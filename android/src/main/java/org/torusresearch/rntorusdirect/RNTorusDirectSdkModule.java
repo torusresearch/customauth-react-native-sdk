@@ -22,18 +22,19 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     private final ReactApplicationContext reactContext;
     private final TorusDirectSdk torusDirectSdk;
 
-    public RNTorusDirectSdkModule(ReactApplicationContext reactContext, String redirectUri, String network, String proxyContractAddress, String browserRedirectUri) {
+    public RNTorusDirectSdkModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
+    }
+    
+    public init(String redirectUri, String network, String proxyContractAddress, String browserRedirectUri) {
         DirectSdkArgs args = new DirectSdkArgs(redirectUri, TorusNetwork.valueOf(network), proxyContractAddress, browserRedirectUri);
-        this.torusDirectSdk = new TorusDirectSdk(args, reactContext);
+        this.torusDirectSdk = new TorusDirectSdk(args, this.reactContext);
     }
 
-    public RNTorusDirectSdkModule(ReactApplicationContext reactContext, String redirectUri) {
-        super(reactContext);
-        this.reactContext = reactContext;
+    public init(String redirectUri) {
         DirectSdkArgs args = new DirectSdkArgs(redirectUri);
-        this.torusDirectSdk = new TorusDirectSdk(args, reactContext);
+        this.torusDirectSdk = new TorusDirectSdk(args, this.reactContext);
     }
 
     public RNTorusDirectSdkModule(ReactApplicationContext reactContext, String redirectUri, String network, String proxyContractAddress) {
