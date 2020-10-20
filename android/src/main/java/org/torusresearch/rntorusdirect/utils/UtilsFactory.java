@@ -7,11 +7,13 @@ import com.facebook.react.bridge.ReadableMapKeySetIterator;
 import com.facebook.react.bridge.ReadableType;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
 
 import org.jetbrains.annotations.NotNull;
 import org.torusresearch.torusdirect.types.AggregateLoginParams;
 import org.torusresearch.torusdirect.types.AggregateVerifierType;
 import org.torusresearch.torusdirect.types.Auth0ClientOptions;
+import org.torusresearch.torusdirect.types.DirectSdkArgs;
 import org.torusresearch.torusdirect.types.Display;
 import org.torusresearch.torusdirect.types.LoginType;
 import org.torusresearch.torusdirect.types.Prompt;
@@ -19,6 +21,7 @@ import org.torusresearch.torusdirect.types.SubVerifierDetails;
 import org.torusresearch.torusdirect.types.TorusAggregateLoginResponse;
 import org.torusresearch.torusdirect.types.TorusKey;
 import org.torusresearch.torusdirect.types.TorusLoginResponse;
+import org.torusresearch.torusdirect.types.TorusNetwork;
 import org.torusresearch.torusdirect.types.TorusVerifierUnionResponse;
 
 import java.util.ArrayList;
@@ -28,8 +31,23 @@ import java.util.List;
 
 // Checks are not present at certain places. It implies params are mandatory and app should crash if they are not provided.
 public final class UtilsFactory {
+    public static DirectSdkArgs directSdkArgsFromMap(ReadableMap map) {
+        String redirectUri = map.getString("redirectUri");
+        DirectSdkArgs args = new DirectSdkArgs(redirectUri);
+        if (map.hasKey("network")) {
+            args.setNetwork(TorusNetwork.valueOfLabel(map.getString("network")));
+        }
+        if (map.hasKey("proxyContractAddress")) {
+            args.setProxyContractAddress((map.getString("proxyContractAddress")));
+        }
+        if (map.hasKey("browserRedirectUri")) {
+            args.setBrowserRedirectUri((map.getString("browserRedirectUri")));
+        }
+        return args;
+    }
+
     public static AggregateLoginParams aggregateLoginParamsFromMap(ReadableMap map) {
-        AggregateVerifierType aggregateVerifierType = AggregateVerifierType.valueOf(map.getString("aggregateVerifierType"));
+        AggregateVerifierType aggregateVerifierType = AggregateVerifierType.valueOfLabel(map.getString("aggregateVerifierType"));
         String verifierIdentifier = map.getString("verifierIdentifier");
         ReadableArray subVerfierDetailsArray = map.getArray("subVerifierDetailsArray");
         List<SubVerifierDetails> arrayList = new ArrayList<>();
@@ -46,40 +64,43 @@ public final class UtilsFactory {
 
 
     public static SubVerifierDetails subVerifierDetailsFromMap(ReadableMap map) {
-        LoginType typeOfLogin = LoginType.valueOf(map.getString("typeOfLogin"));
+        LoginType typeOfLogin = LoginType.valueOfLabel(map.getString("typeOfLogin"));
         String verifier = map.getString("verifier");
         String clientId = map.getString("clientId");
-        Auth0ClientOptions auth0ClientOptions = mapToJwtParams(map.getMap("jwtParams"));
+        Auth0ClientOptions auth0ClientOptions = new Auth0ClientOptions.Auth0ClientOptionsBuilder("").build();
+        if (map.hasKey("jwtParams")) {
+            auth0ClientOptions = mapToJwtParams(map.getMap("jwtParams"));
+        }
         boolean isNewActivity = true;
         if (map.hasKey("isNewActivity")) isNewActivity = map.getBoolean("isNewActivity");
         return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity);
     }
 
     public static WritableMap torusLoginResponseToMap(TorusLoginResponse response) {
-        WritableMap map = Arguments.createMap();
+        WritableMap map = new WritableNativeMap();
         WritableMap userInfoMap = getUserInfoWritableMap(response.getUserInfo());
-        map.putMap("userInfo", userInfoMap);
         map.putString("privateKey", response.getPrivateKey());
         map.putString("publicAddress", response.getPublicAddress());
+        map.putMap("userInfo", (ReadableMap) userInfoMap);
         return map;
     }
 
     @NotNull
     private static WritableMap getUserInfoWritableMap(TorusVerifierUnionResponse userInfo) {
-        WritableMap userInfoMap = Arguments.createMap();
-        userInfoMap.putString("email", userInfo.getEmail());
-        userInfoMap.putString("name", userInfo.getName());
-        userInfoMap.putString("profileImage", userInfo.getProfileImage());
-        userInfoMap.putString("verifier", userInfo.getVerifier());
-        userInfoMap.putString("verifierId", userInfo.getVerifierId());
-        userInfoMap.putString("typeOfLogin", userInfo.getTypeOfLogin().name());
-        userInfoMap.putString("accessToken", userInfo.getAccessToken());
-        userInfoMap.putString("idToken", userInfo.getIdToken());
+        WritableMap userInfoMap = new WritableNativeMap();
+        userInfoMap.putString("email", userInfo.getEmail() != null ? userInfo.getEmail() : "");
+        userInfoMap.putString("name", userInfo.getName() != null ? userInfo.getName() : "");
+        userInfoMap.putString("profileImage", userInfo.getProfileImage() != null ? userInfo.getProfileImage() : "");
+        userInfoMap.putString("verifier", userInfo.getVerifier() != null ? userInfo.getVerifier() : "");
+        userInfoMap.putString("verifierId", userInfo.getVerifierId() != null ? userInfo.getVerifierId() : "");
+        userInfoMap.putString("typeOfLogin", userInfo.getTypeOfLogin() != null ? userInfo.getTypeOfLogin().name() : "");
+        userInfoMap.putString("accessToken", userInfo.getAccessToken() != null ? userInfo.getAccessToken() : "");
+        userInfoMap.putString("idToken", userInfo.getIdToken() != null ? userInfo.getIdToken() : "");
         return userInfoMap;
     }
 
     public static WritableMap torusAggregateLoginResponseToMap(TorusAggregateLoginResponse response) {
-        WritableMap map = Arguments.createMap();
+        WritableMap map = new WritableNativeMap();
         WritableArray userInfoArray = Arguments.createArray();
         Arrays.asList(response.getUserInfo()).forEach(x -> {
             userInfoArray.pushMap(getUserInfoWritableMap(x));
@@ -92,7 +113,7 @@ public final class UtilsFactory {
     }
 
     public static WritableMap torusKeyToMap(TorusKey response) {
-        WritableMap map = Arguments.createMap();
+        WritableMap map = new WritableNativeMap();
 
         map.putString("privateKey", response.getPrivateKey());
         map.putString("publicAddress", response.getPublicAddress());
@@ -101,6 +122,10 @@ public final class UtilsFactory {
     }
 
     public static Auth0ClientOptions mapToJwtParams(ReadableMap jwtParams) {
+        if (!jwtParams.hasKey("domain")) {
+            Auth0ClientOptions.Auth0ClientOptionsBuilder builder = new Auth0ClientOptions.Auth0ClientOptionsBuilder("");
+            return builder.build();
+        }
         String domain = jwtParams.getString("domain");
         Auth0ClientOptions.Auth0ClientOptionsBuilder builder = new Auth0ClientOptions.Auth0ClientOptionsBuilder(domain);
 
@@ -117,10 +142,10 @@ public final class UtilsFactory {
             builder.setVerifierIdField(jwtParams.getString("verifierIdField"));
         }
         if (jwtParams.hasKey("display")) {
-            builder.setDisplay(Display.valueOf(jwtParams.getString("display")));
+            builder.setDisplay(Display.valueOfLabel(jwtParams.getString("display")));
         }
         if (jwtParams.hasKey("prompt")) {
-            builder.setPrompt(Prompt.valueOf(jwtParams.getString("prompt")));
+            builder.setPrompt(Prompt.valueOfLabel(jwtParams.getString("prompt")));
         }
         if (jwtParams.hasKey("max_age")) {
             builder.setMax_age(jwtParams.getString("max_age"));

@@ -8,11 +8,9 @@ import com.facebook.react.bridge.ReadableMap;
 
 import org.torusresearch.rntorusdirect.utils.UtilsFactory;
 import org.torusresearch.torusdirect.TorusDirectSdk;
-import org.torusresearch.torusdirect.types.DirectSdkArgs;
 import org.torusresearch.torusdirect.types.TorusAggregateLoginResponse;
 import org.torusresearch.torusdirect.types.TorusKey;
 import org.torusresearch.torusdirect.types.TorusLoginResponse;
-import org.torusresearch.torusdirect.types.TorusNetwork;
 
 import java.util.HashMap;
 import java.util.concurrent.ForkJoinPool;
@@ -27,23 +25,13 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
         this.reactContext = reactContext;
     }
 
-    public void init(String redirectUri, String network, String proxyContractAddress, String browserRedirectUri) {
-        DirectSdkArgs args = new DirectSdkArgs(redirectUri, TorusNetwork.valueOf(network), proxyContractAddress, browserRedirectUri);
-        this.torusDirectSdk = new TorusDirectSdk(args, this.reactContext);
-    }
-
-    public void init(String redirectUri) {
-        DirectSdkArgs args = new DirectSdkArgs(redirectUri);
-        this.torusDirectSdk = new TorusDirectSdk(args, this.reactContext);
-    }
-
-    public void init(String redirectUri, String network, String proxyContractAddress) {
-        DirectSdkArgs args = new DirectSdkArgs(redirectUri, TorusNetwork.valueOf(network), proxyContractAddress);
-        this.torusDirectSdk = new TorusDirectSdk(args, this.reactContext);
+    @ReactMethod
+    public void init(ReadableMap args) {
+        this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
     }
 
     @ReactMethod
-    private void triggerLogin(ReadableMap subVerifierDetails, Promise promise) {
+    public void triggerLogin(ReadableMap subVerifierDetails, Promise promise) {
         ForkJoinPool.commonPool().submit(() -> {
             try {
                 TorusLoginResponse response = this.torusDirectSdk.triggerLogin(UtilsFactory.subVerifierDetailsFromMap(subVerifierDetails)).get();
@@ -55,7 +43,7 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    private void triggerAggregateLogin(ReadableMap aggregateLoginParams, Promise promise) {
+    public void triggerAggregateLogin(ReadableMap aggregateLoginParams, Promise promise) {
         ForkJoinPool.commonPool().submit(() -> {
             try {
                 TorusAggregateLoginResponse response = this.torusDirectSdk.triggerAggregateLogin(UtilsFactory.aggregateLoginParamsFromMap(aggregateLoginParams)).get();
@@ -67,7 +55,7 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    private void getTorusKey(String verifier, String verifierId, ReadableMap verifierParams, String idToken, Promise promise) {
+    public void getTorusKey(String verifier, String verifierId, ReadableMap verifierParams, String idToken, Promise promise) {
         ForkJoinPool.commonPool().submit(() -> {
             try {
                 HashMap<String, Object> finalVerifierParams = UtilsFactory.toHashMap(verifierParams);

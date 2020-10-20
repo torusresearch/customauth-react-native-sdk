@@ -12,7 +12,7 @@ const EMAIL_PASSWORD = "email_password";
 const HOSTED_EMAIL_PASSWORDLESS = "hosted_email_passwordless";
 const HOSTED_SMS_PASSWORDLESS = "hosted_sms_passwordless";
 
-const AUTH_DOMAIN = "https://torus-test.auth0.com";
+const AUTH_DOMAIN = "torus-test.auth0.com";
 
 export const verifierMap = {
   [GOOGLE]: {

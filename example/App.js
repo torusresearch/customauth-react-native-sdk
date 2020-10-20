@@ -4,35 +4,31 @@ import { GOOGLE, verifierMap } from "./config";
 import TorusSdk from "react-native-torus-direct-sdk";
 
 export default class App extends React.Component {
-  state = { selectedVerifier: GOOGLE, torusdirectsdk: null, loginHint: "", consoleText: "" };
+  state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };
 
   componentDidMount = async () => {
     try {
-      console.log(TorusSdk)
-      // const torusdirectsdk = new TorusSdk();
-      // torusdirectsdk.init({
-      //     redirectUrl: '',
-      //     proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
-      //     network: "testnet", // details for test net
-      //   })
-      // this.setState({ torusdirectsdk: torusdirectsdk });
+      TorusSdk.init({
+        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        network: "testnet",  // details for test net
+        proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
+      });
     } catch (error) {
       console.error(error, "mounted caught");
     }
   };
 
   login = async () => {
-    const { selectedVerifier, torusdirectsdk } = this.state;
-
+    const { selectedVerifier } = this.state;
     try {
-      const { typeOfLogin, clientId, verifier, jwtParams = {} } = verifierMap[selectedVerifier];
-      const loginDetails = await torusdirectsdk.triggerLogin({
+      const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
+      const loginDetails = await TorusSdk.triggerLogin({
         typeOfLogin,
         verifier,
         clientId,
         jwtParams,
       });
-      this.setState({ consoleText: typeof loginDetails === "object" ? JSON.stringify(loginDetails) : loginDetails });
+      this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
     } catch (error) {
       console.error(error, "login caught");
     }
@@ -47,7 +43,9 @@ export default class App extends React.Component {
           <Picker
             style={styles.wrapper}
             selectedValue={selectedVerifier}
-            onValueChange={(itemValue) => this.setState({ selectedVerifier: itemValue })}>
+            onValueChange={(itemValue) => {
+              this.setState({ selectedVerifier: itemValue });
+            }}>
             {Object.keys(verifierMap).map((login) => (
               <Picker.Item style={styles.wrapper} value={login} key={login.toString()} label={verifierMap[login].name} />
             ))}
@@ -75,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 50,
-    width: 250
+    width: 250,
   },
   top: {
     // marginTop: "20",
@@ -85,6 +83,8 @@ const styles = StyleSheet.create({
   },
   console: {
     flex: 1,
+    height: 250,
+    width: 250,
     alignItems: "center",
     justifyContent: "center",
   },
