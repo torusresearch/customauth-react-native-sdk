@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "torus",
+    "direct auth"
   ],
   "author": "Chaitanya Potti",
   "license": "MIT",
@@ -15,5 +17,9 @@
   },
   "devDependencies": {
     "react-native": "^0.63.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/torusresearch/torus-direct-react-native-sdk/issues"
+  },
+  "homepage": "https://github.com/torusresearch/torus-direct-react-native-sdk#readme"
 }
