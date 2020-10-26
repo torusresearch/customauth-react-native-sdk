@@ -17,9 +17,9 @@
     "react-native-gesture-handler": "~1.7.0",
     "react-native-reanimated": "~1.13.0",
     "react-native-screens": "~2.10.1",
-    "react-native-torus-direct-sdk": "file:../react-native-torus-direct-sdk-1.0.0.tgz",
     "react-native-unimodules": "~0.11.0",
-    "react-native-web": "~0.13.12"
+    "react-native-web": "~0.13.12",
+    "torus-direct-react-native-sdk": "file:../torus-direct-react-native-sdk-1.0.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

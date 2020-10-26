@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Picker } from "react-native";
 import { GOOGLE, verifierMap } from "./config";
-import TorusSdk from "react-native-torus-direct-sdk";
+import TorusSdk from "torus-direct-react-native-sdk";
 
 export default class App extends React.Component {
   state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };

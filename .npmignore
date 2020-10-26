@@ -45,4 +45,4 @@ buck-out/
 *.keystore
 
 example/
-react-native-torus-direct-sdk-*
+torus-direct-react-native-sdk-*
