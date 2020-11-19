@@ -5,6 +5,8 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.bridge.WritableNativeMap;
 
 import org.torusresearch.rntorusdirect.utils.UtilsFactory;
 import org.torusresearch.torusdirect.TorusDirectSdk;
@@ -26,8 +28,16 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(ReadableMap args) {
-        this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
+    public void init(ReadableMap args, Promise promise) {
+        ForkJoinPool.commonPool().submit(() -> {
+            try {
+                this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
+                WritableMap map = new WritableNativeMap();
+                promise.resolve(map);
+            } catch (Exception e) {
+                promise.reject(e);
+            }
+        });
     }
 
     @ReactMethod
