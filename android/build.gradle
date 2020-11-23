@@ -49,6 +49,6 @@ repositories {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:torus-direct-android-sdk:1.0.13'
+    api 'org.torusresearch:torus-direct-android-sdk:1.0.14'
 }
   
