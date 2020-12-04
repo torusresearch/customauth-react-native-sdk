@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, Picker } from "react-native";
+import { StyleSheet, Text, View, Button, Picker, AppRegistry } from "react-native";
 import { GOOGLE, verifierMap } from "./config";
 import TorusSdk from "torus-direct-react-native-sdk";
 
