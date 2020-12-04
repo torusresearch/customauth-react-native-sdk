@@ -5,7 +5,7 @@ workspace 'RNTorusDirectSdk'
 platform :ios, '10.0'
 ENV['SWIFT_VERSION'] = '5'
 
-target 'RNTorusDirectSdk' do
+target 'RNTorusDirectSDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
   config = use_native_modules!

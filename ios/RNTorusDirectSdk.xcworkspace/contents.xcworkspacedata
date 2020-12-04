@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:RNTorusDirectSdk.xcodeproj">
+      location = "group:/Users/shubham/Documents/github/torus/torus-direct-react-native-sdk/ios/RNTorusDirectSDK.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
