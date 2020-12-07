@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/torusresearch/torus-direct-react-native-sdk.git", :branch => "feat/ios" }
 
-  s.source_files = "ios/**/*.{h,m}"
+  s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency 'secp256k1.c', '0.1.2'
