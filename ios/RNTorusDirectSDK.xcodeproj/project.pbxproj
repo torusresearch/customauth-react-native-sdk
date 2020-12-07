@@ -13,7 +13,6 @@
 		51BF3474257A18360015DA93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3473257A18360015DA93 /* main.m */; };
 		51BF3483257A18DB0015DA93 /* Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3482257A18DB0015DA93 /* Torus.swift */; };
 		51BF3486257A19050015DA93 /* Torus.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3485257A19050015DA93 /* Torus.m */; };
-		51BF3632257A4E4F0015DA93 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 51BF3631257A4E4F0015DA93 /* main.jsbundle */; };
 		69CB8022A5290E6CDEC4C11D /* libPods-RNTorusDirectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -171,7 +170,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BF3632257A4E4F0015DA93 /* main.jsbundle in Resources */,
 				51BF3471257A18360015DA93 /* LaunchScreen.storyboard in Resources */,
 				51BF346E257A18360015DA93 /* Assets.xcassets in Resources */,
 			);
