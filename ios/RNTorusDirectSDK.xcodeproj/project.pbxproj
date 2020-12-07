@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		51BF3463257A18350015DA93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3462257A18350015DA93 /* AppDelegate.m */; };
 		51BF346E257A18360015DA93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF346D257A18360015DA93 /* Assets.xcassets */; };
-		51BF3471257A18360015DA93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51BF346F257A18360015DA93 /* LaunchScreen.storyboard */; };
 		51BF3474257A18360015DA93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3473257A18360015DA93 /* main.m */; };
 		51BF3483257A18DB0015DA93 /* Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3482257A18DB0015DA93 /* Torus.swift */; };
 		51BF3486257A19050015DA93 /* Torus.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3485257A19050015DA93 /* Torus.m */; };
+		51F8ADCE257E29FB00E86091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */; };
 		69CB8022A5290E6CDEC4C11D /* libPods-RNTorusDirectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -22,14 +22,14 @@
 		51BF3461257A18350015DA93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51BF3462257A18350015DA93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		51BF346D257A18360015DA93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		51BF3470257A18360015DA93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51BF3472257A18360015DA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51BF3473257A18360015DA93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51BF347B257A18920015DA93 /* RNTorusDirectSdk-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTorusDirectSdk-Bridging-Header.h"; sourceTree = "<group>"; };
 		51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTorusDirectSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		51BF3482257A18DB0015DA93 /* Torus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torus.swift; sourceTree = "<group>"; };
 		51BF3485257A19050015DA93 /* Torus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Torus.m; sourceTree = "<group>"; };
-		51BF3631257A4E4F0015DA93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
+		51BF3631257A4E4F0015DA93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
+		51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F66BB2EF83FD88447B77DD2 /* libPods-RNTorusDirectSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTorusDirectSdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTorusDirectSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06EA66ED4081043B75541B9 /* Pods-RNTorusDirectSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSdk.release.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSdk/Pods-RNTorusDirectSdk.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 				51BF3485257A19050015DA93 /* Torus.m */,
 				51BF3462257A18350015DA93 /* AppDelegate.m */,
 				51BF346D257A18360015DA93 /* Assets.xcassets */,
-				51BF346F257A18360015DA93 /* LaunchScreen.storyboard */,
 				51BF3472257A18360015DA93 /* Info.plist */,
+				51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */,
 				51BF3473257A18360015DA93 /* main.m */,
 				51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */,
 			);
@@ -170,7 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BF3471257A18360015DA93 /* LaunchScreen.storyboard in Resources */,
+				51F8ADCE257E29FB00E86091 /* LaunchScreen.storyboard in Resources */,
 				51BF346E257A18360015DA93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,23 +272,11 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		51BF346F257A18360015DA93 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51BF3470257A18360015DA93 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		51BF3476257A18360015DA93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -322,7 +310,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

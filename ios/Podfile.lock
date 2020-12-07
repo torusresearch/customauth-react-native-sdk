@@ -265,7 +265,7 @@ PODS:
   - Torus-fetchNodeDetails (0.0.19):
     - BestLogger (~> 0.0.1)
     - web3swift (~> 2.3.0)
-  - Torus-utils (0.0.22):
+  - Torus-utils (0.0.23):
     - BestLogger (~> 0.0.1)
     - PromiseKit/Foundation (~> 6.0)
     - Torus-fetchNodeDetails (~> 0.0.1)
@@ -412,7 +412,7 @@ SPEC CHECKSUMS:
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   Torus-directSDK: bd3e52548b1dd60561f25b24c3ffca9617f175cf
   Torus-fetchNodeDetails: 3a2ce2095db598949b923cbaff827632918510ff
-  Torus-utils: c8b3bd3a8573d944f60a6d8d21795a5e886819bb
+  Torus-utils: d6473b443c91130cd34b65468c4cc6e4c56dd72c
   web3swift: 0f097eafe1d08f478694b882581b85a01afb6633
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
 
