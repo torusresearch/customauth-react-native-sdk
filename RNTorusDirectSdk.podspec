@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
+  s.dependency 'React'
   s.dependency 'secp256k1.c', '0.1.2'
+  s.dependency 'Torus-directSDK'
   #s.dependency "others"
 end
-

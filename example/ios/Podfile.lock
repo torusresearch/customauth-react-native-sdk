@@ -350,12 +350,21 @@ PODS:
   - RNScreens (2.10.1):
     - React
   - RNTorusDirectSdk (0.0.5):
+    - React
     - secp256k1.c (= 0.1.2)
+    - Torus-directSDK
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
+  - Torus-directSDK (0.0.14):
+    - BestLogger (~> 0.0.1)
+    - Torus-utils (~> 0.0.1)
   - Torus-fetchNodeDetails (0.0.19):
     - BestLogger (~> 0.0.1)
     - web3swift (~> 2.3.0)
+  - Torus-utils (0.0.23):
+    - BestLogger (~> 0.0.1)
+    - PromiseKit/Foundation (~> 6.0)
+    - Torus-fetchNodeDetails (~> 0.0.1)
   - UMAppLoader (1.3.0)
   - UMBarCodeScannerInterface (5.3.0)
   - UMCameraInterface (5.3.0)
@@ -482,7 +491,9 @@ SPEC REPOS:
     - PromiseKit
     - secp256k1.c
     - Starscream
+    - Torus-directSDK
     - Torus-fetchNodeDetails
+    - Torus-utils
     - web3swift
     - YogaKit
 
@@ -654,10 +665,12 @@ SPEC CHECKSUMS:
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
-  RNTorusDirectSdk: f24169cd97851933542c3729bc6c8e595ec61e9d
+  RNTorusDirectSdk: 4d1c6729809015ba8900b57e6c0854e92d7cef7a
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
+  Torus-directSDK: bd3e52548b1dd60561f25b24c3ffca9617f175cf
   Torus-fetchNodeDetails: 3a2ce2095db598949b923cbaff827632918510ff
+  Torus-utils: d6473b443c91130cd34b65468c4cc6e4c56dd72c
   UMAppLoader: 5db5dc03176c6238da9c8b3657a370137882a4ad
   UMBarCodeScannerInterface: 017672479f93de88d94c3a50dfb66b5348b65989
   UMCameraInterface: 22bd2c4bf15dcf68530368fa5704af7490818457

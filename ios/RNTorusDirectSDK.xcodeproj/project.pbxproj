@@ -79,16 +79,16 @@
 		51BF3460257A18350015DA93 /* RNTorusDirectSDK */ = {
 			isa = PBXGroup;
 			children = (
-				51BF347B257A18920015DA93 /* RNTorusDirectSdk-Bridging-Header.h */,
-				51BF3461257A18350015DA93 /* AppDelegate.h */,
-				51BF3482257A18DB0015DA93 /* Torus.swift */,
 				51BF3631257A4E4F0015DA93 /* main.jsbundle */,
-				51BF3485257A19050015DA93 /* Torus.m */,
+				51BF3461257A18350015DA93 /* AppDelegate.h */,
 				51BF3462257A18350015DA93 /* AppDelegate.m */,
+				51BF3482257A18DB0015DA93 /* Torus.swift */,
+				51BF3485257A19050015DA93 /* Torus.m */,
 				51BF346D257A18360015DA93 /* Assets.xcassets */,
 				51BF3472257A18360015DA93 /* Info.plist */,
 				51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */,
 				51BF3473257A18360015DA93 /* main.m */,
+				51BF347B257A18920015DA93 /* RNTorusDirectSdk-Bridging-Header.h */,
 				51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */,
 			);
 			path = RNTorusDirectSDK;
