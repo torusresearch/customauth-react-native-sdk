@@ -50,18 +50,6 @@ struct SubVerifierDetailsWebSDK: Codable {
     }
 }
 
-// const loginDetails = await this.torusdirectsdk.triggerAggregateLogin({
-//   aggregateVerifierType: "single_id_verifier",
-//   verifierIdentifier: "tkey-google",
-//   subVerifierDetailsArray: [
-//     {
-//       clientId: "221898609709-obfn3p63741l5333093430j3qeiinaa8.apps.googleusercontent.com",
-//       typeOfLogin: "google",
-//       verifier: "torus"
-//     }
-//   ]
-// });
-
 struct AggregateLoginParamsWebSDK: Codable{
     var aggregateVerifierType: String
     var verifierIdentifier: String

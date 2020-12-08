@@ -1,6 +1,6 @@
 //
-//  test1.swift
-//  test1
+//  RNTorusDirectSdk.swift
+//  RNTorusDirectSdk
 //
 //  Created by Shubham on 1/12/20.
 //
@@ -9,6 +9,7 @@ import Foundation
 import TorusSwiftDirectSDK
 import PromiseKit
 import BestLogger
+import React
 
 @available(iOS 11.0, *)
 @objc(RNTorusDirectSdk)
@@ -29,16 +30,16 @@ public class RNTorusDirectSdk: NSObject {
                                      clientId: subverifierWeb.clientId,
                                      verifierName: subverifierWeb.verifier,
                                      redirectURL: directAuthVariables!.redirectUri,
-                                     jwtParams: subverifierWeb.jwtParams!)
+                                     extraQueryParams: subverifierWeb.queryParameters ?? [:],
+                                     jwtParams: subverifierWeb.jwtParams ?? [:])
         
         self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: directAuthVariables!.enableLogging!)!)
         
         self.tdsdk!.triggerLogin(browserType: .external).done{ data in
-            print("private key rebuild", data)
             resolve(data)
         }.catch{ err in
             print(err)
-            reject("100", "err", err)
+            reject("400", "triggerLogin: ", err)
         }
     }
     
@@ -51,16 +52,16 @@ public class RNTorusDirectSdk: NSObject {
                                      clientId: subverifierWeb.clientId,
                                      verifierName: subverifierWeb.verifier,
                                      redirectURL: directAuthVariables!.redirectUri,
-                                     jwtParams: subverifierWeb.jwtParams!)
+                                     extraQueryParams: subverifierWeb.queryParameters ?? [:],
+                                     jwtParams: subverifierWeb.jwtParams ?? [:])
         
         self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: directAuthVariables!.enableLogging!)!)
         
         self.tdsdk!.triggerLogin(browserType: .external).done{ data in
-            print("private key rebuild", data)
             resolve(data)
         }.catch{ err in
             print(err)
-            reject("100", "err", err)
+            reject("400", "triggerAggregateLogin: ", err)
         }
     }
     
