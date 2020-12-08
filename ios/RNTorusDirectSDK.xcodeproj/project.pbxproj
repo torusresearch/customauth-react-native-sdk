@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		516BACC2257F9DC30062EE71 /* RNTorus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTorus.h; sourceTree = "<group>"; };
 		51819AE0257F6ECE006B6F39 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		51BF345F257A18350015DA93 /* RNTorusDirectSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTorusDirectSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF3461257A18350015DA93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				51BF3482257A18DB0015DA93 /* Torus.swift */,
+				516BACC2257F9DC30062EE71 /* RNTorus.h */,
 				51819AE0257F6ECE006B6F39 /* Types.swift */,
 				51BF3485257A19050015DA93 /* Torus.m */,
 				51BF3460257A18350015DA93 /* RNTorusDirectSDK */,

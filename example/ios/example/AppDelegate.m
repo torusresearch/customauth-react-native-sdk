@@ -1,6 +1,5 @@
 #import "AppDelegate.h"
-#import "torusdirectexample-Swift.h"
-
+#import <RNTorusDirectSdk/RNTorus.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -97,8 +96,12 @@ static void InitializeFlipper(UIApplication *application) {
   NSString *myString = url.absoluteString;
   
   NSLog(@"String to handle : %@ ", myString);
-  [HandleRedirect handle:(myString)];
-  
+  if (@available(iOS 11.0, *)) {
+    [RNTorusDirectSdk handle:myString];
+  } else {
+    // Fallback on earlier versions
+  }
+
   // Your additional URL handling (if any) goes here.
   return NO;
 }
