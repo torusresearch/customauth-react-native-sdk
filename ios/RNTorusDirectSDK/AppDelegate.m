@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "RNTorusDirectSdk-Swift.h"
+#import "RNTorusDirectSDK-Swift.h"
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -52,7 +52,7 @@ static void InitializeFlipper(UIApplication *application) {
   
   NSString *myString = url.absoluteString;
   NSLog(myString);
-  [RNTorusSwiftDirectSDK handle:myString];
+  [RNTorusDirectSdk handle:myString];
   
   // Your additional URL handling (if any) goes here.
   return NO;

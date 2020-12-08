@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import RNTorusDirectSdk
+
+@available(iOS 11.0, *)
+@objc class HandleRedirect: NSObject{
+  @objc class func handle(_ string: String){
+    RNTorusDirectSdk.handle(string)
+  }
+}

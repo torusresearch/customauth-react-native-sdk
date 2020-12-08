@@ -1,16 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Picker, AppRegistry } from "react-native";
-import { GOOGLE, verifierMap } from "./config";
+import { GITHUB, verifierMap } from "./config";
 import TorusSdk from "torus-direct-react-native-sdk";
 
 export default class App extends React.Component {
-  state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };
+  state = { selectedVerifier: GITHUB, loginHint: "", consoleText: "" };
 
   componentDidMount = async () => {
     console.log("TorusSdk", TorusSdk)
     try {
-      TorusSdk.init({
-        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+      TorusSdk.initialize({
+        redirectUri: "tdsdk://tdsdk/oauthCallback",
         network: "testnet",  // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
       });
@@ -23,6 +23,7 @@ export default class App extends React.Component {
     const { selectedVerifier } = this.state;
     try {
       const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
+      debugger
       const loginDetails = await TorusSdk.triggerLogin({
         typeOfLogin,
         verifier,

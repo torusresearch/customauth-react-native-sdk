@@ -1,18 +1,18 @@
 export const GOOGLE = "google";
-const FACEBOOK = "facebook";
-const REDDIT = "reddit";
-const DISCORD = "discord";
-const TWITCH = "twitch";
-const GITHUB = "github";
-const APPLE = "apple";
-const LINKEDIN = "linkedin";
-const TWITTER = "twitter";
-const LINE = "line";
-const EMAIL_PASSWORD = "email_password";
-const HOSTED_EMAIL_PASSWORDLESS = "hosted_email_passwordless";
-const HOSTED_SMS_PASSWORDLESS = "hosted_sms_passwordless";
+export const FACEBOOK = "facebook";
+export const REDDIT = "reddit";
+export const DISCORD = "discord";
+export const TWITCH = "twitch";
+export const GITHUB = "github";
+export const APPLE = "apple";
+export const LINKEDIN = "linkedin";
+export const TWITTER = "twitter";
+export const LINE = "line";
+export const EMAIL_PASSWORD = "email_password";
+export const HOSTED_EMAIL_PASSWORDLESS = "hosted_email_passwordless";
+export const HOSTED_SMS_PASSWORDLESS = "hosted_sms_passwordless";
 
-const AUTH_DOMAIN = "torus-test.auth0.com";
+export const AUTH_DOMAIN = "torus-test.auth0.com";
 
 export const verifierMap = {
   [GOOGLE]: {
@@ -101,3 +101,15 @@ export const verifierMap = {
     },
   },
 };
+
+export const verifierMap2 = {
+  [GITHUB]: {
+    name: "Github",
+    typeOfLogin: "github",
+    clientId: "PC2a4tfNRvXbT48t89J5am0oFM21Nxff",
+    verifier: "torus-auth0-github-lrc",
+    jwtParams: {
+      domain: AUTH_DOMAIN,
+    },
+  },
+}

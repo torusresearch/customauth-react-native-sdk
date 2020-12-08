@@ -1,7 +1,7 @@
 #import <React/RCTBridgeDelegate.h>
 #import <UIKit/UIKit.h>
 
-@class RNTorusSwiftDirectSDK;
+@class RNTorusDirectSdk;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate>
 

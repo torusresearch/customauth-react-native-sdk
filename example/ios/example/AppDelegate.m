@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "torusdirectexample-Swift.h"
 
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
@@ -94,8 +95,9 @@ static void InitializeFlipper(UIApplication *application) {
             options:(NSDictionary<NSString *, id> *)options {
   
   NSString *myString = url.absoluteString;
-  NSLog(myString);
-  //  [RNTorusSwiftDirectSDK handle:myString];
+  
+  NSLog(@"String to handle : %@ ", myString);
+  [HandleRedirect handle:(myString)];
   
   // Your additional URL handling (if any) goes here.
   return NO;
