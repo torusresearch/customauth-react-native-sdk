@@ -89,6 +89,19 @@ static void InitializeFlipper(UIApplication *application) {
  #endif
 }
 
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+  
+  NSString *myString = url.absoluteString;
+  NSLog(myString);
+  //  [RNTorusSwiftDirectSDK handle:myString];
+  
+  // Your additional URL handling (if any) goes here.
+  return NO;
+}
+
+
 - (void)appController:(EXUpdatesAppController *)appController didStartWithSuccess:(BOOL)success {
   appController.bridge = [self initializeReactNativeApp];
   EXSplashScreenService *splashScreenService = (EXSplashScreenService *)[UMModuleRegistryProvider getSingletonModuleForClass:[EXSplashScreenService class]];

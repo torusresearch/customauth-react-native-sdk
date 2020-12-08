@@ -85,7 +85,7 @@ struct SubVerifierDetailsWebSDK: Codable {
     }
 }
 
-
+@available(iOS 11.0, *)
 @objc(RNTorusSwiftDirectSDK)
 public class RNTorusSwiftDirectSDK: NSObject {
     var tdsdk: TorusSwiftDirectSDK?

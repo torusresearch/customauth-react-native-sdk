@@ -7,6 +7,7 @@ export default class App extends React.Component {
   state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };
 
   componentDidMount = async () => {
+    console.log("TorusSdk", TorusSdk)
     try {
       TorusSdk.init({
         redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
