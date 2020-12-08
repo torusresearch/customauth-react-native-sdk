@@ -1,6 +1,6 @@
 #import "React/RCTBridgeModule.h"
 
-@interface RCT_EXTERN_MODULE(RNTorusSwiftDirectSDK, NSObject)
+@interface RCT_EXTERN_REMAP_MODULE(TorusSdk, RNTorusSwiftDirectSDK, NSObject)
 
 _RCT_EXTERN_REMAP_METHOD(init, initialize: (NSDictionary)params, false)
 
