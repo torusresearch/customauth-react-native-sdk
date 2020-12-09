@@ -56,7 +56,7 @@ public class RNTorusDirectSdk: NSObject {
     
     @objc public func triggerAggregateLogin(_ params: [String:Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
         if(self.directAuthArgs == nil){
-            reject("400", "triggerLogin: ", "Call .initialize first")
+            reject("400", "triggerAggregateLogin: ", "Call .initialize first")
         }
         
         do{
