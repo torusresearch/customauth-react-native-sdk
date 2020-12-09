@@ -23,7 +23,6 @@ export default class App extends React.Component {
     const { selectedVerifier } = this.state;
     try {
       const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
-      debugger
       const loginDetails = await TorusSdk.triggerLogin({
         typeOfLogin,
         verifier,
