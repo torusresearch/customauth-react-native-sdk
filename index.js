@@ -1,4 +1,4 @@
-import { NativeModules, AppRegistry } from "react-native";
+import { NativeModules } from "react-native";
 
 const { RNTorusDirectSdk } = NativeModules;
 
