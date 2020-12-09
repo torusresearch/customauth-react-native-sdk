@@ -44,5 +44,8 @@ buck-out/
 \.buckd/
 *.keystore
 
+#cocoapods
+/ios/Pods/
+
 example/
 torus-direct-react-native-sdk-*
