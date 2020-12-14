@@ -48,3 +48,4 @@ buck-out/
 *.keystore
 torus-direct-react-native-sdk-*
 torus-*.tgz
+*.hprof
