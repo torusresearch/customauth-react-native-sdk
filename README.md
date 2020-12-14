@@ -1,8 +1,6 @@
 
 # torus-direct-react-native-sdk
 
-Disclaimer: Android only for now. Ios support coming soon
-
 ## Getting started
 
 `$ npm install torus-direct-react-native-sdk --save`
