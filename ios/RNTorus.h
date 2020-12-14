@@ -191,7 +191,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
-#import "/Users/shubham/Documents/github/torus/torus-direct-react-native-sdk/ios/RNTorusDirectSDK/RNTorusDirectSDK-Bridging-Header.h"
+#import "React/RCTBridgeModule.h"
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
