@@ -42,7 +42,3 @@ import RNTorusDirectSdk from 'torus-direct-react-native-sdk';
 // TODO: What to do with the module?
 RNTorusDirectSdk;
 ```
-
-## TODO
-- add example
-  
