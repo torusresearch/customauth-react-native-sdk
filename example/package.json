@@ -19,7 +19,7 @@
     "react-native-screens": "~2.10.1",
     "react-native-unimodules": "~0.11.0",
     "react-native-web": "~0.13.12",
-    "torus-direct-react-native-sdk": "file:../torus-direct-react-native-sdk-0.0.5.tgz"
+    "torus-direct-react-native-sdk": "file:../torus-direct-react-native-sdk-0.1.0.tgz"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
