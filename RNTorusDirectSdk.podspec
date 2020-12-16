@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
   # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author       = { "Torus Labs" => "hello@tor.us" }
   s.platform     = :ios, "10.0"
-  s.source       = { :git => "https://github.com/torusresearch/torus-direct-react-native-sdk.git", :branch => "feat/ios" }
+  s.source       = { :git => "https://github.com/torusresearch/torus-direct-react-native-sdk.git", :branch => "master" }
 
   s.source_files = "ios/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency 'React'
   s.dependency 'secp256k1.c', '0.1.2'
-  s.dependency 'Torus-directSDK', '0.0.15'
+  s.dependency 'Torus-directSDK', '~> 0.0.1'
   #s.dependency "others"
 end

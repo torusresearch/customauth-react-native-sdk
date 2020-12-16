@@ -9,7 +9,8 @@ export default class App extends React.Component {
   componentDidMount = async () => {
     try {
       TorusSdk.init({
-        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        // redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        redirectUri: "tdsdk://tdsdk/oauthCallback",
         network: "testnet",  // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
       });

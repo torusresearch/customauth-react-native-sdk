@@ -15,7 +15,7 @@ target 'RNTorusDirectSDK' do
   use_react_native!(:path => config["reactNativePath"])
     
   pod 'secp256k1.c', '0.1.2', :modular_headers => true
-  pod 'Torus-directSDK'
+  pod 'Torus-directSDK', '~> 0.0.15'
 
   # Enables Flipper.
   #
