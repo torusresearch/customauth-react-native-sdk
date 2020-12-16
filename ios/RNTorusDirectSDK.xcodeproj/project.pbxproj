@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		516AE981258770D800278C89 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516AE980258770D800278C89 /* Media.xcassets */; };
 		51819AE1257F6ECE006B6F39 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51819AE0257F6ECE006B6F39 /* Types.swift */; };
 		51BF3463257A18350015DA93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3462257A18350015DA93 /* AppDelegate.m */; };
-		51BF346E257A18360015DA93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51BF346D257A18360015DA93 /* Assets.xcassets */; };
 		51BF3474257A18360015DA93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3473257A18360015DA93 /* main.m */; };
 		51BF3483257A18DB0015DA93 /* Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3482257A18DB0015DA93 /* Torus.swift */; };
 		51BF3486257A19050015DA93 /* Torus.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3485257A19050015DA93 /* Torus.m */; };
@@ -19,12 +19,12 @@
 
 /* Begin PBXFileReference section */
 		0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		516AE980258770D800278C89 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		516BACC2257F9DC30062EE71 /* RNTorus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTorus.h; sourceTree = "<group>"; };
 		51819AE0257F6ECE006B6F39 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		51BF345F257A18350015DA93 /* RNTorusDirectSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTorusDirectSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF3461257A18350015DA93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51BF3462257A18350015DA93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		51BF346D257A18360015DA93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51BF3472257A18360015DA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51BF3473257A18360015DA93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTorusDirectSDK-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -84,8 +84,8 @@
 				51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */,
 				51BF3631257A4E4F0015DA93 /* main.jsbundle */,
 				51BF3461257A18350015DA93 /* AppDelegate.h */,
+				516AE980258770D800278C89 /* Media.xcassets */,
 				51BF3462257A18350015DA93 /* AppDelegate.m */,
-				51BF346D257A18360015DA93 /* Assets.xcassets */,
 				51BF3472257A18360015DA93 /* Info.plist */,
 				51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */,
 				51BF3473257A18360015DA93 /* main.m */,
@@ -173,8 +173,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516AE981258770D800278C89 /* Media.xcassets in Resources */,
 				51F8ADCE257E29FB00E86091 /* LaunchScreen.storyboard in Resources */,
-				51BF346E257A18360015DA93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RNTorusDirectSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -331,7 +331,7 @@
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = RNTorusDirectSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = torus.RNTorusDirectSDK;

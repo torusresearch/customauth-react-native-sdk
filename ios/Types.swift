@@ -10,9 +10,10 @@ import Foundation
 
 struct DirectWebSDKArgs: Codable {
     var redirectUri: String
+    var browserRedirectUri: String? = "https://scripts.toruswallet.io/redirect.html"
     var network: String
     var proxyContractAddress: String? = "0x638646503746d5456209e33a2ff5e3226d698bea"
-    var enableLogging: Int? = 0
+    var enableLogging: Bool? = true
     
     enum CodingKeys: String, CodingKey {
         case redirectUri = "redirectUri"

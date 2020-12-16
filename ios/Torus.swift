@@ -19,7 +19,7 @@ public class RNTorusDirectSdk: NSObject {
     var sub: [SubVerifierDetailsWebSDK] = []
     
     @objc public func initialize(_ params: [String: Any]){
-        self.directAuthArgs = try? JSONDecoder().decode(DirectWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: params))
+        self.directAuthArgs = try! JSONDecoder().decode(DirectWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: params))
     }
     
     @objc public func triggerLogin(_ params: [String:Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
@@ -34,11 +34,17 @@ public class RNTorusDirectSdk: NSObject {
                                          loginProvider: LoginProviders(rawValue: subverifierWeb.typeOfLogin)!,
                                          clientId: subverifierWeb.clientId,
                                          verifierName: subverifierWeb.verifier,
-                                         redirectURL: directAuthArgs!.redirectUri,
+                                         redirectURL: self.directAuthArgs!.redirectUri,
+                                         browserRedirectURL: self.directAuthArgs!.browserRedirectUri,
                                          extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: directAuthArgs!.enableLogging ?? 0)!)
+            var logvalue: Int = 5
+            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
+                logvalue = 0
+            }
+            
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
             
             self.tdsdk!.triggerLogin(browserType: .external).done{ data in
                 resolve(data)
@@ -67,11 +73,17 @@ public class RNTorusDirectSdk: NSObject {
                                          loginProvider: LoginProviders(rawValue: subverifierWeb.typeOfLogin)!,
                                          clientId: subverifierWeb.clientId,
                                          verifierName: subverifierWeb.verifier,
-                                         redirectURL: directAuthArgs!.redirectUri,
+                                         redirectURL: self.directAuthArgs!.redirectUri,
+                                         browserRedirectURL: self.directAuthArgs!.browserRedirectUri,
                                          extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: directAuthArgs!.enableLogging ?? 0)!)
+            var logvalue: Int = 5
+            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
+                logvalue = 0
+            }
+            
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
             
             self.tdsdk!.triggerLogin(browserType: .external).done{ data in
                 resolve(data)

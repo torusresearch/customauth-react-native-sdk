@@ -349,13 +349,13 @@ PODS:
     - React-Core
   - RNScreens (2.10.1):
     - React
-  - RNTorusDirectSdk (0.1.0):
+  - RNTorusDirectSdk (0.1.1):
     - React
     - secp256k1.c (= 0.1.2)
-    - Torus-directSDK (= 0.0.15)
+    - Torus-directSDK (~> 0.0.1)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - Torus-directSDK (0.0.15):
+  - Torus-directSDK (0.0.16):
     - BestLogger (~> 0.0.1)
     - Torus-utils (~> 0.0.1)
   - Torus-fetchNodeDetails (0.0.19):
@@ -456,7 +456,6 @@ DEPENDENCIES:
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNTorusDirectSdk (from `../node_modules/torus-direct-react-native-sdk`)
   - secp256k1.c (= 0.1.2)
-  - Torus-fetchNodeDetails (= 0.0.19)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
   - UMBarCodeScannerInterface (from `../node_modules/unimodules-barcode-scanner-interface/ios`)
   - UMCameraInterface (from `../node_modules/unimodules-camera-interface/ios`)
@@ -665,10 +664,10 @@ SPEC CHECKSUMS:
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
-  RNTorusDirectSdk: b72a9e3c5ee5b5a78f9c7dafe3d92fe1567ce063
+  RNTorusDirectSdk: e3ae0976c981b449b45a22d0bb8955cb03823c70
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  Torus-directSDK: 8c35faf6eeff02af95c3b8699a24610d5f443238
+  Torus-directSDK: 4ce5c8fe297bdcc6bfea26ecca299765c31c79d6
   Torus-fetchNodeDetails: 3a2ce2095db598949b923cbaff827632918510ff
   Torus-utils: d6473b443c91130cd34b65468c4cc6e4c56dd72c
   UMAppLoader: 939854a42e69527ee11dd17b39ebafcbfbefd05c
@@ -688,6 +687,6 @@ SPEC CHECKSUMS:
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: f34b2295d9bd51ae1bcd857ef396e65a50fb1d7c
+PODFILE CHECKSUM: 606ad2c824ce8767f0e5d6fd8d21d2f0ebcd8a36
 
 COCOAPODS: 1.10.0
