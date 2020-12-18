@@ -3,7 +3,7 @@
 
 ## Getting started
 
-`$ npm install torus-direct-react-native-sdk --save`
+`$ npm install @toruslabs/torus-direct-react-native-sdk --save`
 
 ### Mostly automatic installation
 
@@ -15,7 +15,7 @@
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `torus-direct-react-native-sdk` and add `RNTorusDirectSdk.xcodeproj`
+2. Go to `node_modules` ➜ `@toruslabs/torus-direct-react-native-sdk` and add `RNTorusDirectSdk.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNTorusDirectSdk.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -37,7 +37,7 @@
 
 ## Usage
 ```javascript
-import RNTorusDirectSdk from 'torus-direct-react-native-sdk';
+import RNTorusDirectSdk from '@toruslabs/torus-direct-react-native-sdk';
 
 // TODO: What to do with the module?
 RNTorusDirectSdk;

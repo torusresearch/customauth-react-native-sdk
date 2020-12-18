@@ -7,6 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@toruslabs/torus-direct-react-native-sdk": "file:../toruslabs-torus-direct-react-native-sdk-0.1.4.tgz",
     "expo": "~39.0.2",
     "expo-splash-screen": "~0.6.2",
     "expo-status-bar": "~1.0.2",
@@ -18,8 +19,7 @@
     "react-native-reanimated": "~1.13.0",
     "react-native-screens": "~2.10.1",
     "react-native-unimodules": "~0.11.0",
-    "react-native-web": "~0.13.12",
-    "torus-direct-react-native-sdk": "file:../torus-direct-react-native-sdk-0.1.0.tgz"
+    "react-native-web": "~0.13.12"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

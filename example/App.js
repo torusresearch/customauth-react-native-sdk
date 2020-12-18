@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Button, Picker } from "react-native";
 import { GITHUB, verifierMap } from "./config";
-import TorusSdk from "torus-direct-react-native-sdk";
+import TorusSdk from "@toruslabs/torus-direct-react-native-sdk";
 
 export default class App extends React.Component {
   state = { selectedVerifier: GITHUB, loginHint: "", consoleText: "" };
@@ -9,8 +9,8 @@ export default class App extends React.Component {
   componentDidMount = async () => {
     try {
       TorusSdk.init({
-        // redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
-        redirectUri: "tdsdk://tdsdk/oauthCallback",
+        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        // redirectUri: "tdsdk://tdsdk/oauthCallback",
         network: "testnet",  // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
       });
