@@ -9,7 +9,6 @@ import Foundation
 import TorusSwiftDirectSDK
 import PromiseKit
 import BestLogger
-import React
 
 @available(iOS 11.0, *)
 @objc(RNTorusDirectSdk)
