@@ -5,6 +5,14 @@
 
 `$ npm install @toruslabs/torus-direct-react-native-sdk --save`
 
+Please refer to the native sdks for specific configuration.
+
+[Android Sdk](https://github.com/torusresearch/torus-direct-android-sdk)
+[iOS Sdk](https://github.com/torusresearch/torus-direct-swift-sdk)
+
+More info can be found on docs [here](https://docs.tor.us/direct-auth/redirects-and-service-workers#android-and-react-native-android)
+
+
 ### Mostly automatic installation
 
 `$ react-native link torus-direct-react-native-sdk`
