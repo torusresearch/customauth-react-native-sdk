@@ -13,10 +13,10 @@
   "author": "Chaitanya Potti",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.63.2"
+    "react-native": "^0.63.4"
   },
   "devDependencies": {
-    "react-native": "^0.63.2"
+    "react-native": "^0.63.4"
   },
   "bugs": {
     "url": "https://github.com/torusresearch/torus-direct-react-native-sdk/issues"

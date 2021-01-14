@@ -7,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath 'com.android.tools.build:gradle:4.1.1'
     }
 }
 
@@ -49,6 +49,6 @@ repositories {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:torus-direct-android-sdk:1.0.15'
+    api 'org.torusresearch:torus-direct-android-sdk:1.1.1'
 }
   

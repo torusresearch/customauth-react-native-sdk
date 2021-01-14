@@ -32,16 +32,16 @@ import java.util.List;
 // Checks are not present at certain places. It implies params are mandatory and app should crash if they are not provided.
 public final class UtilsFactory {
     public static DirectSdkArgs directSdkArgsFromMap(ReadableMap map) {
-        String redirectUri = map.getString("redirectUri");
-        DirectSdkArgs args = new DirectSdkArgs(redirectUri);
+        String browserRedirectUri = map.getString("browserRedirectUri");
+        DirectSdkArgs args = new DirectSdkArgs(browserRedirectUri);
         if (map.hasKey("network")) {
-            args.setNetwork(TorusNetwork.valueOfLabel(map.getString("network")));
+            args = new DirectSdkArgs(browserRedirectUri, TorusNetwork.valueOfLabel(map.getString("network")));
         }
         if (map.hasKey("proxyContractAddress")) {
             args.setProxyContractAddress((map.getString("proxyContractAddress")));
         }
-        if (map.hasKey("browserRedirectUri")) {
-            args.setBrowserRedirectUri((map.getString("browserRedirectUri")));
+        if (map.hasKey("redirectUri")) {
+            args.setRedirectUri((map.getString("redirectUri")));
         }
         return args;
     }
