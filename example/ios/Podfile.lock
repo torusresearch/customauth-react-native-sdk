@@ -2,11 +2,11 @@ PODS:
   - BestLogger (0.0.3)
   - BigInt (4.0.0)
   - boost-for-react-native (1.63.0)
-  - CocoaAsyncSocket (7.6.4)
+  - CocoaAsyncSocket (7.6.5)
   - CocoaLibEvent (1.0.0)
   - CryptoSwift (1.0.0)
   - DoubleConversion (1.1.6)
-  - EXConstants (9.2.0):
+  - EXConstants (9.3.5):
     - UMConstantsInterface
     - UMCore
   - EXErrorRecovery (1.3.0):
@@ -349,19 +349,19 @@ PODS:
     - React-Core
   - RNScreens (2.10.1):
     - React
-  - RNTorusDirectSdk (0.1.1):
+  - RNTorusDirectSdk (0.1.4):
     - React
     - secp256k1.c (= 0.1.2)
-    - Torus-directSDK (~> 0.0.1)
+    - Torus-directSDK (~> 0.1.0)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - Torus-directSDK (0.0.16):
+  - Torus-directSDK (0.1.1):
     - BestLogger (~> 0.0.1)
-    - Torus-utils (~> 0.0.1)
-  - Torus-fetchNodeDetails (0.0.19):
+    - Torus-utils (~> 0.1.0)
+  - Torus-fetchNodeDetails (0.0.20):
     - BestLogger (~> 0.0.1)
     - web3swift (~> 2.3.0)
-  - Torus-utils (0.0.23):
+  - Torus-utils (0.1.1):
     - BestLogger (~> 0.0.1)
     - PromiseKit/Foundation (~> 6.0)
     - Torus-fetchNodeDetails (~> 0.0.1)
@@ -394,7 +394,7 @@ PODS:
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - EXConstants (from `../node_modules/expo-constants/ios`)
+  - EXConstants (from `../node_modules/expo-linking/node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
@@ -454,7 +454,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNTorusDirectSdk (from `../node_modules/torus-direct-react-native-sdk`)
+  - "RNTorusDirectSdk (from `../node_modules/@toruslabs/torus-direct-react-native-sdk`)"
   - secp256k1.c (= 0.1.2)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
   - UMBarCodeScannerInterface (from `../node_modules/unimodules-barcode-scanner-interface/ios`)
@@ -500,7 +500,7 @@ EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   EXConstants:
-    :path: "../node_modules/expo-constants/ios"
+    :path: "../node_modules/expo-linking/node_modules/expo-constants/ios"
   EXErrorRecovery:
     :path: "../node_modules/expo-error-recovery/ios"
   EXFileSystem:
@@ -578,7 +578,7 @@ EXTERNAL SOURCES:
   RNScreens:
     :path: "../node_modules/react-native-screens"
   RNTorusDirectSdk:
-    :path: "../node_modules/torus-direct-react-native-sdk"
+    :path: "../node_modules/@toruslabs/torus-direct-react-native-sdk"
   UMAppLoader:
     :path: "../node_modules/unimodules-app-loader/ios"
   UMBarCodeScannerInterface:
@@ -612,11 +612,11 @@ SPEC CHECKSUMS:
   BestLogger: 70475db073dfab3ec1ba9b58b0bb78126b068eee
   BigInt: 2aad1a9942dc932ec8b84290d2c564a3d76f97ab
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   DoubleConversion: cde416483dac037923206447da6e1454df403714
-  EXConstants: 6ec1ea4a13ec734c7e2274bc9e5b7408d73007a1
+  EXConstants: 5874c3bf65601ce96049412e6e5f43d198c1cdaf
   EXErrorRecovery: cfb65ec51567cf57a00b2720a2367ac009298319
   EXFileSystem: efd6c0225f90c8b2c85131d578a09e13197e8b70
   EXFont: 91111ccdce7c739ff51c5fcb484f2dd9a9a4ce45
@@ -664,12 +664,12 @@ SPEC CHECKSUMS:
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
-  RNTorusDirectSdk: e3ae0976c981b449b45a22d0bb8955cb03823c70
+  RNTorusDirectSdk: 8a01819eb50956fada07e3f17a216b3dc6bf46a0
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  Torus-directSDK: 4ce5c8fe297bdcc6bfea26ecca299765c31c79d6
-  Torus-fetchNodeDetails: 3a2ce2095db598949b923cbaff827632918510ff
-  Torus-utils: d6473b443c91130cd34b65468c4cc6e4c56dd72c
+  Torus-directSDK: f48d6acca6b3a4c451881a636f3d8e8a7925469a
+  Torus-fetchNodeDetails: 567d0c73c1b318c8811abcef0b2f31cfdcd5a4a4
+  Torus-utils: cd8ac44a3397d1dac0132ca414478f9dd55a8825
   UMAppLoader: 939854a42e69527ee11dd17b39ebafcbfbefd05c
   UMBarCodeScannerInterface: 198ced513a0cf8143d822620f1620bce467d02be
   UMCameraInterface: dbcaade8d0364ba5518ae4519c63c59bf010aa89
@@ -689,4 +689,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 606ad2c824ce8767f0e5d6fd8d21d2f0ebcd8a36
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
