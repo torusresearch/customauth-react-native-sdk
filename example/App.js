@@ -6,11 +6,27 @@ import TorusSdk from "@toruslabs/torus-direct-react-native-sdk";
 
 export default class App extends React.Component {
   state = { selectedVerifier: GITHUB, loginHint: "", consoleText: "" };
-
+  
   componentDidMount = async () => {
+    /**
+     * Testing mode
+     * 1. "https://scripts.toruswallet.io/redirect.html" will redirect to arbitrary redirectUri and should ONLY be use in developement mode. 
+     * 2. If you want a similar, i.e. brower to application (deeplink) flow, please host you own URL with hardcoded redirectUri for security purposes. 
+     *
+     * browserRedirectUri: "https://scripts.toruswallet.io/redirect.html"
+     * redirectUri: "<APPLICATION_REDIRECT_URI>"
+     * 
+     * Production mode
+     * browserRedirectUri: "<APPLICATION_REDIRECT_URI>"
+     * redirectUri: "<APPLICATION_REDIRECT_URI>"
+     * 
+     * Android example: <APPLICATION_REDIRECT_URI> = "torusapp://org.torusresearch.torusdirectexample/redirect",
+     * iOS example:     <APPLICATION_REDIRECT_URI> = "tdsdk://tdsdk/oauthCallback",
+     */
     try {
       TorusSdk.init({
         browserRedirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
         network: "testnet", // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
       });
@@ -18,7 +34,7 @@ export default class App extends React.Component {
       console.error(error, "mounted caught");
     }
   };
-
+  
   login = async () => {
     const { selectedVerifier } = this.state;
     try {
@@ -34,59 +50,60 @@ export default class App extends React.Component {
       console.error(error, "login caught");
     }
   };
-
+  
   render() {
     const { selectedVerifier, consoleText } = this.state;
     return (
       <View style={styles.container}>
-        <View style={styles.container}>
-          <Text style={styles.wrapper}>Verifier:</Text>
-          <Picker
-            style={styles.wrapper}
-            selectedValue={selectedVerifier}
-            onValueChange={(itemValue) => {
-              this.setState({ selectedVerifier: itemValue });
-            }}>
-            {Object.keys(verifierMap).map((login) => (
-              <Picker.Item style={styles.wrapper} value={login} key={login.toString()} label={verifierMap[login].name} />
-            ))}
-          </Picker>
+      <View style={styles.container}>
+      <Text style={styles.wrapper}>Verifier:</Text>
+      <Picker
+      style={styles.wrapper}
+      selectedValue={selectedVerifier}
+      onValueChange={(itemValue) => {
+        this.setState({ selectedVerifier: itemValue });
+      }}>
+      {Object.keys(verifierMap).map((login) => (
+        <Picker.Item style={styles.wrapper} value={login} key={login.toString()} label={verifierMap[login].name} />
+        ))}
+        </Picker>
         </View>
         <View style={styles.top}>
-          <Button onPress={this.login} title="Login with Torus" />
+        <Button onPress={this.login} title="Login with Torus" />
         </View>
         <View style={styles.console}>
-          <Text>{consoleText}</Text>
+        <Text>{consoleText}</Text>
         </View>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  wrapper: {
-    alignItems: "center",
-    justifyContent: "center",
-    height: 50,
-    width: 250,
-  },
-  top: {
-    // marginTop: "20",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  console: {
-    flex: 1,
-    height: 250,
-    width: 250,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+        </View>
+        );
+      }
+    }
+    
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      wrapper: {
+        alignItems: "center",
+        justifyContent: "center",
+        height: 50,
+        width: 250,
+      },
+      top: {
+        // marginTop: "20",
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      console: {
+        flex: 1,
+        height: 250,
+        width: 250,
+        alignItems: "center",
+        justifyContent: "center",
+      },
+    });
+    

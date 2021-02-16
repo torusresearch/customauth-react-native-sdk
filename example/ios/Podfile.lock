@@ -6,40 +6,44 @@ PODS:
   - CocoaLibEvent (1.0.0)
   - CryptoSwift (1.0.0)
   - DoubleConversion (1.1.6)
+  - EXApplication (2.4.1):
+    - UMCore
   - EXConstants (9.3.5):
     - UMConstantsInterface
     - UMCore
-  - EXErrorRecovery (1.3.0):
+  - EXErrorRecovery (1.4.0):
     - UMCore
-  - EXFileSystem (9.2.0):
+  - EXFileSystem (9.3.0):
     - UMCore
     - UMFileSystemInterface
-  - EXFont (8.3.0):
+  - EXFont (8.4.0):
     - UMCore
     - UMFontInterface
-  - EXImageLoader (1.2.0):
+  - EXImageLoader (1.3.0):
     - React-Core
     - UMCore
     - UMImageLoaderInterface
-  - EXKeepAwake (8.3.0):
+  - EXKeepAwake (8.4.0):
     - UMCore
-  - EXLinearGradient (8.3.1):
+  - EXLinearGradient (8.4.0):
     - UMCore
-  - EXLocation (9.0.1):
+  - EXLocation (10.0.0):
     - UMCore
     - UMPermissionsInterface
     - UMTaskManagerInterface
-  - EXPermissions (9.3.0):
+  - EXPermissions (10.0.0):
     - UMCore
     - UMPermissionsInterface
-  - EXSplashScreen (0.6.2):
-    - React
+  - EXSecureStore (9.3.0):
     - UMCore
-  - EXSQLite (8.4.0):
+  - EXSplashScreen (0.9.0):
+    - React-Core
+    - UMCore
+  - EXSQLite (8.5.0):
     - UMCore
     - UMFileSystemInterface
-  - EXUpdates (0.3.5):
-    - React
+  - EXUpdates (0.4.1):
+    - React-Core
     - UMCore
   - FBLazyVector (0.63.4)
   - FBReactNativeSpec (0.63.4):
@@ -61,8 +65,8 @@ PODS:
     - OpenSSL-Universal (= 1.0.2.20)
   - Flipper-Glog (0.3.6)
   - Flipper-PeerTalk (0.0.4)
-  - Flipper-RSocket (1.1.0):
-    - Flipper-Folly (~> 2.2)
+  - Flipper-RSocket (1.1.1):
+    - Flipper-Folly (~> 2.3)
   - FlipperKit (0.54.0):
     - FlipperKit/Core (= 0.54.0)
   - FlipperKit/Core (0.54.0):
@@ -343,16 +347,18 @@ PODS:
     - React-Core (= 0.63.4)
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
-  - RNGestureHandler (1.7.0):
-    - React
+  - RNCPicker (1.9.11):
+    - React-Core
+  - RNGestureHandler (1.10.1):
+    - React-Core
   - RNReanimated (1.13.2):
     - React-Core
-  - RNScreens (2.10.1):
-    - React
-  - RNTorusDirectSdk (0.1.4):
+  - RNScreens (2.17.1):
+    - React-Core
+  - RNTorusDirectSdk (0.1.5):
     - React
     - secp256k1.c (= 0.1.2)
-    - Torus-directSDK (~> 0.1.0)
+    - Torus-directSDK (~> 0.1.1)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
   - Torus-directSDK (0.1.1):
@@ -365,23 +371,23 @@ PODS:
     - BestLogger (~> 0.0.1)
     - PromiseKit/Foundation (~> 6.0)
     - Torus-fetchNodeDetails (~> 0.0.1)
-  - UMAppLoader (1.3.0)
-  - UMBarCodeScannerInterface (5.3.0)
-  - UMCameraInterface (5.3.0)
-  - UMConstantsInterface (5.3.0)
-  - UMCore (5.5.1)
-  - UMFaceDetectorInterface (5.3.0)
-  - UMFileSystemInterface (5.3.0)
-  - UMFontInterface (5.3.0)
-  - UMImageLoaderInterface (5.3.0)
-  - UMPermissionsInterface (5.3.0):
+  - UMAppLoader (1.4.0)
+  - UMBarCodeScannerInterface (5.4.0)
+  - UMCameraInterface (5.4.0)
+  - UMConstantsInterface (5.4.0)
+  - UMCore (6.0.0)
+  - UMFaceDetectorInterface (5.4.0)
+  - UMFileSystemInterface (5.4.0)
+  - UMFontInterface (5.4.0)
+  - UMImageLoaderInterface (5.4.0)
+  - UMPermissionsInterface (5.4.0):
     - UMCore
-  - UMReactNativeAdapter (5.6.0):
+  - UMReactNativeAdapter (5.7.0):
     - React-Core
     - UMCore
     - UMFontInterface
-  - UMSensorsInterface (5.3.0)
-  - UMTaskManagerInterface (5.3.0)
+  - UMSensorsInterface (5.4.0)
+  - UMTaskManagerInterface (5.4.0)
   - web3swift (2.3.0):
     - BigInt (~> 4.0)
     - CryptoSwift (~> 1.0.0)
@@ -394,7 +400,8 @@ PODS:
 
 DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - EXConstants (from `../node_modules/expo-linking/node_modules/expo-constants/ios`)
+  - EXApplication (from `../node_modules/expo-application/ios`)
+  - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
@@ -403,6 +410,7 @@ DEPENDENCIES:
   - EXLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - EXLocation (from `../node_modules/expo-location/ios`)
   - EXPermissions (from `../node_modules/expo-permissions/ios`)
+  - EXSecureStore (from `../node_modules/expo-secure-store/ios`)
   - EXSplashScreen (from `../node_modules/expo-splash-screen/ios`)
   - EXSQLite (from `../node_modules/expo-sqlite/ios`)
   - EXUpdates (from `../node_modules/expo-updates/ios`)
@@ -410,7 +418,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Flipper (~> 0.54.0)
   - Flipper-DoubleConversion (= 1.1.7)
-  - Flipper-Folly (~> 2.2)
+  - Flipper-Folly (= 2.3.0)
   - Flipper-Glog (= 0.3.6)
   - Flipper-PeerTalk (~> 0.0.4)
   - Flipper-RSocket (~> 1.1)
@@ -451,6 +459,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -499,8 +508,10 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+  EXApplication:
+    :path: "../node_modules/expo-application/ios"
   EXConstants:
-    :path: "../node_modules/expo-linking/node_modules/expo-constants/ios"
+    :path: "../node_modules/expo-constants/ios"
   EXErrorRecovery:
     :path: "../node_modules/expo-error-recovery/ios"
   EXFileSystem:
@@ -517,6 +528,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-location/ios"
   EXPermissions:
     :path: "../node_modules/expo-permissions/ios"
+  EXSecureStore:
+    :path: "../node_modules/expo-secure-store/ios"
   EXSplashScreen:
     :path: "../node_modules/expo-splash-screen/ios"
   EXSQLite:
@@ -571,6 +584,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNCPicker:
+    :path: "../node_modules/@react-native-picker/picker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -616,18 +631,20 @@ SPEC CHECKSUMS:
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
   DoubleConversion: cde416483dac037923206447da6e1454df403714
+  EXApplication: b61d007b4f23ab6aa3d7fe1f517ffd81ed962749
   EXConstants: 5874c3bf65601ce96049412e6e5f43d198c1cdaf
-  EXErrorRecovery: cfb65ec51567cf57a00b2720a2367ac009298319
-  EXFileSystem: efd6c0225f90c8b2c85131d578a09e13197e8b70
-  EXFont: 91111ccdce7c739ff51c5fcb484f2dd9a9a4ce45
-  EXImageLoader: 0b33400e65955c5510a09afc2f9bb369a81e1c6e
-  EXKeepAwake: 4502a0ed7b7c5135587004e6d118acf8cea055fc
-  EXLinearGradient: 54bec9b1b4940407fc498cab6a0c49c617c8cf54
-  EXLocation: 210d39a6e5d793f9721117a11c0b27dc523a3183
-  EXPermissions: 5797c6c72efb411b2bbf502cd5acd841e3ffeefa
-  EXSplashScreen: accde6b1aaa87f395d6c5e0542e23d5c09a549ab
-  EXSQLite: 246074ef810a3b5e41c0cf8cde141adccc3b0f6b
-  EXUpdates: 305ea4c81ed9e6f70274c1f5fe765d646d5dcbdc
+  EXErrorRecovery: 595048e4ae93a70716b195f2ebc1849d63e0ee3f
+  EXFileSystem: 7c4397042d9a3ae47e6c53c0ce0229d4b4204851
+  EXFont: 0f005a50e7d6d30b61e4680069c4025b9feeffe4
+  EXImageLoader: b9f8ac1b2d9bcf9d929a6daf487c70b8425ea7d4
+  EXKeepAwake: cb0641970ea9c9a35759a5e3be23eca7e0c83b70
+  EXLinearGradient: e082a9b5ec21532b98acba28ee988f9e70b50119
+  EXLocation: 5689bbf163581eefb70978130611ec25d027bcf3
+  EXPermissions: 55cadfd11547c07a5390ba7eea63bd998a71018d
+  EXSecureStore: 7cda998bd7c150b28021cb9c85b0747daa6a5ab5
+  EXSplashScreen: 1d97ad60f1bbe461c99229f5245a3b529cb30cb2
+  EXSQLite: 98f4062e567a2facc80aa6a064be88fa1a9476b6
+  EXUpdates: 82b87323deef92651a130a0f38abd67d970604ab
   FBLazyVector: 3bb422f41b18121b71783a905c10e58606f7dc3e
   FBReactNativeSpec: f2c97f2529dd79c083355182cc158c9f98f4bd6e
   Flipper: be611d4b742d8c87fbae2ca5f44603a02539e365
@@ -635,7 +652,7 @@ SPEC CHECKSUMS:
   Flipper-Folly: e4493b013c02d9347d5e0cb4d128680239f6c78a
   Flipper-Glog: 1dfd6abf1e922806c52ceb8701a3599a79a200a6
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
-  Flipper-RSocket: 64e7431a55835eb953b0bf984ef3b90ae9fdddd7
+  Flipper-RSocket: a3acb8812d6adf127deb0a5edae2793b97e6b641
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
@@ -661,32 +678,33 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
+  RNCPicker: 6780c753e9e674065db90d9c965920516402579d
+  RNGestureHandler: 5e58135436aacc1c5d29b75547d3d2b9430d052c
   RNReanimated: e03f7425cb7a38dcf1b644d680d1bfc91c3337ad
-  RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
-  RNTorusDirectSdk: 8a01819eb50956fada07e3f17a216b3dc6bf46a0
+  RNScreens: b6c9607e6fe47c1b6e2f1910d2acd46dd7ecea3a
+  RNTorusDirectSdk: 76b2aa0dc3820fc967a998f85f4ceb0698f3e4e4
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   Torus-directSDK: f48d6acca6b3a4c451881a636f3d8e8a7925469a
   Torus-fetchNodeDetails: 567d0c73c1b318c8811abcef0b2f31cfdcd5a4a4
   Torus-utils: cd8ac44a3397d1dac0132ca414478f9dd55a8825
-  UMAppLoader: 939854a42e69527ee11dd17b39ebafcbfbefd05c
-  UMBarCodeScannerInterface: 198ced513a0cf8143d822620f1620bce467d02be
-  UMCameraInterface: dbcaade8d0364ba5518ae4519c63c59bf010aa89
-  UMConstantsInterface: 2ad180a29afdf28607d11d6e23c90793d294ea0e
-  UMCore: 9b6c0ae27349356ed39c9e78b99b7830bb093856
-  UMFaceDetectorInterface: 24faf81d90fb00d477c674fd00b9cb005176f4a0
-  UMFileSystemInterface: 5216dca58177014de7f1157d69c70a1ec5c620bb
-  UMFontInterface: 4d0f13001fc59436125d7424cdfa7c897b699724
-  UMImageLoaderInterface: 575357942cc57ad31662659df9d5a73daa6de54c
-  UMPermissionsInterface: 208b2c5fd6756dcad739d806dfe32b9e44b9311b
-  UMReactNativeAdapter: 2c175f151cfe5ff011ced7bc79ccb08bf124f6c3
-  UMSensorsInterface: 1df848f22690ccd23a821777f00df230fe5a28e3
-  UMTaskManagerInterface: dfc62edf51844ae87dafc1fe849b594871fda1e5
+  UMAppLoader: 515d02d30e29cf05bbe58f77c59f896840cc5895
+  UMBarCodeScannerInterface: 77a5bebdc21106979a363bb057c4fbb46aacc171
+  UMCameraInterface: 123f7ebc3f6d0915afd369f7133bf29231ed418b
+  UMConstantsInterface: e4358999ee6aeb248ba9584a6fbb409ae3ac36f8
+  UMCore: 171e3e5b94edec38519947a3831436b27bb4afdd
+  UMFaceDetectorInterface: f743f95c143144d69cb1efc8681d9b3515df2080
+  UMFileSystemInterface: c87240844f0337bff174cedc80282b62a5298095
+  UMFontInterface: 60ea8ac3aec17845ffeb4bd9ddd02f7f23049b7e
+  UMImageLoaderInterface: 8fdbaf4f610d6e0e1a9286db78e05294db950581
+  UMPermissionsInterface: ea27d84c8e1f70426ac04cdc93369b214b7fe1a1
+  UMReactNativeAdapter: c2a83677e340b1448d7dfa6412377dd8bbf62c2c
+  UMSensorsInterface: d7e32791c7d4e0fa9ae3e76698624f90494b7bd9
+  UMTaskManagerInterface: eee33176282a16e6348aabcbe89ebd363e69f9cb
   web3swift: 0f097eafe1d08f478694b882581b85a01afb6633
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 606ad2c824ce8767f0e5d6fd8d21d2f0ebcd8a36
+PODFILE CHECKSUM: f479e47815d157c88084f3337a3c4dac9c606d99
 
 COCOAPODS: 1.10.1
