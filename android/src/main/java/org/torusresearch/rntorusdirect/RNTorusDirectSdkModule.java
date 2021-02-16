@@ -12,7 +12,6 @@ import org.torusresearch.rntorusdirect.utils.UtilsFactory;
 import org.torusresearch.torusdirect.TorusDirectSdk;
 
 import java.util.HashMap;
-import java.util.concurrent.ForkJoinPool;
 
 public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
 
@@ -26,15 +25,13 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void init(ReadableMap args, Promise promise) {
-        ForkJoinPool.commonPool().submit(() -> {
-            try {
-                this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
-                WritableMap map = new WritableNativeMap();
-                promise.resolve(map);
-            } catch (Exception e) {
-                promise.reject(e);
-            }
-        });
+        try {
+            this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
+            WritableMap map = new WritableNativeMap();
+            promise.resolve(map);
+        } catch (Exception e) {
+            promise.reject(e);
+        }
     }
 
     @ReactMethod
