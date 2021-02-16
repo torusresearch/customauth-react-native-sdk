@@ -10,9 +10,6 @@ import com.facebook.react.bridge.WritableNativeMap;
 
 import org.torusresearch.rntorusdirect.utils.UtilsFactory;
 import org.torusresearch.torusdirect.TorusDirectSdk;
-import org.torusresearch.torusdirect.types.TorusAggregateLoginResponse;
-import org.torusresearch.torusdirect.types.TorusKey;
-import org.torusresearch.torusdirect.types.TorusLoginResponse;
 
 import java.util.HashMap;
 import java.util.concurrent.ForkJoinPool;
@@ -42,38 +39,28 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void triggerLogin(ReadableMap subVerifierDetails, Promise promise) {
-        ForkJoinPool.commonPool().submit(() -> {
-            try {
-                TorusLoginResponse response = this.torusDirectSdk.triggerLogin(UtilsFactory.subVerifierDetailsFromMap(subVerifierDetails)).get();
-                promise.resolve(UtilsFactory.torusLoginResponseToMap(response));
-            } catch (Exception e) {
-                promise.reject(e);
-            }
+        this.torusDirectSdk.triggerLogin(UtilsFactory.subVerifierDetailsFromMap(subVerifierDetails)).whenComplete((response, throwable) -> {
+            if (throwable != null) promise.reject(throwable);
+            else promise.resolve(UtilsFactory.torusLoginResponseToMap(response));
         });
     }
 
     @ReactMethod
     public void triggerAggregateLogin(ReadableMap aggregateLoginParams, Promise promise) {
-        ForkJoinPool.commonPool().submit(() -> {
-            try {
-                TorusAggregateLoginResponse response = this.torusDirectSdk.triggerAggregateLogin(UtilsFactory.aggregateLoginParamsFromMap(aggregateLoginParams)).get();
-                promise.resolve(UtilsFactory.torusAggregateLoginResponseToMap(response));
-            } catch (Exception e) {
-                promise.reject(e);
-            }
+        this.torusDirectSdk.triggerAggregateLogin(UtilsFactory.aggregateLoginParamsFromMap(aggregateLoginParams)).whenComplete((torusAggregateLoginResponse, throwable) -> {
+            if (throwable != null) promise.reject(throwable);
+            else
+                promise.resolve(UtilsFactory.torusAggregateLoginResponseToMap(torusAggregateLoginResponse));
         });
     }
 
     @ReactMethod
     public void getTorusKey(String verifier, String verifierId, ReadableMap verifierParams, String idToken, Promise promise) {
-        ForkJoinPool.commonPool().submit(() -> {
-            try {
-                HashMap<String, Object> finalVerifierParams = UtilsFactory.toHashMap(verifierParams);
-                TorusKey response = this.torusDirectSdk.getTorusKey(verifier, verifierId, finalVerifierParams, idToken).get();
-                promise.resolve(UtilsFactory.torusKeyToMap(response));
-            } catch (Exception e) {
-                promise.reject(e);
-            }
+        HashMap<String, Object> finalVerifierParams = UtilsFactory.toHashMap(verifierParams);
+        this.torusDirectSdk.getTorusKey(verifier, verifierId, finalVerifierParams, idToken).whenComplete((torusKey, throwable) -> {
+            if (throwable != null) promise.reject(throwable);
+            else
+                promise.resolve(UtilsFactory.torusKeyToMap(torusKey));
         });
     }
 
