@@ -7,6 +7,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^1.9.11",
     "@toruslabs/torus-direct-react-native-sdk": "file:../toruslabs-torus-direct-react-native-sdk-0.1.5.tgz",
     "expo": "~40.0.1",
     "expo-splash-screen": "~0.9.0",
