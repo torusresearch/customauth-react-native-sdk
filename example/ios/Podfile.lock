@@ -367,7 +367,7 @@ PODS:
   - Torus-fetchNodeDetails (0.0.20):
     - BestLogger (~> 0.0.1)
     - web3swift (~> 2.3.0)
-  - Torus-utils (0.1.1):
+  - Torus-utils (0.1.3):
     - BestLogger (~> 0.0.1)
     - PromiseKit/Foundation (~> 6.0)
     - Torus-fetchNodeDetails (~> 0.0.1)
@@ -687,7 +687,7 @@ SPEC CHECKSUMS:
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   Torus-directSDK: f48d6acca6b3a4c451881a636f3d8e8a7925469a
   Torus-fetchNodeDetails: 567d0c73c1b318c8811abcef0b2f31cfdcd5a4a4
-  Torus-utils: cd8ac44a3397d1dac0132ca414478f9dd55a8825
+  Torus-utils: 9c5328d2694bf30f8d8120af8fb2dd492cc638b7
   UMAppLoader: 515d02d30e29cf05bbe58f77c59f896840cc5895
   UMBarCodeScannerInterface: 77a5bebdc21106979a363bb057c4fbb46aacc171
   UMCameraInterface: 123f7ebc3f6d0915afd369f7133bf29231ed418b
