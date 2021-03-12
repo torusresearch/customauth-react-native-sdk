@@ -4,6 +4,7 @@ import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
@@ -55,6 +56,15 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     public void getTorusKey(String verifier, String verifierId, ReadableMap verifierParams, String idToken, Promise promise) {
         HashMap<String, Object> finalVerifierParams = UtilsFactory.toHashMap(verifierParams);
         this.torusDirectSdk.getTorusKey(verifier, verifierId, finalVerifierParams, idToken).whenComplete((torusKey, throwable) -> {
+            if (throwable != null) promise.reject(throwable);
+            else
+                promise.resolve(UtilsFactory.torusKeyToMap(torusKey));
+        });
+    }
+
+    @ReactMethod
+    public void getAggregateTorusKey(String verifier, String verifierId, ReadableArray subVerifierInfoArray, Promise promise) {
+        this.torusDirectSdk.getAggregateTorusKey(verifier, verifierId, UtilsFactory.subVerifierInfoFromArray(subVerifierInfoArray)).whenComplete((torusKey, throwable) -> {
             if (throwable != null) promise.reject(throwable);
             else
                 promise.resolve(UtilsFactory.torusKeyToMap(torusKey));

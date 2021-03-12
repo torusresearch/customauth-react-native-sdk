@@ -22,6 +22,7 @@ import org.torusresearch.torusdirect.types.TorusAggregateLoginResponse;
 import org.torusresearch.torusdirect.types.TorusKey;
 import org.torusresearch.torusdirect.types.TorusLoginResponse;
 import org.torusresearch.torusdirect.types.TorusNetwork;
+import org.torusresearch.torusdirect.types.TorusSubVerifierInfo;
 import org.torusresearch.torusdirect.types.TorusVerifierUnionResponse;
 
 import java.util.ArrayList;
@@ -74,6 +75,17 @@ public final class UtilsFactory {
         boolean isNewActivity = true;
         if (map.hasKey("isNewActivity")) isNewActivity = map.getBoolean("isNewActivity");
         return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity);
+    }
+
+    public static TorusSubVerifierInfo[] subVerifierInfoFromArray(ReadableArray arr) {
+        TorusSubVerifierInfo[] torusSubVerifierInfo = new TorusSubVerifierInfo[arr.size()];
+        for (int i = 0; i < arr.size(); i++) {
+            ReadableMap map = arr.getMap(i);
+            String verifier = map.getString("verifier");
+            String idToken = map.getString("idToken");
+            torusSubVerifierInfo[i] = new TorusSubVerifierInfo(verifier, idToken);
+        }
+        return torusSubVerifierInfo;
     }
 
     public static WritableMap torusLoginResponseToMap(TorusLoginResponse response) {
