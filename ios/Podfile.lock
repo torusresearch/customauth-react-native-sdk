@@ -259,13 +259,13 @@ PODS:
     - React-jsi (= 0.63.4)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - Torus-directSDK (0.1.0):
+  - Torus-directSDK (0.3.0):
     - BestLogger (~> 0.0.1)
     - Torus-utils (~> 0.1.0)
-  - Torus-fetchNodeDetails (0.0.19):
+  - Torus-fetchNodeDetails (0.0.20):
     - BestLogger (~> 0.0.1)
     - web3swift (~> 2.3.0)
-  - Torus-utils (0.1.0):
+  - Torus-utils (0.1.3):
     - BestLogger (~> 0.0.1)
     - PromiseKit/Foundation (~> 6.0)
     - Torus-fetchNodeDetails (~> 0.0.1)
@@ -306,7 +306,7 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - secp256k1.c (= 0.1.2)
-  - Torus-directSDK (~> 0.1.0)
+  - Torus-directSDK (~> 0.3.0)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -410,12 +410,12 @@ SPEC CHECKSUMS:
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  Torus-directSDK: 3829e93a0746aa1d1cb46007d60ee828f6f80c1b
-  Torus-fetchNodeDetails: 3a2ce2095db598949b923cbaff827632918510ff
-  Torus-utils: 61d4851eef84fb41597bb00c4a185c1f48ec3910
+  Torus-directSDK: 70dcc5ef57438af81a5f306b7282baa0680f9c44
+  Torus-fetchNodeDetails: 567d0c73c1b318c8811abcef0b2f31cfdcd5a4a4
+  Torus-utils: 9c5328d2694bf30f8d8120af8fb2dd492cc638b7
   web3swift: 0f097eafe1d08f478694b882581b85a01afb6633
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
 
-PODFILE CHECKSUM: d45125e9345be424c8fa763c9fce6cc744ed09eb
+PODFILE CHECKSUM: 55500c922e84174336270dcf011e1dd3f5261364
 
 COCOAPODS: 1.10.1

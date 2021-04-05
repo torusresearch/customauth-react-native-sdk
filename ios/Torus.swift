@@ -114,15 +114,13 @@ public class RNTorusDirectSdk: NSObject {
                                          browserRedirectURL: self.directAuthArgs!.browserRedirectUri,
                                          extraQueryParams: [:],
                                          jwtParams: [:])
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
 
-            var data: [String: Any] = [
-                "verifier": verifier,
-                "verifierId": verifierId,
-                "idToken": idToken,
-                "subVerifierId": subVerifierId
-            ]
-            resolve(data)
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
+            self.tdsdk!.getAggregateTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, subVerifierDetails: sub).done{ data in
+                resolve(data)
+            }.catch{ err in
+                reject("400", "getAggregateTorusKey: ", err)
+            }
         }catch let err as NSError {
             print("JSON decode failed: \(err.localizedDescription)")
             reject("400", "getAggregateTorusKey: ", err.localizedDescription)
