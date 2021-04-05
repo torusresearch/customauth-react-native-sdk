@@ -39,13 +39,21 @@ export default class App extends React.Component {
     const { selectedVerifier } = this.state;
     try {
       const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
-      const loginDetails = await TorusSdk.triggerLogin({
+      // const loginDetails = await TorusSdk.triggerLogin({
+      //   typeOfLogin,
+      //   verifier,
+      //   clientId,
+      //   jwtParams,
+      // });
+      // this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
+
+      const loginDetails = await TorusSdk.getAggregateTorusKey({
         typeOfLogin,
         verifier,
         clientId,
         jwtParams,
       });
-      this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
+      console.log(loginDetails);
     } catch (error) {
       console.error(error, "login caught");
     }

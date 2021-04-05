@@ -94,6 +94,19 @@ public class RNTorusDirectSdk: NSObject {
             reject("400", "triggerAggregateLogin: ", err.localizedDescription)
         }
     }
+
+    @objc public func getAggregateTorusKey(_ params: [String:Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
+        if(self.directAuthArgs == nil){
+            reject("400", "getAggregateTorusKey: ", "Call .initialize first")
+        }
+        
+        do{
+            resolve(params)
+        }catch let err as NSError {
+            print("JSON decode failed: \(err.localizedDescription)")
+            reject("400", "getAggregateTorusKey: ", err.localizedDescription)
+        }
+    }
     
     @objc class public func handle(_ url: String){
         TorusSwiftDirectSDK.handle(url: URL(string: url)!)
