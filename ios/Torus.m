@@ -21,7 +21,9 @@ RCT_EXTERN_METHOD(
                   )
 
 RCT_EXTERN_METHOD(
-                  getAggregateTorusKey: (NSDictionary)params
+                  getAggregateTorusKey: (NSString)verifier
+                  verifierId: (NSString)verifierId
+                  subVerifiers: (NSArray)subVerifiers
                   resolver: (RCTPromiseResolveBlock)resolve
                   rejecter: (RCTPromiseRejectBlock)reject
                   )

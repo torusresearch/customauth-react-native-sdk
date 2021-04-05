@@ -214,7 +214,7 @@ SWIFT_CLASS_NAMED("RNTorusDirectSdk") SWIFT_AVAILABILITY(ios,introduced=11.0)
 - (void)initialize:(NSDictionary<NSString *, id> * _Nonnull)params;
 - (void)triggerLogin:(NSDictionary<NSString *, id> * _Nonnull)params resolver:(RCTPromiseResolveBlock _Nonnull)resolve rejecter:(RCTPromiseRejectBlock _Nonnull)reject;
 - (void)triggerAggregateLogin:(NSDictionary<NSString *, id> * _Nonnull)params resolver:(RCTPromiseResolveBlock _Nonnull)resolve rejecter:(RCTPromiseRejectBlock _Nonnull)reject;
-- (void)getAggregateTorusKey:(NSDictionary<NSString *, id> * _Nonnull)params resolver:(RCTPromiseResolveBlock _Nonnull)resolve rejecter:(RCTPromiseRejectBlock _Nonnull)reject;
+- (void)getAggregateTorusKey:(NSString * _Nonnull)verifier verifierId:(NSString * _Nonnull)verifierId subVerifiers:(NSArray * _Nonnull)subVerifiers resolver:(RCTPromiseResolveBlock _Nonnull)resolve rejecter:(RCTPromiseRejectBlock _Nonnull)reject;
 + (void)handle:(NSString * _Nonnull)url;
 + (BOOL)requiresMainQueueSetup SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

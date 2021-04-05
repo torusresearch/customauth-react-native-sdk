@@ -95,13 +95,18 @@ public class RNTorusDirectSdk: NSObject {
         }
     }
 
-    @objc public func getAggregateTorusKey(_ params: [String:Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
+    @objc public func getAggregateTorusKey(_ verifier: String, verifierId verifierId: String, subVerifiers subVerifiers: [Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
         if(self.directAuthArgs == nil){
             reject("400", "getAggregateTorusKey: ", "Call .initialize first")
         }
         
         do{
-            resolve(params)
+            var data: [String: Any] = [
+                "verifier": verifier,
+                "verifierId": verifierId,
+                "subVerifiers": subVerifiers
+            ]
+            resolve(data)
         }catch let err as NSError {
             print("JSON decode failed: \(err.localizedDescription)")
             reject("400", "getAggregateTorusKey: ", err.localizedDescription)
