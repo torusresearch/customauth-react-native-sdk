@@ -95,7 +95,7 @@ public class RNTorusDirectSdk: NSObject {
         }
     }
 
-    @objc public func getAggregateTorusKey(_ verifier: String, verifierId verifierId: String, subVerifiers subVerifiers: [Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
+    @objc public func getAggregateTorusKey(_ verifier: String, verifierId verifierId: String, idToken idToken: String, subVerifierId subVerifierId: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
         if(self.directAuthArgs == nil){
             reject("400", "getAggregateTorusKey: ", "Call .initialize first")
         }
@@ -106,12 +106,21 @@ public class RNTorusDirectSdk: NSObject {
                 logvalue = 0
             }
 
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], loglevel: BestLogger.Level(rawValue: logvalue)!)
+            let sub = SubVerifierDetails(loginType: .installed,
+                                         loginProvider: .jwt,
+                                         clientId: "",
+                                         verifierName: subVerifierId,
+                                         redirectURL: self.directAuthArgs!.redirectUri,
+                                         browserRedirectURL: self.directAuthArgs!.browserRedirectUri,
+                                         extraQueryParams: [:],
+                                         jwtParams: [:])
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
 
             var data: [String: Any] = [
                 "verifier": verifier,
                 "verifierId": verifierId,
-                "subVerifiers": subVerifiers
+                "idToken": idToken,
+                "subVerifierId": subVerifierId
             ]
             resolve(data)
         }catch let err as NSError {

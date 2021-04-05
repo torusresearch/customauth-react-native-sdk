@@ -49,10 +49,7 @@ export default class App extends React.Component {
       // this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
 
       // Get aggregate Torus key 
-      const loginDetails = await TorusSdk.getAggregateTorusKey(verifier, "<id>", [
-        { verifier: "cognito", idToken: "<cognito token>" },
-        { verifier: "google", idToken: "<google token>" }
-      ]);
+      const loginDetails = await TorusSdk.getAggregateTorusKey(verifier, "<id>", "<cognito token>", "cognito");
       console.log(loginDetails);
     } catch (error) {
       console.error(error, "login caught");
