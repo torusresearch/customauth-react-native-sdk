@@ -101,6 +101,13 @@ public class RNTorusDirectSdk: NSObject {
         }
         
         do{
+            var logvalue: Int = 5
+            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
+                logvalue = 0
+            }
+
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], loglevel: BestLogger.Level(rawValue: logvalue)!)
+
             var data: [String: Any] = [
                 "verifier": verifier,
                 "verifierId": verifierId,
