@@ -38,19 +38,23 @@ export default class App extends React.Component {
   login = async () => {
     const { selectedVerifier } = this.state;
     try {
-      // const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
       // Trigger login
-      // const loginDetails = await TorusSdk.triggerLogin({
-      //   typeOfLogin,
-      //   verifier,
-      //   clientId,
-      //   jwtParams,
-      // });
-      // this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
+      const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
+      const loginDetails = await TorusSdk.triggerLogin({
+        typeOfLogin,
+        verifier,
+        clientId,
+        jwtParams,
+      });
+      this.setState({ consoleText: `publicAddress: ${loginDetails.publicAddress}` });
+
+      // Get Torus key 
+      // const loginDetails = await TorusSdk.getTorusKey("google-lrc", "<id>", "<token>");
+      // console.log(loginDetails);
 
       // Get aggregate Torus key 
-      const loginDetails = await TorusSdk.getAggregateTorusKey("alice-cognito-test", "<id>", "<cognito token>", "cognito");
-      console.log(loginDetails);
+      // const loginDetails = await TorusSdk.getAggregateTorusKey("tkey-google", "<id>", "<cognito token>", "cognito");
+      // console.log(loginDetails);
     } catch (error) {
       console.error(error, "login caught");
     }

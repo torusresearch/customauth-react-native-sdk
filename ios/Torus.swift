@@ -95,6 +95,29 @@ public class RNTorusDirectSdk: NSObject {
         }
     }
 
+    @objc public func getTorusKey(_ verifier: String, verifierId verifierId: String, idToken idToken: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
+        if(self.directAuthArgs == nil){
+            reject("400", "getTorusKey: ", "Call .initialize first")
+        }
+        
+        do{
+            var logvalue: Int = 5
+            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
+                logvalue = 0
+            }
+
+            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], loglevel: BestLogger.Level(rawValue: logvalue)!)
+            self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken).done{ data in
+                resolve(data)
+            }.catch{ err in
+                reject("400", "getTorusKey: ", err)
+            }
+        }catch let err as NSError {
+            print("JSON decode failed: \(err.localizedDescription)")
+            reject("400", "getTorusKey: ", err.localizedDescription)
+        }
+    }
+
     @objc public func getAggregateTorusKey(_ verifier: String, verifierId verifierId: String, idToken idToken: String, subVerifierId subVerifierId: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
         if(self.directAuthArgs == nil){
             reject("400", "getAggregateTorusKey: ", "Call .initialize first")
