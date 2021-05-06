@@ -73,8 +73,10 @@ public final class UtilsFactory {
             auth0ClientOptions = mapToJwtParams(map.getMap("jwtParams"));
         }
         boolean isNewActivity = true;
+        boolean preferCustomTabs = true;
         if (map.hasKey("isNewActivity")) isNewActivity = map.getBoolean("isNewActivity");
-        return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity);
+        if (map.hasKey("preferCustomTabs")) preferCustomTabs = map.getBoolean("preferCustomTabs");
+        return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity, preferCustomTabs);
     }
 
     public static TorusSubVerifierInfo[] subVerifierInfoFromArray(ReadableArray arr) {
@@ -114,9 +116,9 @@ public final class UtilsFactory {
     public static WritableMap torusAggregateLoginResponseToMap(TorusAggregateLoginResponse response) {
         WritableMap map = new WritableNativeMap();
         WritableArray userInfoArray = Arguments.createArray();
-        Arrays.asList(response.getUserInfo()).forEach(x -> {
+        for (TorusVerifierUnionResponse x : response.getUserInfo()) {
             userInfoArray.pushMap(getUserInfoWritableMap(x));
-        });
+        }
         map.putArray("userInfo", userInfoArray);
         map.putString("privateKey", response.getPrivateKey());
         map.putString("publicAddress", response.getPublicAddress());
