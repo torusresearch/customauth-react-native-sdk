@@ -74,9 +74,11 @@ public final class UtilsFactory {
         }
         boolean isNewActivity = true;
         boolean preferCustomTabs = true;
+        String[] allowedBrowsers = null;
         if (map.hasKey("isNewActivity")) isNewActivity = map.getBoolean("isNewActivity");
         if (map.hasKey("preferCustomTabs")) preferCustomTabs = map.getBoolean("preferCustomTabs");
-        return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity, preferCustomTabs);
+        if (map.hasKey("allowedBrowsers")) allowedBrowsers = map.getArray("allowedBrowsers").toArrayList().toArray(new String[0]);
+        return new SubVerifierDetails(typeOfLogin, verifier, clientId, auth0ClientOptions, isNewActivity, preferCustomTabs).setAllowedBrowsers(allowedBrowsers);
     }
 
     public static TorusSubVerifierInfo[] subVerifierInfoFromArray(ReadableArray arr) {
