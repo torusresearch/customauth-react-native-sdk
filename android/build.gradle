@@ -43,12 +43,12 @@ repositories {
         url "$rootDir/../node_modules/jsc-android/dist"
     }
     google()
-    jcenter()
+    mavenCentral()
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:torus-direct-android-sdk:1.4.0'
+    api 'org.torusresearch:torus-direct-android-sdk:1.5.1'
 }
   
