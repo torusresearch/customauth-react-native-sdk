@@ -28,6 +28,7 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tdsdk-swift</string>
+				<string>torusapp</string>
 				<string>tdsdk</string>
 			</array>
 		</dict>
