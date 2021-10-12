@@ -57,3 +57,16 @@ struct AggregateLoginParamsWebSDK: Codable{
     var verifierIdentifier: String
     var subVerifierDetailsArray: [SubVerifierDetailsWebSDK]
 }
+
+struct TorusSubVerifierInfoWebSDK: Codable {
+    var verifier: String
+    var idToken: String
+}
+
+func decodeTorusSubVerifierInfoWebSDK(obj: [String: Any]) throws -> TorusSubVerifierInfoWebSDK {
+    do{
+        return try JSONDecoder().decode(TorusSubVerifierInfoWebSDK.self, from: JSONSerialization.data(withJSONObject: obj))
+    }catch{
+        throw error
+    }
+}
