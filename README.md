@@ -19,13 +19,6 @@ Please refer to the native SDKs for platform-specific configuration.
 - [Android SDK](https://github.com/torusresearch/torus-direct-android-sdk)
 - [iOS SDK](https://github.com/torusresearch/torus-direct-swift-sdk)
 
-### Automatic installation
-
-```bash
-react-native link torus-direct-react-native-sdk
-```
-
-You should be ready to use the SDK now, if you faced any issues running this command, please [reach out to us for support](https://tor.us/contact-us.html).
 
 ### Manual installation
 
@@ -72,7 +65,7 @@ TorusDirect.init({
 
   // Redirect from browser, some providers don't allow to redirect to custom scheme, you'll need to configure a proxy web address in which case
   browserRedirectUri:
-    "torusapp://org.torusresearch.torusdirectexample/redirect",
+    "https://scripts.toruswallet.io/redirect.html",
 });
 ```
 
