@@ -13,7 +13,7 @@
   "author": "Chaitanya Potti",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.65.x"
+    "react-native": ">=0.65"
   },
   "devDependencies": {
     "react-native": "^0.65.1"
