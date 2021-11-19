@@ -10,14 +10,14 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 
 import org.torusresearch.rntorusdirect.utils.UtilsFactory;
-import org.torusresearch.torusdirect.TorusDirectSdk;
+import org.torusresearch.customauth.CustomAuth;
 
 import java.util.HashMap;
 
 public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
-    private TorusDirectSdk torusDirectSdk;
+    private CustomAuth torusDirectSdk;
 
     public RNTorusDirectSdkModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -27,7 +27,7 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void init(ReadableMap args, Promise promise) {
         try {
-            this.torusDirectSdk = new TorusDirectSdk(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
+            this.torusDirectSdk = new CustomAuth(UtilsFactory.directSdkArgsFromMap(args), this.reactContext);
             WritableMap map = new WritableNativeMap();
             promise.resolve(map);
         } catch (Exception e) {

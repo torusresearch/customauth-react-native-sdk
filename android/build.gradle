@@ -14,12 +14,12 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0.0"
     }
@@ -49,6 +49,6 @@ repositories {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:torus-direct-android-sdk:1.5.1'
+    api 'org.torusresearch:customauth-android-sdk:2.0.0'
 }
   

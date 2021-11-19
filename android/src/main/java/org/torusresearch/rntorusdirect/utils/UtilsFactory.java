@@ -10,20 +10,20 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 
 import org.jetbrains.annotations.NotNull;
-import org.torusresearch.torusdirect.types.AggregateLoginParams;
-import org.torusresearch.torusdirect.types.AggregateVerifierType;
-import org.torusresearch.torusdirect.types.Auth0ClientOptions;
-import org.torusresearch.torusdirect.types.DirectSdkArgs;
-import org.torusresearch.torusdirect.types.Display;
-import org.torusresearch.torusdirect.types.LoginType;
-import org.torusresearch.torusdirect.types.Prompt;
-import org.torusresearch.torusdirect.types.SubVerifierDetails;
-import org.torusresearch.torusdirect.types.TorusAggregateLoginResponse;
-import org.torusresearch.torusdirect.types.TorusKey;
-import org.torusresearch.torusdirect.types.TorusLoginResponse;
-import org.torusresearch.torusdirect.types.TorusNetwork;
-import org.torusresearch.torusdirect.types.TorusSubVerifierInfo;
-import org.torusresearch.torusdirect.types.TorusVerifierUnionResponse;
+import org.torusresearch.customauth.types.AggregateLoginParams;
+import org.torusresearch.customauth.types.AggregateVerifierType;
+import org.torusresearch.customauth.types.Auth0ClientOptions;
+import org.torusresearch.customauth.types.CustomAuthArgs;
+import org.torusresearch.customauth.types.Display;
+import org.torusresearch.customauth.types.LoginType;
+import org.torusresearch.customauth.types.Prompt;
+import org.torusresearch.customauth.types.SubVerifierDetails;
+import org.torusresearch.customauth.types.TorusAggregateLoginResponse;
+import org.torusresearch.customauth.types.TorusKey;
+import org.torusresearch.customauth.types.TorusLoginResponse;
+import org.torusresearch.customauth.types.TorusNetwork;
+import org.torusresearch.customauth.types.TorusSubVerifierInfo;
+import org.torusresearch.customauth.types.TorusVerifierUnionResponse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,11 +32,11 @@ import java.util.List;
 
 // Checks are not present at certain places. It implies params are mandatory and app should crash if they are not provided.
 public final class UtilsFactory {
-    public static DirectSdkArgs directSdkArgsFromMap(ReadableMap map) {
+    public static CustomAuthArgs directSdkArgsFromMap(ReadableMap map) {
         String browserRedirectUri = map.getString("browserRedirectUri");
-        DirectSdkArgs args = new DirectSdkArgs(browserRedirectUri);
+        CustomAuthArgs args = new CustomAuthArgs(browserRedirectUri);
         if (map.hasKey("network")) {
-            args = new DirectSdkArgs(browserRedirectUri, TorusNetwork.valueOfLabel(map.getString("network")));
+            args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOfLabel(map.getString("network")));
         }
         if (map.hasKey("proxyContractAddress")) {
             args.setProxyContractAddress((map.getString("proxyContractAddress")));
