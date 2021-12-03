@@ -420,7 +420,7 @@ PODS:
   - RNScreens (3.8.0):
     - React-Core
     - React-RCTImage
-  - RNTorusDirectSdk (0.5.1):
+  - RNCustomAuthSdk (0.5.1):
     - React
     - secp256k1.c (= 0.1.2)
     - Torus-directSDK (~> 0.2.0)
@@ -521,7 +521,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
-  - RNTorusDirectSdk (from `../..`)
+  - RNCustomAuthSdk (from `../..`)
   - secp256k1.c (= 0.1.2)
   - UMAppLoader (from `../node_modules/unimodules-app-loader/ios`)
   - "UMCore (from `../node_modules/@unimodules/core/ios`)"
@@ -644,7 +644,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
     :path: "../node_modules/react-native-screens"
-  RNTorusDirectSdk:
+  RNCustomAuthSdk:
     :path: "../.."
   UMAppLoader:
     :path: "../node_modules/unimodules-app-loader/ios"
@@ -719,7 +719,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: ad24db8af24e3fe1b5c462785bc3db8d5baae2ee
   RNScreens: 6e1ea5787989f92b0671049b808aef64fa1ef98c
-  RNTorusDirectSdk: cfcaf28dcd0e423e97ea6530d2f073981b443ef4
+  RNCustomAuthSdk: cfcaf28dcd0e423e97ea6530d2f073981b443ef4
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   Torus-directSDK: c3f27906dcb539b129ca2e2a4451030ec9483c92

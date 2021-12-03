@@ -17,7 +17,7 @@
                BlueprintIdentifier = "51BF345E257A18350015DA93"
                BuildableName = "RNTorusDirectSDK.app"
                BlueprintName = "RNTorusDirectSDK"
-               ReferencedContainer = "container:RNTorusDirectSdk.xcodeproj">
+               ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "51BF345E257A18350015DA93"
             BuildableName = "RNTorusDirectSDK.app"
             BlueprintName = "RNTorusDirectSDK"
-            ReferencedContainer = "container:RNTorusDirectSdk.xcodeproj">
+            ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "51BF345E257A18350015DA93"
             BuildableName = "RNTorusDirectSDK.app"
             BlueprintName = "RNTorusDirectSDK"
-            ReferencedContainer = "container:RNTorusDirectSdk.xcodeproj">
+            ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

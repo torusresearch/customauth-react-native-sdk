@@ -1,7 +1,7 @@
 #import <React/RCTBridgeDelegate.h>
 #import <UIKit/UIKit.h>
 
-@class RNTorusDirectSdk;
+@class RNCustomAuthSdk;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate>
 

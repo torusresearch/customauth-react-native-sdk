@@ -1,6 +1,6 @@
-#import "RNTorusDirectSdk.h"
+#import "RNCustomAuthSdk.h"
 
-@implementation RNTorusDirectSdk
+@implementation RNCustomAuthSdk
 
 RCT_EXPORT_MODULE()
 

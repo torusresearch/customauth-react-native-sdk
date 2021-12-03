@@ -14,12 +14,12 @@ import org.torusresearch.customauth.CustomAuth;
 
 import java.util.HashMap;
 
-public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
+public class RNCustomAuthSdkModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
     private CustomAuth torusDirectSdk;
 
-    public RNTorusDirectSdkModule(ReactApplicationContext reactContext) {
+    public RNCustomAuthSdkModule(ReactApplicationContext reactContext) {
         super(reactContext);
         this.reactContext = reactContext;
     }
@@ -93,6 +93,6 @@ public class RNTorusDirectSdkModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "RNTorusDirectSdk";
+        return "RNCustomAuthSdk";
     }
 }

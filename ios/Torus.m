@@ -1,6 +1,6 @@
 #import "React/RCTBridgeModule.h"
 
-@interface RCT_EXTERN_MODULE(RNTorusDirectSdk, NSObject)
+@interface RCT_EXTERN_MODULE(RNCustomAuthSdk, NSObject)
 
 _RCT_EXTERN_REMAP_METHOD(init, initialize: (NSDictionary)params, false)
 

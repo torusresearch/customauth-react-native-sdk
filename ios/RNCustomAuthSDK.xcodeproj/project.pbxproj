@@ -32,10 +32,10 @@
 		51BF3485257A19050015DA93 /* Torus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Torus.m; sourceTree = "<group>"; };
 		51BF3631257A4E4F0015DA93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
 		51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5F66BB2EF83FD88447B77DD2 /* libPods-RNTorusDirectSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTorusDirectSdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTorusDirectSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C06EA66ED4081043B75541B9 /* Pods-RNTorusDirectSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSdk.release.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSdk/Pods-RNTorusDirectSdk.release.xcconfig"; sourceTree = "<group>"; };
-		EB75995A739475EEB633F169 /* Pods-RNTorusDirectSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSdk.debug.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSdk/Pods-RNTorusDirectSdk.debug.xcconfig"; sourceTree = "<group>"; };
+		C06EA66ED4081043B75541B9 /* Pods-RNCustomAuthSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.release.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.release.xcconfig"; sourceTree = "<group>"; };
+		EB75995A739475EEB633F169 /* Pods-RNCustomAuthSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.debug.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.debug.xcconfig"; sourceTree = "<group>"; };
 		FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSDK.release.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +61,7 @@
 		220F517D39CDD82245FB2D0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F66BB2EF83FD88447B77DD2 /* libPods-RNTorusDirectSdk.a */,
+				5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */,
 				8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */,
 			);
 			name = Frameworks;
@@ -70,8 +70,8 @@
 		2AB2FA82E9628F7EDB89E551 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EB75995A739475EEB633F169 /* Pods-RNTorusDirectSdk.debug.xcconfig */,
-				C06EA66ED4081043B75541B9 /* Pods-RNTorusDirectSdk.release.xcconfig */,
+				EB75995A739475EEB633F169 /* Pods-RNCustomAuthSdk.debug.xcconfig */,
+				C06EA66ED4081043B75541B9 /* Pods-RNCustomAuthSdk.release.xcconfig */,
 				0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */,
 				FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */,
 			);

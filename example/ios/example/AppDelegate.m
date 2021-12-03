@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import <RNTorusDirectSdk/RNTorus.h>
+#import <RNCustomAuthSdk/RNTorus.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -97,7 +97,7 @@ static void InitializeFlipper(UIApplication *application) {
   
   NSLog(@"String to handle : %@ ", myString);
   if (@available(iOS 11.0, *)) {
-    [RNTorusDirectSdk handle:myString];
+    [RNCustomAuthSdk handle:myString];
   } else {
     // Fallback on earlier versions
   }

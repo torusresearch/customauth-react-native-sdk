@@ -25,6 +25,6 @@ target 'RNTorusDirectSDK' do
   # post_install do |installer|
   #   flipper_post_install(installer)
   # end
-  # Pods for RNTorusDirectSdk
+  # Pods for RNCustomAuthSdk
 
 end

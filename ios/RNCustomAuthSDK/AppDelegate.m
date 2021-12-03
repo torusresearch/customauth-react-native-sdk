@@ -52,7 +52,7 @@ static void InitializeFlipper(UIApplication *application) {
   
   NSString *myString = url.absoluteString;
   NSLog(myString);
-  [RNTorusDirectSdk handle:myString];
+  [RNCustomAuthSdk handle:myString];
   
   // Your additional URL handling (if any) goes here.
   return NO;

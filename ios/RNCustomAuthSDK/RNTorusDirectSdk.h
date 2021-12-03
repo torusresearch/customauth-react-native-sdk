@@ -4,6 +4,6 @@
 #import "RCTBridgeModule.h"
 #endif
 
-@interface RNTorusDirectSdk : NSObject <RCTBridgeModule>
+@interface RNCustomAuthSdk : NSObject <RCTBridgeModule>
 
 @end
