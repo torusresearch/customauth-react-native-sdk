@@ -6,6 +6,9 @@ platform :ios, '11.0'
 target 'example2' do
   config = use_native_modules!
 
+
+  pod 'secp256k1.c', '0.1.2', :modular_headers => true
+
   use_react_native!(
     :path => config[:reactNativePath],
     # to enable hermes on iOS, change `false` to `true` and then install pods
@@ -26,5 +29,8 @@ target 'example2' do
   post_install do |installer|
     react_native_post_install(installer)
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+    end
   end
 end
