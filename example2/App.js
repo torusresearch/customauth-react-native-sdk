@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { GOOGLE, verifierMap } from "./config";
-import TorusSdk from "@toruslabs/customauth-react-native-sdk";
+import CustomAuth from "@toruslabs/customauth-react-native-sdk";
 
 export default class App extends React.Component {
   state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };
@@ -24,7 +24,7 @@ export default class App extends React.Component {
      * iOS example:     <APPLICATION_REDIRECT_URI> = "tdsdk://tdsdk/oauthCallback",
      */
     try {
-      TorusSdk.init({
+      CustomAuth.init({
         browserRedirectUri: "https://scripts.toruswallet.io/redirect.html",
         redirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
         network: "testnet", // details for test net
@@ -40,7 +40,7 @@ export default class App extends React.Component {
     const { selectedVerifier } = this.state;
     try {
       const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
-      const loginDetails = await TorusSdk.triggerLogin({
+      const loginDetails = await CustomAuth.triggerLogin({
         typeOfLogin,
         verifier,
         clientId,
@@ -54,7 +54,7 @@ export default class App extends React.Component {
 
   getTorusKey = async () => {
     try {
-        const getTorusKeyDetails = await TorusSdk.getTorusKey(
+        const getTorusKeyDetails = await CustomAuth.getTorusKey(
           "torus-direct-mock-ios",
           "michael@tor.us",
           {"verifier_id": "michael@tor.us"},

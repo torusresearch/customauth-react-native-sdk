@@ -55,9 +55,9 @@ Please refer to the native SDKs for platform-specific configuration.
 Initialize the SDK after your app is mounted (`useEffect` or `componentDidMount`):
 
 ```js
-import TorusDirect from "@toruslabs/customauth-react-native-sdk";
+import CustomAuth from "@toruslabs/customauth-react-native-sdk";
 
-TorusDirect.init({
+CustomAuth.init({
   network: "testnet",
 
   // Final redirect to your app, can be either custom scheme or deep link
@@ -72,9 +72,9 @@ TorusDirect.init({
 Trigger user's login:
 
 ```js
-import TorusDirect from "@toruslabs/customauth-react-native-sdk";
+import CustomAuth from "@toruslabs/customauth-react-native-sdk";
 
-const credentials = await TorusDirect.triggerLogin({
+const credentials = await CustomAuth.triggerLogin({
   typeOfLogin: "google", // "facebook", "email_passwordless", "twitter", "discord", etc
   verifier: "acme-google", // Your verifier registered on https://developer.tor.us
   clientId, // Your OAuth provider's client ID
