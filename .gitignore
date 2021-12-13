@@ -28,7 +28,7 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-RNTorusDirectSDK.xcworkspace
+RNCustomAuthSDK.xcworkspace
 
 #cocoapods
 /ios/Pods/

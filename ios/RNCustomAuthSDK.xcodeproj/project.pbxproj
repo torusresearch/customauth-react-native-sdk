@@ -14,29 +14,29 @@
 		51BF3483257A18DB0015DA93 /* Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3482257A18DB0015DA93 /* Torus.swift */; };
 		51BF3486257A19050015DA93 /* Torus.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3485257A19050015DA93 /* Torus.m */; };
 		51F8ADCE257E29FB00E86091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */; };
-		69CB8022A5290E6CDEC4C11D /* libPods-RNTorusDirectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */; };
+		69CB8022A5290E6CDEC4C11D /* libPods-RNCustomAuthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNCustomAuthSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSDK.debug.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		516AE980258770D800278C89 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		516BACC2257F9DC30062EE71 /* RNTorus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTorus.h; sourceTree = "<group>"; };
 		51819AE0257F6ECE006B6F39 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
-		51BF345F257A18350015DA93 /* RNTorusDirectSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTorusDirectSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BF345F257A18350015DA93 /* RNCustomAuthSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNCustomAuthSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BF3461257A18350015DA93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51BF3462257A18350015DA93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		51BF3472257A18360015DA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51BF3473257A18360015DA93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNTorusDirectSDK-Bridging-Header.h"; sourceTree = "<group>"; };
+		51BF3481257A18DA0015DA93 /* RNCustomAuthSDK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNCustomAuthSDK-Bridging-Header.h"; sourceTree = "<group>"; };
 		51BF3482257A18DB0015DA93 /* Torus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Torus.swift; sourceTree = "<group>"; };
 		51BF3485257A19050015DA93 /* Torus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Torus.m; sourceTree = "<group>"; };
 		51BF3631257A4E4F0015DA93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
 		51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTorusDirectSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06EA66ED4081043B75541B9 /* Pods-RNCustomAuthSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.release.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.release.xcconfig"; sourceTree = "<group>"; };
 		EB75995A739475EEB633F169 /* Pods-RNCustomAuthSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.debug.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.debug.xcconfig"; sourceTree = "<group>"; };
-		FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTorusDirectSDK.release.xcconfig"; path = "Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK.release.xcconfig"; sourceTree = "<group>"; };
+		FF3422E9012B031E1C038A5A /* Pods-RNCustomAuthSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSDK.release.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69CB8022A5290E6CDEC4C11D /* libPods-RNTorusDirectSDK.a in Frameworks */,
+				69CB8022A5290E6CDEC4C11D /* libPods-RNCustomAuthSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */,
-				8E45CCD37491E7D2A42381FD /* libPods-RNTorusDirectSDK.a */,
+				8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,16 +72,16 @@
 			children = (
 				EB75995A739475EEB633F169 /* Pods-RNCustomAuthSdk.debug.xcconfig */,
 				C06EA66ED4081043B75541B9 /* Pods-RNCustomAuthSdk.release.xcconfig */,
-				0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */,
-				FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */,
+				0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNCustomAuthSDK.debug.xcconfig */,
+				FF3422E9012B031E1C038A5A /* Pods-RNCustomAuthSDK.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		51BF3460257A18350015DA93 /* RNTorusDirectSDK */ = {
+		51BF3460257A18350015DA93 /* RNCustomAuthSDK */ = {
 			isa = PBXGroup;
 			children = (
-				51BF3481257A18DA0015DA93 /* RNTorusDirectSDK-Bridging-Header.h */,
+				51BF3481257A18DA0015DA93 /* RNCustomAuthSDK-Bridging-Header.h */,
 				51BF3631257A4E4F0015DA93 /* main.jsbundle */,
 				51BF3461257A18350015DA93 /* AppDelegate.h */,
 				516AE980258770D800278C89 /* Media.xcassets */,
@@ -90,7 +90,7 @@
 				51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */,
 				51BF3473257A18360015DA93 /* main.m */,
 			);
-			path = RNTorusDirectSDK;
+			path = RNCustomAuthSDK;
 			sourceTree = "<group>";
 		};
 		58B511D21A9E6C8500147676 = {
@@ -100,20 +100,20 @@
 				516BACC2257F9DC30062EE71 /* RNTorus.h */,
 				51819AE0257F6ECE006B6F39 /* Types.swift */,
 				51BF3485257A19050015DA93 /* Torus.m */,
-				51BF3460257A18350015DA93 /* RNTorusDirectSDK */,
+				51BF3460257A18350015DA93 /* RNCustomAuthSDK */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				2AB2FA82E9628F7EDB89E551 /* Pods */,
 				220F517D39CDD82245FB2D0F /* Frameworks */,
-				51BF345F257A18350015DA93 /* RNTorusDirectSDK.app */,
+				51BF345F257A18350015DA93 /* RNCustomAuthSDK.app */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51BF345E257A18350015DA93 /* RNTorusDirectSDK */ = {
+		51BF345E257A18350015DA93 /* RNCustomAuthSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51BF3475257A18360015DA93 /* Build configuration list for PBXNativeTarget "RNTorusDirectSDK" */;
+			buildConfigurationList = 51BF3475257A18360015DA93 /* Build configuration list for PBXNativeTarget "RNCustomAuthSDK" */;
 			buildPhases = (
 				BD22BF5F06D22646C59644C8 /* [CP] Check Pods Manifest.lock */,
 				51BF3559257A2DCB0015DA93 /* Start Packager */,
@@ -127,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = RNTorusDirectSDK;
-			productName = RNTorusDirectSDK;
-			productReference = 51BF345F257A18350015DA93 /* RNTorusDirectSDK.app */;
+			name = RNCustomAuthSDK;
+			productName = RNCustomAuthSDK;
+			productReference = 51BF345F257A18350015DA93 /* RNCustomAuthSDK.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -149,7 +149,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNTorusDirectSDK" */;
+			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNCustomAuthSDK" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51BF345E257A18350015DA93 /* RNTorusDirectSDK */,
+				51BF345E257A18350015DA93 /* RNCustomAuthSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -223,18 +223,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/web3swift/Browser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Browser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTorusDirectSDK/Pods-RNTorusDirectSDK-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD22BF5F06D22646C59644C8 /* [CP] Check Pods Manifest.lock */ = {
@@ -252,7 +250,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNTorusDirectSDK-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RNCustomAuthSDK-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,7 +277,7 @@
 /* Begin XCBuildConfiguration section */
 		51BF3476257A18360015DA93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNTorusDirectSDK.debug.xcconfig */;
+			baseConfigurationReference = 0F5AC0BBB9FA7B9F6EB09506 /* Pods-RNCustomAuthSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -296,14 +294,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RNTorusDirectSDK/Info.plist;
+				INFOPLIST_FILE = RNCustomAuthSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = torus.RNTorusDirectSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = torus.RNCustomAuthSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RNTorusDirectSDK/RNTorusDirectSDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNCustomAuthSDK/RNCustomAuthSDK-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,7 +310,7 @@
 		};
 		51BF3477257A18360015DA93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF3422E9012B031E1C038A5A /* Pods-RNTorusDirectSDK.release.xcconfig */;
+			baseConfigurationReference = FF3422E9012B031E1C038A5A /* Pods-RNCustomAuthSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -330,13 +328,13 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2Q63NCPY55;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = RNTorusDirectSDK/Info.plist;
+				INFOPLIST_FILE = RNCustomAuthSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = torus.RNTorusDirectSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = torus.RNCustomAuthSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RNTorusDirectSDK/RNTorusDirectSDK-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNCustomAuthSDK/RNCustomAuthSDK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,7 +445,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		51BF3475257A18360015DA93 /* Build configuration list for PBXNativeTarget "RNTorusDirectSDK" */ = {
+		51BF3475257A18360015DA93 /* Build configuration list for PBXNativeTarget "RNCustomAuthSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51BF3476257A18360015DA93 /* Debug */,
@@ -456,7 +454,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNTorusDirectSDK" */ = {
+		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "RNCustomAuthSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58B511ED1A9E6C8500147676 /* Debug */,

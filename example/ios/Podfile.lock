@@ -423,10 +423,10 @@ PODS:
   - RNCustomAuthSdk (0.5.1):
     - React
     - secp256k1.c (= 0.1.2)
-    - Torus-directSDK (~> 0.2.0)
+    - CustomAuth (~> 0.2.0)
   - secp256k1.c (0.1.2)
   - Starscream (3.1.1)
-  - Torus-directSDK (0.2.2):
+  - CustomAuth (0.2.2):
     - BestLogger (~> 0.0.1)
     - Torus-utils (~> 0.1.0)
   - Torus-fetchNodeDetails (0.0.20):
@@ -551,7 +551,7 @@ SPEC REPOS:
     - PromiseKit
     - secp256k1.c
     - Starscream
-    - Torus-directSDK
+    - CustomAuth
     - Torus-fetchNodeDetails
     - Torus-utils
     - web3swift
@@ -722,7 +722,7 @@ SPEC CHECKSUMS:
   RNCustomAuthSdk: cfcaf28dcd0e423e97ea6530d2f073981b443ef4
   secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
-  Torus-directSDK: c3f27906dcb539b129ca2e2a4451030ec9483c92
+  CustomAuth: c3f27906dcb539b129ca2e2a4451030ec9483c92
   Torus-fetchNodeDetails: 567d0c73c1b318c8811abcef0b2f31cfdcd5a4a4
   Torus-utils: 55c022f52f6a7d7914e23d7e11d1af649ff2a8bb
   UMAppLoader: 21af63390e55c82e037fb9752d93114a80ecf16e

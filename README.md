@@ -33,7 +33,7 @@ Please refer to the native SDKs for platform-specific configuration.
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 
-   - Add `import org.torusresearch.rntorusdirect.RNCustomAuthSdkPackage;` to the imports at the top of the file
+   - Add `import org.torusresearch.rncustomauth.RNCustomAuthSdkPackage;` to the imports at the top of the file
 
    - Add `new RNCustomAuthSdkPackage()` to the list returned by the `getPackages()` method
 
@@ -61,7 +61,7 @@ CustomAuth.init({
   network: "testnet",
 
   // Final redirect to your app, can be either custom scheme or deep link
-  redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+  redirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
 
   // Redirect from browser, some providers don't allow to redirect to custom scheme, you'll need to configure a proxy web address in which case
   browserRedirectUri:

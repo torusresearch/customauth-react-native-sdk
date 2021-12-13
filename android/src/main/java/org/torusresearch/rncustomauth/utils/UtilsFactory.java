@@ -1,4 +1,4 @@
-package org.torusresearch.rntorusdirect.utils;
+package org.torusresearch.rncustomauth.utils;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableArray;

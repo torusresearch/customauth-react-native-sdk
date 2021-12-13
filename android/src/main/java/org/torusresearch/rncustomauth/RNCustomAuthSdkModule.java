@@ -1,4 +1,4 @@
-package org.torusresearch.rntorusdirect;
+package org.torusresearch.rncustomauth;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -9,7 +9,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 
-import org.torusresearch.rntorusdirect.utils.UtilsFactory;
+import org.torusresearch.rncustomauth.utils.UtilsFactory;
 import org.torusresearch.customauth.CustomAuth;
 
 import java.util.HashMap;

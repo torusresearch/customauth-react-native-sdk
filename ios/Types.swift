@@ -1,6 +1,6 @@
 //
 //  types.swift
-//  RNTorusDirectSDK
+//  RNCustomAuthSDK
 //
 //  Created by Shubham on 8/12/20.
 //  Copyright © 2020 Facebook. All rights reserved.

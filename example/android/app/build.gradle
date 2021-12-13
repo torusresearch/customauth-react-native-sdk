@@ -131,7 +131,7 @@ android {
     }
 
     defaultConfig {
-        applicationId 'org.torusresearch.torusdirectexample'
+        applicationId 'org.torusresearch.customauthexample'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -139,7 +139,7 @@ android {
         multiDexEnabled true
         manifestPlaceholders = [
                 'torusRedirectScheme': 'torusapp',
-                'torusRedirectHost': 'org.torusresearch.torusdirectexample',
+                'torusRedirectHost': 'org.torusresearch.customauthexample',
                 'torusRedirectPathPrefix': '/redirect'
         ]
     }
