@@ -1,5 +1,5 @@
 import { NativeModules } from "react-native";
 
-const { RNTorusDirectSdk } = NativeModules;
+const { RNCustomAuthSdk } = NativeModules;
 
-export default RNTorusDirectSdk;
+export default RNCustomAuthSdk;

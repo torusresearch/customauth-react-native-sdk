@@ -1,5 +1,5 @@
 {
-  "name": "@toruslabs/torus-direct-react-native-sdk",
+  "name": "@toruslabs/customauth-react-native-sdk",
   "version": "0.6.1",
   "description": "React Native sdk for torus direct",
   "scripts": {
@@ -19,7 +19,7 @@
     "react-native": "^0.66.3"
   },
   "bugs": {
-    "url": "https://github.com/torusresearch/torus-direct-react-native-sdk/issues"
+    "url": "https://github.com/torusresearch/customauth-react-native-sdk/issues"
   },
-  "homepage": "https://github.com/torusresearch/torus-direct-react-native-sdk#readme"
+  "homepage": "https://github.com/torusresearch/customauth-react-native-sdk#readme"
 }

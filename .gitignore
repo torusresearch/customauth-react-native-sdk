@@ -46,7 +46,7 @@ local.properties
 buck-out/
 \.buckd/
 *.keystore
-toruslabs-torus-direct-react-native-sdk-*
-torus-direct-react-native-sdk-*
+toruslabs-customauth-react-native-sdk-*
+customauth-react-native-sdk-*
 torus-*.tgz
 *.hprof

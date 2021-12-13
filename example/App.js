@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { GITHUB, verifierMap } from "./config";
-import TorusSdk from "@toruslabs/torus-direct-react-native-sdk";
+import TorusSdk from "@toruslabs/customauth-react-native-sdk";
 
 export default class App extends React.Component {
   state = { selectedVerifier: GITHUB, loginHint: "", consoleText: "" };

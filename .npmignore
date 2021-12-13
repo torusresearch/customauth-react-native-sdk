@@ -48,5 +48,5 @@ buck-out/
 /ios/Pods/
 
 example/
-torus-direct-react-native-sdk-*
-toruslabs-torus-direct-react-native-sdk-*
+customauth-react-native-sdk-*
+toruslabs-customauth-react-native-sdk-*

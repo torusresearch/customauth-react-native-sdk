@@ -1,6 +1,6 @@
 //
-//  RNTorusDirectSdk.swift
-//  RNTorusDirectSdk
+//  RNCustomAuthSdk.swift
+//  RNCustomAuthSdk
 //
 //  Created by Shubham on 1/12/20.
 //
@@ -11,8 +11,8 @@ import PromiseKit
 import BestLogger
 
 @available(iOS 11.0, *)
-@objc(RNTorusDirectSdk)
-public class RNTorusDirectSdk: NSObject {
+@objc(RNCustomAuthSdk)
+public class RNCustomAuthSdk: NSObject {
     var tdsdk: TorusSwiftDirectSDK?
     var directAuthArgs: DirectWebSDKArgs?
     var sub: [SubVerifierDetailsWebSDK] = []
