@@ -1,5 +1,4 @@
 PODS:
-  - BigInt (5.0.0)
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - CryptoSwift (1.4.2)
@@ -350,8 +349,6 @@ PODS:
   - RNCustomAuthSdk (0.6.1):
     - CustomAuth (~> 2.0.0)
     - React
-    - secp256k1.c (= 0.1.2)
-  - secp256k1.c (0.1.2)
   - secp256k1.swift (0.1.4)
   - Torus-fetchNodeDetails (1.2.0):
     - PromiseKit/Foundation (~> 6.0)
@@ -362,7 +359,6 @@ PODS:
     - secp256k1.swift (~> 0.1.4)
     - Torus-fetchNodeDetails (~> 1.2.0)
   - web3.swift (0.8.1):
-    - BigInt (~> 5.0.0)
     - GenericJSON (~> 2.0)
     - secp256k1.swift (~> 0.1)
   - Yoga (1.14.0)
@@ -424,12 +420,11 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - RNCustomAuthSdk (from `../..`)
-  - secp256k1.c (= 0.1.2)
+  - web3.swift (from `https://github.com/torusresearch/web3.swift.git`, branch `refactor/embed-bigint`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
-    - BigInt
     - CocoaAsyncSocket
     - CryptoSwift
     - CustomAuth
@@ -447,11 +442,9 @@ SPEC REPOS:
     - libevent
     - OpenSSL-Universal
     - PromiseKit
-    - secp256k1.c
     - secp256k1.swift
     - Torus-fetchNodeDetails
     - Torus-utils
-    - web3.swift
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -517,11 +510,18 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-picker/picker"
   RNCustomAuthSdk:
     :path: "../.."
+  web3.swift:
+    :branch: refactor/embed-bigint
+    :git: https://github.com/torusresearch/web3.swift.git
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
+CHECKOUT OPTIONS:
+  web3.swift:
+    :commit: e3ae1221f2401f4a02ad44a7796eb65c0b01eacd
+    :git: https://github.com/torusresearch/web3.swift.git
+
 SPEC CHECKSUMS:
-  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
@@ -569,15 +569,14 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 4bb657a97aa74568d9ed634c8bd478299bb8a3a6
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
   RNCPicker: cb57c823d5ce8d2d0b5dfb45ad97b737260dc59e
-  RNCustomAuthSdk: 8f51cb71b297e4ea9a34d45285f3dfdcc644b7b3
-  secp256k1.c: db47b726585d80f027423682eb369729e61b3b20
+  RNCustomAuthSdk: 0c911a86c401d0293fb932e6e826e487569c04f2
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Torus-fetchNodeDetails: 0978689c217448624ee6940122ad2c33a175ba55
   Torus-utils: 79f03c658d6ed78b40725a3d3da4cbf72f97d936
-  web3.swift: ce00a5e6e39fb184e33e3622e8be22ae53205e57
+  web3.swift: a86d3f132da8d61a81b5a827cc2b150119c8d0c0
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 3dbfdfc205f1ed6666968c95396c8dc08ae25b26
+PODFILE CHECKSUM: c1da0c88bba9d56e6eb6f7772fc504d693898d1c
 
 COCOAPODS: 1.11.2

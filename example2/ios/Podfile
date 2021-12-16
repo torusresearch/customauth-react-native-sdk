@@ -8,7 +8,10 @@ target 'example2' do
 
   config = use_native_modules!
 
-  pod 'secp256k1.c', '0.1.2', :modular_headers => true
+
+  pod 'web3.swift', :git => 'https://github.com/torusresearch/web3.swift.git', :branch => 'refactor/embed-bigint'
+
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
 
   use_react_native!(
     :path => config[:reactNativePath],
