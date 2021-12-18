@@ -336,7 +336,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
   - RNCustomAuthSdk (from `../..`)
-  - web3.swift (from `https://github.com/torusresearch/web3.swift.git`, branch `fix/remove-bad-xcconfig`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -350,6 +349,7 @@ SPEC REPOS:
     - secp256k1.swift
     - Torus-fetchNodeDetails
     - Torus-utils
+    - web3.swift
 
 EXTERNAL SOURCES:
   boost:
@@ -414,16 +414,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-picker/picker"
   RNCustomAuthSdk:
     :path: "../.."
-  web3.swift:
-    :branch: fix/remove-bad-xcconfig
-    :git: https://github.com/torusresearch/web3.swift.git
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
-
-CHECKOUT OPTIONS:
-  web3.swift:
-    :commit: a3a434a575d0a189a5d0c11f60ef349b3de64c12
-    :git: https://github.com/torusresearch/web3.swift.git
 
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
@@ -466,9 +458,9 @@ SPEC CHECKSUMS:
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Torus-fetchNodeDetails: 0978689c217448624ee6940122ad2c33a175ba55
   Torus-utils: 79f03c658d6ed78b40725a3d3da4cbf72f97d936
-  web3.swift: 3d1afca4c057223cb9fc9140bab1a7a79ecbc5cb
+  web3.swift: ce00a5e6e39fb184e33e3622e8be22ae53205e57
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
 
-PODFILE CHECKSUM: 90d809f87f1f710699445a37a334fa879ab2bb4c
+PODFILE CHECKSUM: ed8c5375fc9e6449fd95a9311639c630e009145e
 
 COCOAPODS: 1.11.2
