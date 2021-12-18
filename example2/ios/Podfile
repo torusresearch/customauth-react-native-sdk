@@ -9,7 +9,7 @@ target 'example2' do
   config = use_native_modules!
 
 
-  pod 'web3.swift', :git => 'https://github.com/torusresearch/web3.swift.git', :branch => 'refactor/embed-bigint'
+  pod 'web3.swift', :git => 'https://github.com/torusresearch/web3.swift.git', :branch => 'fix/remove-bad-xcconfig'
 
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
 
@@ -28,7 +28,7 @@ target 'example2' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
-  use_flipper!()
+  # use_flipper!()
 
   post_install do |installer|
     react_native_post_install(installer)
