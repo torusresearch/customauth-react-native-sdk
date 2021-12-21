@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CustomAuth
+import FetchNodeDetails
 
 struct DirectWebSDKArgs: Codable {
     var network: String
@@ -25,6 +27,15 @@ struct DirectWebSDKArgs: Codable {
     
     init(dictionary: [String: Any]) throws {
         self = try JSONDecoder().decode(DirectWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: dictionary))
+    }
+    
+    var nativeNetwork: EthereumNetwork {
+        get {
+            if network == "mainnet" {
+                return .MAINNET
+            }
+            return .ROPSTEN
+        }
     }
     
 }
