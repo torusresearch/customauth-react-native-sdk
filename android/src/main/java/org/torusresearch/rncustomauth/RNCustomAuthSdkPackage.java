@@ -1,5 +1,5 @@
 
-package org.torusresearch.rntorusdirect;
+package org.torusresearch.rncustomauth;
 
 import java.util.Arrays;
 import java.util.Collections;

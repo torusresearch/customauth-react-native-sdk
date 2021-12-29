@@ -1,4 +1,4 @@
-package org.torusresearch.torusdirectexample.generated;
+package org.torusresearch.customauthexample.generated;
 
 import java.util.Arrays;
 import java.util.List;

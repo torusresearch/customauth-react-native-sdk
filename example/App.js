@@ -20,13 +20,13 @@ export default class App extends React.Component {
      * browserRedirectUri: "<APPLICATION_REDIRECT_URI>"
      * redirectUri: "<APPLICATION_REDIRECT_URI>"
      *
-     * Android example: <APPLICATION_REDIRECT_URI> = "torusapp://org.torusresearch.torusdirectexample/redirect",
+     * Android example: <APPLICATION_REDIRECT_URI> = "torusapp://org.torusresearch.customauthexample/redirect",
      * iOS example:     <APPLICATION_REDIRECT_URI> = "tdsdk://tdsdk/oauthCallback",
      */
     try {
       TorusSdk.init({
-        browserRedirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
-        redirectUri: "torusapp://org.torusresearch.torusdirectexample/redirect",
+        browserRedirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
+        redirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
         network: "testnet", // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
         enableLogging: true,

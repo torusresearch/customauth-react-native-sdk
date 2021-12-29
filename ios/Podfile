@@ -2,12 +2,14 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-workspace 'RNTorusDirectSDK'
-platform :ios, '10.0'
+workspace 'RNCustomAuthSDK'
+platform :ios, '11.0'
 
 ENV['SWIFT_VERSION'] = '5'
 
-target 'RNTorusDirectSDK' do
+target 'RNCustomAuthSDK' do
+  use_modular_headers!
+
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
   config = use_native_modules!
@@ -15,7 +17,7 @@ target 'RNTorusDirectSDK' do
   use_react_native!(:path => config["reactNativePath"])
     
   pod 'secp256k1.c', '0.1.2', :modular_headers => true
-  pod 'Torus-directSDK', '~> 0.1.0'
+  pod 'CustomAuth', '~> 2.0.0'
 
   # Enables Flipper.
   #

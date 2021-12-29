@@ -15,7 +15,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "29.0.3"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         minSdkVersion 21
@@ -49,6 +49,6 @@ repositories {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:customauth-android-sdk:2.0.0'
+    api 'org.torusresearch:customauth-android-sdk:2.0.4'
 }
   

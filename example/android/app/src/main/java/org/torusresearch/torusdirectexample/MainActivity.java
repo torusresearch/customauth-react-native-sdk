@@ -1,4 +1,4 @@
-package org.torusresearch.torusdirectexample;
+package org.torusresearch.customauthexample;
 
 import android.os.Bundle;
 

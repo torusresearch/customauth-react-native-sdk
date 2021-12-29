@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "RNTorusDirectSDK-Swift.h"
+#import "RNCustomAuthSDK-Swift.h"
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>

@@ -1,12 +1,14 @@
 //
 //  types.swift
-//  RNTorusDirectSDK
+//  RNCustomAuthSDK
 //
 //  Created by Shubham on 8/12/20.
 //  Copyright © 2020 Facebook. All rights reserved.
 //
 
 import Foundation
+import CustomAuth
+import FetchNodeDetails
 
 struct DirectWebSDKArgs: Codable {
     var network: String
@@ -25,6 +27,15 @@ struct DirectWebSDKArgs: Codable {
     
     init(dictionary: [String: Any]) throws {
         self = try JSONDecoder().decode(DirectWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: dictionary))
+    }
+    
+    var nativeNetwork: EthereumNetwork {
+        get {
+            if network == "mainnet" {
+                return .MAINNET
+            }
+            return .ROPSTEN
+        }
     }
     
 }

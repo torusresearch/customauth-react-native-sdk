@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "51BF345E257A18350015DA93"
-               BuildableName = "RNTorusDirectSDK.app"
-               BlueprintName = "RNTorusDirectSDK"
+               BuildableName = "RNCustomAuthSDK.app"
+               BlueprintName = "RNCustomAuthSDK"
                ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51BF345E257A18350015DA93"
-            BuildableName = "RNTorusDirectSDK.app"
-            BlueprintName = "RNTorusDirectSDK"
+            BuildableName = "RNCustomAuthSDK.app"
+            BlueprintName = "RNCustomAuthSDK"
             ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "51BF345E257A18350015DA93"
-            BuildableName = "RNTorusDirectSDK.app"
-            BlueprintName = "RNTorusDirectSDK"
+            BuildableName = "RNCustomAuthSDK.app"
+            BlueprintName = "RNCustomAuthSDK"
             ReferencedContainer = "container:RNCustomAuthSdk.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

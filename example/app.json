@@ -16,13 +16,13 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "org.torusresearch.torusdirectexample"
+      "bundleIdentifier": "org.torusresearch.customauthexample"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "package": "org.torusresearch.torusdirectexample"
+      "package": "org.torusresearch.customauthexample"
     }
   }
 }

@@ -6,14 +6,13 @@
 //
 
 import Foundation
-import TorusSwiftDirectSDK
+import CustomAuth
 import PromiseKit
-import BestLogger
 
 @available(iOS 11.0, *)
 @objc(RNCustomAuthSdk)
 public class RNCustomAuthSdk: NSObject {
-    var tdsdk: TorusSwiftDirectSDK?
+    var tdsdk: CustomAuth?
     var directAuthArgs: DirectWebSDKArgs?
     var sub: [SubVerifierDetailsWebSDK] = []
     
@@ -38,18 +37,19 @@ public class RNCustomAuthSdk: NSObject {
                                          extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             
-            var logvalue: Int = 5
-            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
-                logvalue = 0
+
+            
+            self.tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], network: self.directAuthArgs!.nativeNetwork, loglevel: .info)
+            
+            DispatchQueue.main.async {
+                self.tdsdk!.triggerLogin(browserType: .external).done{ data in
+                    resolve(data)
+                }.catch{ err in
+                    reject("400", "triggerLogin: ", err)
+                }
             }
             
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
             
-            self.tdsdk!.triggerLogin(browserType: .external).done{ data in
-                resolve(data)
-            }.catch{ err in
-                reject("400", "triggerLogin: ", err)
-            }
             
         }catch let err as NSError {
             print("JSON decode failed: \(err.localizedDescription)")
@@ -77,18 +77,20 @@ public class RNCustomAuthSdk: NSObject {
                                          extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             
-            var logvalue: Int = 5
-            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
-                logvalue = 0
+        
+       
+            
+            self.tdsdk = CustomAuth(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], network: self.directAuthArgs!.nativeNetwork, loglevel: .info)
+            
+            DispatchQueue.main.async {
+                self.tdsdk!.triggerLogin(browserType: .external).done{ data in
+                    resolve(data)
+                }.catch{ err in
+                    reject("400", "triggerAggregateLogin: ", err)
+                }
             }
             
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], loglevel: BestLogger.Level(rawValue: logvalue)!)
             
-            self.tdsdk!.triggerLogin(browserType: .external).done{ data in
-                resolve(data)
-            }.catch{ err in
-                reject("400", "triggerAggregateLogin: ", err)
-            }
         }catch let err as NSError {
             print("JSON decode failed: \(err.localizedDescription)")
             reject("400", "triggerAggregateLogin: ", err.localizedDescription)
@@ -96,7 +98,7 @@ public class RNCustomAuthSdk: NSObject {
     }
     
     @objc class public func handle(_ url: String){
-        TorusSwiftDirectSDK.handle(url: URL(string: url)!)
+        CustomAuth.handle(url: URL(string: url)!)
     }
     
     @objc public func getTorusKey(_ verifier: String, verifierId: String, verifierParams: [String:Any]?, idToken: String, extraParams: [String:Any]?, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
@@ -105,18 +107,17 @@ public class RNCustomAuthSdk: NSObject {
             return
         }
 
-        var logvalue: Int = 5
-        if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
-            logvalue = 0
-        }
-        self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], loglevel: BestLogger.Level(rawValue: logvalue)!)
+      
+        self.tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], network: self.directAuthArgs!.nativeNetwork, loglevel: .info)
         
-        self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, userData: extraParams ?? [:]).done{ data in
-            resolve(data)
-        }.catch{ err in
-            reject("400", "getTorusKey: ", err.localizedDescription)
+        DispatchQueue.main.async {
+            self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, userData: extraParams ?? [:]).done{ data in
+                resolve(data)
+            }.catch{ err in
+                reject("400", "getTorusKey: ", err.localizedDescription)
+            }
         }
-   
+        
     }
     
     @objc public func getAggregateTorusKey(_ verifier: String, verifierId: String, subVerifierInfoArray: Array<[String: String]>, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
@@ -132,19 +133,17 @@ public class RNCustomAuthSdk: NSObject {
                 throw "subVerifierInfoArray cannot be empty"
             }
             
-            var logvalue: Int = 5
-            if(self.directAuthArgs!.enableLogging != nil && self.directAuthArgs!.enableLogging == true){
-                logvalue = 0
+            
+            self.tdsdk = CustomAuth(aggregateVerifierType: .singleIdVerifier, aggregateVerifierName: verifier, subVerifierDetails: [], network: self.directAuthArgs!.nativeNetwork, loglevel: .info)
+            
+            DispatchQueue.main.async {
+                self.tdsdk!.getAggregateTorusKey(verifier: verifier, verifierId: verifierId, idToken: subverifierInfoWebArray[0].idToken, subVerifierDetails: SubVerifierDetails(loginProvider: .jwt, clientId: "", verifierName: verifier, redirectURL: "https://app.tor.us")).done{ data in
+                    resolve(data)
+                }.catch{ err in
+                    reject("400", "getAggregateTorusKey: ", err)
+                }
             }
-            
-            self.tdsdk = TorusSwiftDirectSDK(aggregateVerifierType: .singleIdVerifier, aggregateVerifierName: verifier, subVerifierDetails: [], loglevel: BestLogger.Level(rawValue: logvalue)!)
-            
-            self.tdsdk!.getAggregateTorusKey(verifier: verifier, verifierId: verifierId, idToken: subverifierInfoWebArray[0].idToken, subVerifierDetails: SubVerifierDetails(loginProvider: .jwt, clientId: "", verifierName: verifier, redirectURL: "https://app.tor.us")).done{ data in
-                resolve(data)
-            }.catch{ err in
-                reject("400", "getAggregateTorusKey: ", err)
-            }
-            
+
         }catch let err as NSError {
             print("JSON decode failed: \(err.localizedDescription)")
             reject("400", "getAggregateTorusKey: ", err.localizedDescription)

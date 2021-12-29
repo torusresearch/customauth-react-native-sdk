@@ -20,7 +20,7 @@ export default class App extends React.Component {
      * browserRedirectUri: "<APPLICATION_REDIRECT_URI>"
      * redirectUri: "<APPLICATION_REDIRECT_URI>"
      *
-     * Android example: <APPLICATION_REDIRECT_URI> = "torusapp://org.torusresearch.torusdirectexample/redirect",
+     * Android example: <APPLICATION_REDIRECT_URI> = "torusapp://org.torusresearch.customauthexample/redirect",
      * iOS example:     <APPLICATION_REDIRECT_URI> = "tdsdk://tdsdk/oauthCallback",
      */
     try {
