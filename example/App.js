@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-import { GITHUB, verifierMap } from "./config";
-import TorusSdk from "@toruslabs/customauth-react-native-sdk";
+import { GOOGLE, verifierMap } from "./config";
+import CustomAuth from "@toruslabs/customauth-react-native-sdk";
 
 export default class App extends React.Component {
-  state = { selectedVerifier: GITHUB, loginHint: "", consoleText: "" };
+  state = { selectedVerifier: GOOGLE, loginHint: "", consoleText: "" };
 
   componentDidMount = async () => {
     /**
@@ -24,8 +24,8 @@ export default class App extends React.Component {
      * iOS example:     <APPLICATION_REDIRECT_URI> = "tdsdk://tdsdk/oauthCallback",
      */
     try {
-      TorusSdk.init({
-        browserRedirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
+      CustomAuth.init({
+        browserRedirectUri: "https://scripts.toruswallet.io/redirect.html",
         redirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
         network: "testnet", // details for test net
         proxyContractAddress: "0x4023d2a0D330bF11426B12C6144Cfb96B7fa6183", // details for test net
@@ -40,7 +40,7 @@ export default class App extends React.Component {
     const { selectedVerifier } = this.state;
     try {
       const { typeOfLogin, clientId, verifier, jwtParams } = verifierMap[selectedVerifier];
-      const loginDetails = await TorusSdk.triggerLogin({
+      const loginDetails = await CustomAuth.triggerLogin({
         typeOfLogin,
         verifier,
         clientId,
@@ -54,12 +54,12 @@ export default class App extends React.Component {
 
   getTorusKey = async () => {
     try {
-        const getTorusKeyDetails = await TorusSdk.getTorusKey(
+        const getTorusKeyDetails = await CustomAuth.getTorusKey(
           "torus-direct-mock-ios",
           "michael@tor.us",
           {"verifier_id": "michael@tor.us"},
           "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY0MTk2YWVlMTE5ZmUyMTU5M2Q0OGJmY2ZiNWJmMDAxNzdkZDRhNGQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2MzYxOTk0NjUyNDItZmQ3dWp0b3JwdnZ1ZHRzbDN1M2V2OTBuaWplY3RmcW0uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2MzYxOTk0NjUyNDItZmQ3dWp0b3JwdnZ1ZHRzbDN1M2V2OTBuaWplY3RmcW0uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDkxMTE5NTM4NTYwMzE3OTk2MzkiLCJoZCI6InRvci51cyIsImVtYWlsIjoibWljaGFlbEB0b3IudXMiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Ik9meERLU2JBUEE5Zjc1SGpQdUh5M3ciLCJub25jZSI6IlM5WmhVenJ1YTMiLCJuYW1lIjoiTWljaGFlbCBMZWUiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd3NCYjk4Z1NZalZObEJCQWhYSmp2cU5PdzJHRFNlVGYwSTZTSmg9czk2LWMiLCJnaXZlbl9uYW1lIjoiTWljaGFlbCIsImZhbWlseV9uYW1lIjoiTGVlIiwibG9jYWxlIjoiZW4iLCJpYXQiOjE2MzM2NjIyNDAsImV4cCI6MTYzMzY2NTg0MH0.nElQXYUDk-wC1nHJOAJ_JT7ZpkeiD6LPjixWImTm-h7vc2Je5zYbyupMOoIXVIQBploxcG2JMZXPDIhOXn9pXxasjdlOzMvT4a-xdPAvhuW0kQBBSxw2wwqRbzmFKzYnpsfmGRGjBYj8vjieQxiWV4hOgllePEPEn7At-VtTegUZC99Bblu2zhqblAF1I7ML5aKdmAvv2q1FK26i0WC5qQMZk9FFf9sk1DUJzxEp_RTDlgy_G0p7YUS99Olu3WPOIDsb5KKtjYOca006_G-onk6omKaPUklBxSNuhTilKpvQsT609OpsOAFKxaqTlGKfdwkahL_-Bm-rGRtGpoX8pw",
-          {},
+          // {},
           )
           console.log(getTorusKeyDetails)
     } catch (error) {
