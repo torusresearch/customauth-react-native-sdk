@@ -2,8 +2,8 @@ PODS:
   - BigInt (5.0.0)
   - boost (1.76.0)
   - CryptoSwift (1.4.2)
-  - CustomAuth (2.0.0):
-    - Torus-utils (~> 1.2.0)
+  - CustomAuth (2.1.0):
+    - Torus-utils (~> 1.3.0)
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.66.0)
   - FBReactNativeSpec (0.66.0):
@@ -285,17 +285,17 @@ PODS:
   - RNCPicker (2.2.1):
     - React-Core
   - RNCustomAuthSdk (1.0.0):
-    - CustomAuth (~> 2.0.0)
+    - CustomAuth (~> 2.1.0)
     - React
   - secp256k1.swift (0.1.4)
-  - Torus-fetchNodeDetails (1.2.0):
+  - Torus-fetchNodeDetails (1.3.0):
     - PromiseKit/Foundation (~> 6.0)
-    - web3.swift (~> 0.8.0)
-  - Torus-utils (1.2.0):
+    - web3.swift (~> 0.8.1)
+  - Torus-utils (1.3.0):
     - CryptoSwift (~> 1.4.1)
     - PromiseKit/Foundation (~> 6.0)
     - secp256k1.swift (~> 0.1.4)
-    - Torus-fetchNodeDetails (~> 1.2.0)
+    - Torus-fetchNodeDetails (~> 1.3.0)
   - web3.swift (0.8.1):
     - BigInt (~> 5.0.0)
     - GenericJSON (~> 2.0)
@@ -421,7 +421,7 @@ SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CryptoSwift: a532e74ed010f8c95f611d00b8bbae42e9fe7c17
-  CustomAuth: 0c178cb4acecbba578dc8a0575809b1b0355e18f
+  CustomAuth: 404244ccfe3ef82cf2f28603244b0e92448325b6
   DoubleConversion: 831926d9b8bf8166fd87886c4abab286c2422662
   FBLazyVector: 6816ca39e1cc8beffd2a96783f518296789d1c48
   FBReactNativeSpec: 3b1e86618e902743fde35b40cf9ebd100fd655b7
@@ -454,13 +454,13 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 4bb657a97aa74568d9ed634c8bd478299bb8a3a6
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
   RNCPicker: cb57c823d5ce8d2d0b5dfb45ad97b737260dc59e
-  RNCustomAuthSdk: a8e1e79d9f053f13b2ebd02f5fb9099c677d1b41
+  RNCustomAuthSdk: 0c0aa320c54dd7dcbe260f55cd126785cf1512da
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
-  Torus-fetchNodeDetails: 0978689c217448624ee6940122ad2c33a175ba55
-  Torus-utils: 79f03c658d6ed78b40725a3d3da4cbf72f97d936
+  Torus-fetchNodeDetails: f25e2edb3919441bcd135fa03aa53c511305bd1b
+  Torus-utils: b7ce3b4890cdc43f058b71e6e2c99d00e048ddd5
   web3.swift: ce00a5e6e39fb184e33e3622e8be22ae53205e57
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
 
-PODFILE CHECKSUM: dddae0c8b5911f6b0dd6fe9fddd5ccee44f83e79
+PODFILE CHECKSUM: 8c90ef2b0bf3358ac51e14e2be0f926f7a7827a2
 
 COCOAPODS: 1.11.2

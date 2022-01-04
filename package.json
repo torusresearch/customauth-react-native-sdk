@@ -16,7 +16,7 @@
     "react-native": ">=0.66"
   },
   "devDependencies": {
-    "react-native": "^0.66.3"
+    "react-native": "^0.66.4"
   },
   "bugs": {
     "url": "https://github.com/torusresearch/customauth-react-native-sdk/issues"

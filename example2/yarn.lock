@@ -1504,7 +1504,7 @@
 
 "@toruslabs/customauth-react-native-sdk@file:..":
   "resolved" "file:.."
-  "version" "0.6.1"
+  "version" "1.0.0"
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   "integrity" "sha512-EAEHtisTMM+KaKwfWdC3oyllIqswlznXCIVCt7/oRNrh+DhgT4UEBNC/jlADNjvw7UnfbcdkGQcPVZ1xYiLcrQ=="
