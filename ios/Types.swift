@@ -10,7 +10,7 @@ import Foundation
 import CustomAuth
 import FetchNodeDetails
 
-struct CustomAuthWebSDKArgs: Codable {
+struct CustomAuthArgs: Codable {
     var network: String
     var redirectUri: String
     var browserRedirectUri: String? = "https://scripts.toruswallet.io/redirect.html"
@@ -26,7 +26,7 @@ struct CustomAuthWebSDKArgs: Codable {
     }
     
     init(dictionary: [String: Any]) throws {
-        self = try JSONDecoder().decode(CustomAuthWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: dictionary))
+        self = try JSONDecoder().decode(CustomAuthArgs.self, from: JSONSerialization.data(withJSONObject: dictionary))
     }
     
     var nativeNetwork: EthereumNetwork {
