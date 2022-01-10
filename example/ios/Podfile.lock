@@ -284,7 +284,7 @@ PODS:
     - React-perflogger (= 0.66.0)
   - RNCPicker (2.2.1):
     - React-Core
-  - RNCustomAuthSdk (1.0.0):
+  - RNCustomAuthSdk (1.0.1):
     - CustomAuth (~> 2.1.0)
     - React
   - secp256k1.swift (0.1.4)
@@ -454,7 +454,7 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: 4bb657a97aa74568d9ed634c8bd478299bb8a3a6
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
   RNCPicker: cb57c823d5ce8d2d0b5dfb45ad97b737260dc59e
-  RNCustomAuthSdk: 0c0aa320c54dd7dcbe260f55cd126785cf1512da
+  RNCustomAuthSdk: 93c0674a8edbed9dbcae9b70ddda3fe86b6c1e5e
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
   Torus-fetchNodeDetails: f25e2edb3919441bcd135fa03aa53c511305bd1b
   Torus-utils: b7ce3b4890cdc43f058b71e6e2c99d00e048ddd5
