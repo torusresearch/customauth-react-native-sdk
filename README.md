@@ -19,7 +19,6 @@ Please refer to the native SDKs for platform-specific configuration.
 - [Android SDK](https://github.com/torusresearch/customauth-android-sdk)
 - [iOS SDK](https://github.com/torusresearch/customauth-swift-sdk)
 
-
 ### Manual installation
 
 #### iOS
@@ -64,8 +63,7 @@ CustomAuth.init({
   redirectUri: "torusapp://org.torusresearch.customauthexample/redirect",
 
   // Redirect from browser, some providers don't allow to redirect to custom scheme, you'll need to configure a proxy web address in which case
-  browserRedirectUri:
-    "https://scripts.toruswallet.io/redirect.html",
+  browserRedirectUri: "https://scripts.toruswallet.io/redirect.html",
 });
 ```
 
@@ -76,7 +74,7 @@ import CustomAuth from "@toruslabs/customauth-react-native-sdk";
 
 const credentials = await CustomAuth.triggerLogin({
   typeOfLogin: "google", // "facebook", "email_passwordless", "twitter", "discord", etc
-  verifier: "acme-google", // Your verifier registered on https://developer.tor.us
+  verifier: "acme-google", // Your verifier registered on https://dashboard.web3auth.io
   clientId, // Your OAuth provider's client ID
   jwtParams, // Extra params vary by provider
 });
