@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "React Native sdk for CustomAuth",
   "scripts": {
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,7 +17,8 @@
     "react-native": ">=0.66"
   },
   "devDependencies": {
-    "react-native": "^0.66.4"
+    "react-native": "^0.66.4",
+    "release-it": "^14.12.4"
   },
   "bugs": {
     "url": "https://github.com/torusresearch/customauth-react-native-sdk/issues"
