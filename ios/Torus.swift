@@ -13,11 +13,11 @@ import PromiseKit
 @objc(RNCustomAuthSdk)
 public class RNCustomAuthSdk: NSObject {
     var tdsdk: CustomAuth?
-    var directAuthArgs: DirectWebSDKArgs?
+    var directAuthArgs: CustomAuthArgs?
     var sub: [SubVerifierDetailsWebSDK] = []
     
     @objc public func initialize(_ params: [String: Any]){
-        self.directAuthArgs = try! JSONDecoder().decode(DirectWebSDKArgs.self, from: JSONSerialization.data(withJSONObject: params))
+        self.directAuthArgs = try! JSONDecoder().decode(CustomAuthArgs.self, from: JSONSerialization.data(withJSONObject: params))
     }
     
     @objc public func triggerLogin(_ params: [String:Any], resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock){
