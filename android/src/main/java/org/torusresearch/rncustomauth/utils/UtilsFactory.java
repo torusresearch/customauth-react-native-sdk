@@ -24,6 +24,7 @@ import org.torusresearch.customauth.types.TorusLoginResponse;
 import org.torusresearch.customauth.types.TorusNetwork;
 import org.torusresearch.customauth.types.TorusSubVerifierInfo;
 import org.torusresearch.customauth.types.TorusVerifierUnionResponse;
+import org.torusresearch.torusutils.helpers.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,8 +39,8 @@ public final class UtilsFactory {
         if (map.hasKey("network")) {
             args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOfLabel(map.getString("network")));
         }
-        if (map.hasKey("proxyContractAddress")) {
-            args.setProxyContractAddress((map.getString("proxyContractAddress")));
+        if (map.hasKey("enableOneKey")) {
+            args.setEnableOneKey((map.getBoolean("enableOneKey")));
         }
         if (map.hasKey("redirectUri")) {
             args.setRedirectUri((map.getString("redirectUri")));
@@ -95,7 +96,7 @@ public final class UtilsFactory {
     public static WritableMap torusLoginResponseToMap(TorusLoginResponse response) {
         WritableMap map = new WritableNativeMap();
         WritableMap userInfoMap = getUserInfoWritableMap(response.getUserInfo());
-        map.putString("privateKey", response.getPrivateKey());
+        map.putString("privateKey", Utils.padLeft(response.getPrivateKey().toString(16), '0', 64));
         map.putString("publicAddress", response.getPublicAddress());
         map.putMap("userInfo", (ReadableMap) userInfoMap);
         return map;
@@ -122,7 +123,7 @@ public final class UtilsFactory {
             userInfoArray.pushMap(getUserInfoWritableMap(x));
         }
         map.putArray("userInfo", userInfoArray);
-        map.putString("privateKey", response.getPrivateKey());
+        map.putString("privateKey", Utils.padLeft(response.getPrivateKey().toString(16), '0', 64));
         map.putString("publicAddress", response.getPublicAddress());
 
         return map;
@@ -131,7 +132,7 @@ public final class UtilsFactory {
     public static WritableMap torusKeyToMap(TorusKey response) {
         WritableMap map = new WritableNativeMap();
 
-        map.putString("privateKey", response.getPrivateKey());
+        map.putString("privateKey", Utils.padLeft(response.getPrivateKey().toString(16), '0', 64));
         map.putString("publicAddress", response.getPublicAddress());
 
         return map;

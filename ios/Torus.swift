@@ -9,7 +9,7 @@ import Foundation
 import CustomAuth
 import PromiseKit
 
-@available(iOS 11.0, *)
+@available(iOS 13.0, *)
 @objc(RNCustomAuthSdk)
 public class RNCustomAuthSdk: NSObject {
     var tdsdk: CustomAuth?

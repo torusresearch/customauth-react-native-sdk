@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* example2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* example2Tests.m */; };
+		00E356F31AD99517003FC87E /* customauthexampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* customauthexampleTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		210B3D8ABF3A619B2FD66E36 /* libPods-example2-example2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DD5AA72D7109B8EE57F4CE /* libPods-example2-example2Tests.a */; };
+		210B3D8ABF3A619B2FD66E36 /* libPods-customauthexample-customauthexampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DD5AA72D7109B8EE57F4CE /* libPods-customauthexample-customauthexampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8AD654CD82DEBC23275CA51E /* libPods-example2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65403C025C3C10D9F462A21B /* libPods-example2.a */; };
+		8AD654CD82DEBC23275CA51E /* libPods-customauthexample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65403C025C3C10D9F462A21B /* libPods-customauthexample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,27 +22,27 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = example2;
+			remoteInfo = customauthexample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* example2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = example2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* customauthexampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = customauthexampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* example2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = example2Tests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* example2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = example2/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = example2/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = example2/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = example2/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = example2/main.m; sourceTree = "<group>"; };
-		1C26C221E4B005CEFDB2F580 /* Pods-example2-example2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example2-example2Tests.release.xcconfig"; path = "Target Support Files/Pods-example2-example2Tests/Pods-example2-example2Tests.release.xcconfig"; sourceTree = "<group>"; };
-		20535CDB5D510BF3FCB65087 /* Pods-example2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example2.debug.xcconfig"; path = "Target Support Files/Pods-example2/Pods-example2.debug.xcconfig"; sourceTree = "<group>"; };
-		33DD5AA72D7109B8EE57F4CE /* libPods-example2-example2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example2-example2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		65403C025C3C10D9F462A21B /* libPods-example2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EDBDD39FBF06411BC3241C2 /* Pods-example2-example2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example2-example2Tests.debug.xcconfig"; path = "Target Support Files/Pods-example2-example2Tests/Pods-example2-example2Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = example2/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E82843CAC65274ADCB5ECF1F /* Pods-example2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example2.release.xcconfig"; path = "Target Support Files/Pods-example2/Pods-example2.release.xcconfig"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* customauthexampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customauthexampleTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* customauthexample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customauthexample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = customauthexample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = customauthexample/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = customauthexample/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = customauthexample/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = customauthexample/main.m; sourceTree = "<group>"; };
+		1C26C221E4B005CEFDB2F580 /* Pods-customauthexample-customauthexampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample-customauthexampleTests.release.xcconfig"; path = "Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		20535CDB5D510BF3FCB65087 /* Pods-customauthexample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample.debug.xcconfig"; path = "Target Support Files/Pods-customauthexample/Pods-customauthexample.debug.xcconfig"; sourceTree = "<group>"; };
+		33DD5AA72D7109B8EE57F4CE /* libPods-customauthexample-customauthexampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-customauthexample-customauthexampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65403C025C3C10D9F462A21B /* libPods-customauthexample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-customauthexample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDBDD39FBF06411BC3241C2 /* Pods-customauthexample-customauthexampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample-customauthexampleTests.debug.xcconfig"; path = "Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = customauthexample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E82843CAC65274ADCB5ECF1F /* Pods-customauthexample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample.release.xcconfig"; path = "Target Support Files/Pods-customauthexample/Pods-customauthexample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210B3D8ABF3A619B2FD66E36 /* libPods-example2-example2Tests.a in Frameworks */,
+				210B3D8ABF3A619B2FD66E36 /* libPods-customauthexample-customauthexampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,20 +59,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD654CD82DEBC23275CA51E /* libPods-example2.a in Frameworks */,
+				8AD654CD82DEBC23275CA51E /* libPods-customauthexample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* example2Tests */ = {
+		00E356EF1AD99517003FC87E /* customauthexampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* example2Tests.m */,
+				00E356F21AD99517003FC87E /* customauthexampleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = example2Tests;
+			path = customauthexampleTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -83,7 +83,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* example2 */ = {
+		13B07FAE1A68108700A75B9A /* customauthexample */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -93,15 +93,15 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = example2;
+			name = customauthexample;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				65403C025C3C10D9F462A21B /* libPods-example2.a */,
-				33DD5AA72D7109B8EE57F4CE /* libPods-example2-example2Tests.a */,
+				65403C025C3C10D9F462A21B /* libPods-customauthexample.a */,
+				33DD5AA72D7109B8EE57F4CE /* libPods-customauthexample-customauthexampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,10 +109,10 @@
 		7D08ACB37A06EAE1309C3374 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				20535CDB5D510BF3FCB65087 /* Pods-example2.debug.xcconfig */,
-				E82843CAC65274ADCB5ECF1F /* Pods-example2.release.xcconfig */,
-				6EDBDD39FBF06411BC3241C2 /* Pods-example2-example2Tests.debug.xcconfig */,
-				1C26C221E4B005CEFDB2F580 /* Pods-example2-example2Tests.release.xcconfig */,
+				20535CDB5D510BF3FCB65087 /* Pods-customauthexample.debug.xcconfig */,
+				E82843CAC65274ADCB5ECF1F /* Pods-customauthexample.release.xcconfig */,
+				6EDBDD39FBF06411BC3241C2 /* Pods-customauthexample-customauthexampleTests.debug.xcconfig */,
+				1C26C221E4B005CEFDB2F580 /* Pods-customauthexample-customauthexampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* example2 */,
+				13B07FAE1A68108700A75B9A /* customauthexample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* example2Tests */,
+				00E356EF1AD99517003FC87E /* customauthexampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				7D08ACB37A06EAE1309C3374 /* Pods */,
@@ -142,8 +142,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* example2.app */,
-				00E356EE1AD99517003FC87E /* example2Tests.xctest */,
+				13B07F961A680F5B00A75B9A /* customauthexample.app */,
+				00E356EE1AD99517003FC87E /* customauthexampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* example2Tests */ = {
+		00E356ED1AD99517003FC87E /* customauthexampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "example2Tests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "customauthexampleTests" */;
 			buildPhases = (
 				8C7D299136BA34AFF8D680E4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -166,14 +166,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = example2Tests;
-			productName = example2Tests;
-			productReference = 00E356EE1AD99517003FC87E /* example2Tests.xctest */;
+			name = customauthexampleTests;
+			productName = customauthexampleTests;
+			productReference = 00E356EE1AD99517003FC87E /* customauthexampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* example2 */ = {
+		13B07F861A680F5B00A75B9A /* customauthexample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "example2" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "customauthexample" */;
 			buildPhases = (
 				5926AC5C81FA7E607E9280A4 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -187,9 +187,9 @@
 			);
 			dependencies = (
 			);
-			name = example2;
-			productName = example2;
-			productReference = 13B07F961A680F5B00A75B9A /* example2.app */;
+			name = customauthexample;
+			productName = customauthexample;
+			productReference = 13B07F961A680F5B00A75B9A /* customauthexample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -209,8 +209,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "example2" */;
-			compatibilityVersion = "Xcode 12.0";
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "customauthexample" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -222,8 +222,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* example2 */,
-				00E356ED1AD99517003FC87E /* example2Tests */,
+				13B07F861A680F5B00A75B9A /* customauthexample */,
+				00E356ED1AD99517003FC87E /* customauthexampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,15 +268,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-example2/Pods-example2-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-customauthexample/Pods-customauthexample-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-example2/Pods-example2-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-customauthexample/Pods-customauthexample-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-example2/Pods-example2-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-customauthexample/Pods-customauthexample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5926AC5C81FA7E607E9280A4 /* [CP] Check Pods Manifest.lock */ = {
@@ -294,7 +294,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-example2-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-customauthexample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -316,7 +316,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-example2-example2Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-customauthexample-customauthexampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,15 +329,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-example2-example2Tests/Pods-example2-example2Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-example2-example2Tests/Pods-example2-example2Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-example2-example2Tests/Pods-example2-example2Tests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -366,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* example2Tests.m in Sources */,
+				00E356F31AD99517003FC87E /* customauthexampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +384,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* example2 */;
+			target = 13B07F861A680F5B00A75B9A /* customauthexample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -392,15 +392,16 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EDBDD39FBF06411BC3241C2 /* Pods-example2-example2Tests.debug.xcconfig */;
+			baseConfigurationReference = 6EDBDD39FBF06411BC3241C2 /* Pods-customauthexample-customauthexampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = example2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = customauthexampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,18 +414,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example2.app/example2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/customauthexample.app/customauthexample";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C26C221E4B005CEFDB2F580 /* Pods-example2-example2Tests.release.xcconfig */;
+			baseConfigurationReference = 1C26C221E4B005CEFDB2F580 /* Pods-customauthexample-customauthexampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = example2Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = customauthexampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,20 +439,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/example2.app/example2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/customauthexample.app/customauthexample";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20535CDB5D510BF3FCB65087 /* Pods-example2.debug.xcconfig */;
+			baseConfigurationReference = 20535CDB5D510BF3FCB65087 /* Pods-customauthexample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 93GJ7R8CJJ;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = example2/Info.plist;
+				INFOPLIST_FILE = customauthexample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +464,7 @@
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = example2;
+				PRODUCT_NAME = customauthexample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -471,13 +473,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E82843CAC65274ADCB5ECF1F /* Pods-example2.release.xcconfig */;
+			baseConfigurationReference = E82843CAC65274ADCB5ECF1F /* Pods-customauthexample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 93GJ7R8CJJ;
-				INFOPLIST_FILE = example2/Info.plist;
+				INFOPLIST_FILE = customauthexample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +491,7 @@
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = example2;
+				PRODUCT_NAME = customauthexample;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -544,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -552,7 +554,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -603,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -611,7 +612,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SDKROOT)/usr/lib/swift\"",
 					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
-					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -623,7 +623,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "example2Tests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "customauthexampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -632,7 +632,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "example2" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "customauthexample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -641,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "example2" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "customauthexample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

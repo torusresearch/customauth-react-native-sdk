@@ -84,7 +84,7 @@ const credentials = await CustomAuth.triggerLogin({
 
 1. I got `BigInt not found` build error when building for iOS, what should I do?
 
-Add the following snipplet to your `ios/Podfile`. See `example2/ios/Podfile` for a full example.
+Add the following snipplet to your `ios/Podfile`. See `example/ios/Podfile` for a full example.
 
 ```ruby
   post_install do |installer|

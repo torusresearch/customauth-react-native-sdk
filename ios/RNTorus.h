@@ -209,7 +209,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-SWIFT_CLASS_NAMED("RNCustomAuthSdk") SWIFT_AVAILABILITY(ios,introduced=11.0)
+SWIFT_CLASS_NAMED("RNCustomAuthSdk") SWIFT_AVAILABILITY(ios,introduced=13.0)
 @interface RNCustomAuthSdk : NSObject
 - (void)initialize:(NSDictionary<NSString *, id> * _Nonnull)params;
 - (void)triggerLogin:(NSDictionary<NSString *, id> * _Nonnull)params resolver:(RCTPromiseResolveBlock _Nonnull)resolve rejecter:(RCTPromiseRejectBlock _Nonnull)reject;
