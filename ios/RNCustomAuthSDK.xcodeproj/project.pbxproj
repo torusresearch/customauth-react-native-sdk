@@ -14,7 +14,7 @@
 		51BF3483257A18DB0015DA93 /* Torus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3482257A18DB0015DA93 /* Torus.swift */; };
 		51BF3486257A19050015DA93 /* Torus.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BF3485257A19050015DA93 /* Torus.m */; };
 		51F8ADCE257E29FB00E86091 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */; };
-		69CB8022A5290E6CDEC4C11D /* libPods-RNCustomAuthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */; };
+		6FF1D9F67BFBBFC47D77D3D5 /* libPods-RNCustomAuthSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8E15928EF4B02A132FB2C99 /* libPods-RNCustomAuthSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		51BF3631257A4E4F0015DA93 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = SOURCE_ROOT; };
 		51F8ADCD257E29FB00E86091 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06EA66ED4081043B75541B9 /* Pods-RNCustomAuthSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.release.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.release.xcconfig"; sourceTree = "<group>"; };
+		C8E15928EF4B02A132FB2C99 /* libPods-RNCustomAuthSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNCustomAuthSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB75995A739475EEB633F169 /* Pods-RNCustomAuthSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSdk.debug.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSdk/Pods-RNCustomAuthSdk.debug.xcconfig"; sourceTree = "<group>"; };
 		FF3422E9012B031E1C038A5A /* Pods-RNCustomAuthSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNCustomAuthSDK.release.xcconfig"; path = "Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69CB8022A5290E6CDEC4C11D /* libPods-RNCustomAuthSDK.a in Frameworks */,
+				6FF1D9F67BFBBFC47D77D3D5 /* libPods-RNCustomAuthSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				5F66BB2EF83FD88447B77DD2 /* libPods-RNCustomAuthSdk.a */,
-				8E45CCD37491E7D2A42381FD /* libPods-RNCustomAuthSDK.a */,
+				C8E15928EF4B02A132FB2C99 /* libPods-RNCustomAuthSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 				51BF345C257A18350015DA93 /* Frameworks */,
 				51BF345D257A18350015DA93 /* Resources */,
 				51BF3558257A2D9B0015DA93 /* Bundle React Native code and images */,
-				B991C0F974FFDC0B736D32B4 /* [CP] Copy Pods Resources */,
+				38ECEFCDAB40461C227317D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +181,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		38ECEFCDAB40461C227317D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Torus-fetchNodeDetails/Torus-fetchNodeDetails.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Torus-fetchNodeDetails.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		51BF3558257A2D9B0015DA93 /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,24 +236,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"srcroot is ${SRCROOT}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
-		};
-		B991C0F974FFDC0B736D32B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNCustomAuthSDK/Pods-RNCustomAuthSDK-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		BD22BF5F06D22646C59644C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

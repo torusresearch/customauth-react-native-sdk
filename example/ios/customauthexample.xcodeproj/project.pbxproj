@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = customauthexample;
 		};
+		BD00323D2894F17F00ED5EBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0032392894F17F00ED5EBB /* RNCustomAuthSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51BF345F257A18350015DA93;
+			remoteInfo = RNCustomAuthSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +49,7 @@
 		65403C025C3C10D9F462A21B /* libPods-customauthexample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-customauthexample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EDBDD39FBF06411BC3241C2 /* Pods-customauthexample-customauthexampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample-customauthexampleTests.debug.xcconfig"; path = "Target Support Files/Pods-customauthexample-customauthexampleTests/Pods-customauthexample-customauthexampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = customauthexample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD0032392894F17F00ED5EBB /* RNCustomAuthSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCustomAuthSDK.xcodeproj; path = ../../ios/RNCustomAuthSDK.xcodeproj; sourceTree = "<group>"; };
 		E82843CAC65274ADCB5ECF1F /* Pods-customauthexample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customauthexample.release.xcconfig"; path = "Target Support Files/Pods-customauthexample/Pods-customauthexample.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -127,6 +135,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				BD0032392894F17F00ED5EBB /* RNCustomAuthSDK.xcodeproj */,
 				13B07FAE1A68108700A75B9A /* customauthexample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* customauthexampleTests */,
@@ -144,6 +153,14 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* customauthexample.app */,
 				00E356EE1AD99517003FC87E /* customauthexampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD00323A2894F17F00ED5EBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD00323E2894F17F00ED5EBB /* RNCustomAuthSDK.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +237,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BD00323A2894F17F00ED5EBB /* Products */;
+					ProjectRef = BD0032392894F17F00ED5EBB /* RNCustomAuthSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* customauthexample */,
@@ -227,6 +250,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BD00323E2894F17F00ED5EBB /* RNCustomAuthSDK.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RNCustomAuthSDK.app;
+			remoteRef = BD00323D2894F17F00ED5EBB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -530,7 +563,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -595,7 +628,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

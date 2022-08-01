@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '13.0'
+
+target 'RNCustomAuthSDK' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_modular_headers!
+
+  config = use_native_modules!
+
+  # Pods for RNCustomAuthSDK
+  pod 'CustomAuth', '~> 3.0.0', :modular_headers => true
+  pod 'secp256k1.swift', :modular_headers => true
+
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+
+
+end
