@@ -27,8 +27,9 @@ export default class App extends React.Component {
       CustomAuth.init({
         browserRedirectUri: 'https://scripts.toruswallet.io/redirect.html',
         redirectUri: 'torusapp://org.torusresearch.customauthexample/redirect',
-        network: 'testnet', // details for test net
+        network: 'polygon', // details for test net
         enableLogging: true,
+        enableOneKey:false
       });
     } catch (error) {
       console.error(error, 'mounted caught');

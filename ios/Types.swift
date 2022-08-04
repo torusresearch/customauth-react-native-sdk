@@ -6,36 +6,38 @@
 //  Copyright © 2020 Facebook. All rights reserved.
 //
 
-import Foundation
 import CustomAuth
 import FetchNodeDetails
+import Foundation
 
 struct CustomAuthArgs: Codable {
     var network: String
     var redirectUri: String
     var browserRedirectUri: String? = "https://scripts.toruswallet.io/redirect.html"
     var enableLogging: Bool? = true
-    
+    var enableOneKey: Bool? = false
+
     enum CodingKeys: String, CodingKey {
-        case redirectUri = "redirectUri"
-        case network = "network"
-        case browserRedirectUri = "browserRedirectUri"
-        case enableLogging = "enableLogging"
+        case redirectUri
+        case network
+        case browserRedirectUri
+        case enableLogging
+        case enableOneKey
     }
-    
+
     init(dictionary: [String: Any]) throws {
         self = try JSONDecoder().decode(CustomAuthArgs.self, from: JSONSerialization.data(withJSONObject: dictionary))
     }
-    
-    var nativeNetwork: EthereumNetwork {
-        get {
-            if network == "testnet" {
-                return .ROPSTEN
-            }
+
+    var nativeNetwork: EthereumNetworkFND {
+        if network == "testnet" {
+            return .ROPSTEN
+        } else if network == "polygon" {
+            return .POLYGON
+        } else {
             return .MAINNET
         }
     }
-    
 }
 
 struct SubVerifierDetailsWebSDK: Codable {
@@ -43,25 +45,23 @@ struct SubVerifierDetailsWebSDK: Codable {
     var verifier: String
     var clientId: String
     var jwtParams: [String: String]? = [:]
-    var hash: String?;
     var queryParameters: [String: String]? = [:]
     var webOrInstalled: String? = "web"
-    
+
     enum CodingKeys: String, CodingKey {
-        case typeOfLogin = "typeOfLogin"
-        case verifier = "verifier"
-        case clientId = "clientId"
-        case jwtParams = "jwtParams"
-        case hash = "hash"
-        case queryParameters = "queryParameters"
+        case typeOfLogin
+        case verifier
+        case clientId
+        case jwtParams
+        case queryParameters
     }
-    
+
     init(dictionary: [String: Any]) throws {
         self = try JSONDecoder().decode(SubVerifierDetailsWebSDK.self, from: JSONSerialization.data(withJSONObject: dictionary))
     }
 }
 
-struct AggregateLoginParamsWebSDK: Codable{
+struct AggregateLoginParamsWebSDK: Codable {
     var aggregateVerifierType: String
     var verifierIdentifier: String
     var subVerifierDetailsArray: [SubVerifierDetailsWebSDK]
@@ -73,9 +73,9 @@ struct TorusSubVerifierInfoWebSDK: Codable {
 }
 
 func decodeTorusSubVerifierInfoWebSDK(obj: [String: Any]) throws -> TorusSubVerifierInfoWebSDK {
-    do{
+    do {
         return try JSONDecoder().decode(TorusSubVerifierInfoWebSDK.self, from: JSONSerialization.data(withJSONObject: obj))
-    }catch{
+    } catch {
         throw error
     }
 }
