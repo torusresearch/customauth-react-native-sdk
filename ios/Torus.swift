@@ -27,8 +27,8 @@ public class RNCustomAuthSdk: NSObject {
 
         do {
             let subverifierWeb = try JSONDecoder().decode(SubVerifierDetailsWebSDK.self, from: JSONSerialization.data(withJSONObject: params))
-
-            let sub = SubVerifierDetails(loginType: SubVerifierType(rawValue: subverifierWeb.webOrInstalled!)!,
+            let browserType: URLOpenerTypes = URLOpenerTypes(rawValue: subverifierWeb.browserType ?? "") ?? .asWebAuthSession
+            let sub = SubVerifierDetails(loginType: SubVerifierType(rawValue: subverifierWeb.webOrInstalled ?? "") ?? .web,
                                          loginProvider: LoginProviders(rawValue: subverifierWeb.typeOfLogin)!,
                                          clientId: subverifierWeb.clientId,
                                          verifierName: subverifierWeb.verifier,
@@ -37,9 +37,9 @@ public class RNCustomAuthSdk: NSObject {
                                          extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
-
             DispatchQueue.main.async {
-                self.tdsdk!.triggerLogin(browserType: .external).done { data in
+                let vc = UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
+                self.tdsdk!.triggerLogin(controller: vc, browserType: browserType).done { data in
                     resolve(data)
                 }.catch { err in
                     reject("400", "triggerLogin: ", err)
@@ -60,8 +60,8 @@ public class RNCustomAuthSdk: NSObject {
         do {
             let aggregateVerifierWeb = try JSONDecoder().decode(AggregateLoginParamsWebSDK.self, from: JSONSerialization.data(withJSONObject: params))
             let subverifierWeb = aggregateVerifierWeb.subVerifierDetailsArray[0]
-
-            let sub = SubVerifierDetails(loginType: SubVerifierType(rawValue: subverifierWeb.webOrInstalled!)!,
+            let browserType: URLOpenerTypes = URLOpenerTypes(rawValue: subverifierWeb.browserType ?? "") ?? .asWebAuthSession
+            let sub = SubVerifierDetails(loginType: SubVerifierType(rawValue: subverifierWeb.webOrInstalled ?? "") ?? .web,
                                          loginProvider: LoginProviders(rawValue: subverifierWeb.typeOfLogin)!,
                                          clientId: subverifierWeb.clientId,
                                          verifierName: subverifierWeb.verifier,
@@ -71,9 +71,9 @@ public class RNCustomAuthSdk: NSObject {
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
 
             tdsdk = CustomAuth(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
-
             DispatchQueue.main.async {
-                self.tdsdk!.triggerLogin(browserType: .external).done { data in
+                let vc = UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
+                self.tdsdk!.triggerLogin(controller: vc, browserType: browserType).done { data in
                     resolve(data)
                 }.catch { err in
                     reject("400", "triggerAggregateLogin: ", err)
@@ -90,7 +90,7 @@ public class RNCustomAuthSdk: NSObject {
         CustomAuth.handle(url: URL(string: url)!)
     }
 
-    @objc public func getTorusKey(_ verifier: String, verifierId: String, verifierParams: [String: Any]?, idToken: String, extraParams: [String: Any]?, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
+    @objc public func getTorusKey(_ verifier: String, verifierId: String, verifierParams: [String: Any]?, idToken: String, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) {
         if directAuthArgs == nil {
             reject("400", "getTorusKey: ", "Call .initialize first")
             return
@@ -99,7 +99,7 @@ public class RNCustomAuthSdk: NSObject {
         tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
 
         DispatchQueue.main.async {
-            self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, userData: extraParams ?? [:]).done { data in
+            self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, userData: [:]).done { data in
                 resolve(data)
             }.catch { err in
                 reject("400", "getTorusKey: ", err.localizedDescription)

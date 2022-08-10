@@ -11,6 +11,7 @@ target 'customauthexample' do
 
 
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
+  pod 'CustomAuth', :git => 'https://github.com/torusresearch/customauth-swift-sdk.git', :branch => 'master', :modular_headers => true
 
   use_react_native!(
     :path => config[:reactNativePath],

@@ -312,7 +312,7 @@ PODS:
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
-  - CustomAuth (~> 3.0.0)
+  - CustomAuth (from `https://github.com/torusresearch/customauth-swift-sdk.git`, branch `master`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
@@ -351,7 +351,6 @@ SPEC REPOS:
   trunk:
     - BigInt
     - CryptoSwift
-    - CustomAuth
     - fmt
     - GenericJSON
     - JWTDecode
@@ -365,6 +364,9 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   boost:
     :podspec: "../node_modules/react-native/third-party-podspecs/boost.podspec"
+  CustomAuth:
+    :branch: master
+    :git: https://github.com/torusresearch/customauth-swift-sdk.git
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -426,6 +428,11 @@ EXTERNAL SOURCES:
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
+CHECKOUT OPTIONS:
+  CustomAuth:
+    :commit: c528d46244c2564091b8bc1b54f6b8d7c4e6374b
+    :git: https://github.com/torusresearch/customauth-swift-sdk.git
+
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   boost: a7c83b31436843459a1961bfd74b96033dc77234
@@ -471,6 +478,6 @@ SPEC CHECKSUMS:
   web3.swift: c6c3bf1f853743f8a7a58d263e5f7e46545e22c7
   Yoga: 99652481fcd320aefa4a7ef90095b95acd181952
 
-PODFILE CHECKSUM: a0554507c70aa0042ba204586c4369e83add3a7a
+PODFILE CHECKSUM: df2db4d75307520238d275857ded3322ccd568e0
 
 COCOAPODS: 1.11.3

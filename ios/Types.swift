@@ -47,6 +47,7 @@ struct SubVerifierDetailsWebSDK: Codable {
     var jwtParams: [String: String]? = [:]
     var queryParameters: [String: String]? = [:]
     var webOrInstalled: String? = "web"
+    var browserType:String? = URLOpenerTypes.asWebAuthSession.rawValue
 
     enum CodingKeys: String, CodingKey {
         case typeOfLogin
@@ -54,6 +55,8 @@ struct SubVerifierDetailsWebSDK: Codable {
         case clientId
         case jwtParams
         case queryParameters
+        case webOrInstalled
+        case browserType
     }
 
     init(dictionary: [String: Any]) throws {
