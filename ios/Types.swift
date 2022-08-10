@@ -32,7 +32,7 @@ struct CustomAuthArgs: Codable {
     var nativeNetwork: EthereumNetworkFND {
         if network == "testnet" {
             return .ROPSTEN
-        } else if network == "polygon" {
+        } else if network == "cyan" {
             return .POLYGON
         } else {
             return .MAINNET
