@@ -29,7 +29,7 @@ export default class App extends React.Component {
         redirectUri: 'torusapp://org.torusresearch.customauthexample/redirect',
         network: 'testnet', // details for test net
         enableLogging: true,
-        enableOneKey:false
+        enableOneKey: false,
       });
     } catch (error) {
       console.error(error, 'mounted caught');
@@ -45,7 +45,7 @@ export default class App extends React.Component {
         typeOfLogin,
         verifier,
         clientId,
-        jwtParams
+        jwtParams,
       });
       this.setState({
         consoleText: `publicAddress: ${loginDetails.publicAddress}`,
