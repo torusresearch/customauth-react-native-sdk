@@ -14,11 +14,11 @@
   "author": "Chaitanya Potti",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": ">=0.66"
+    "react-native": "*"
   },
   "devDependencies": {
-    "react-native": "^0.66.4",
-    "release-it": "^14.12.4"
+    "react-native": "~0.68.2",
+    "release-it": "^15.2.0"
   },
   "bugs": {
     "url": "https://github.com/torusresearch/customauth-react-native-sdk/issues"

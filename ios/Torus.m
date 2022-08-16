@@ -29,7 +29,6 @@ RCT_EXTERN_METHOD(
                   verifierId: (NSString)verifierid
                   verifierParams: (NSDictionary)verifierParams
                   idToken: (NSString)idToken
-                  extraParams: (NSDictionary)extraParams
                   resolver: (RCTPromiseResolveBlock)resolve
                   rejecter: (RCTPromiseRejectBlock)reject
                   )

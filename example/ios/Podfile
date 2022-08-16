@@ -1,9 +1,9 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '11.0'
+platform :ios, '13.0'
 
-target 'example2' do
+target 'customauthexample' do
   use_modular_headers!
 
   config = use_native_modules!
@@ -11,14 +11,14 @@ target 'example2' do
 
 
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
-
+  pod 'CustomAuth', '~> 3.2.0', :modular_headers => true
   use_react_native!(
     :path => config[:reactNativePath],
     # to enable hermes on iOS, change `false` to `true` and then install pods
     :hermes_enabled => false
   )
 
-  target 'example2Tests' do
+  target 'customauthexampleTests' do
     inherit! :complete
     # Pods for testing
   end

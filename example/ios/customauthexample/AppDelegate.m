@@ -34,7 +34,7 @@ static void InitializeFlipper(UIApplication *application) {
 
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"example2"
+                                                   moduleName:@"customauthexample"
                                             initialProperties:nil];
 
   if (@available(iOS 13.0, *)) {
@@ -58,7 +58,7 @@ static void InitializeFlipper(UIApplication *application) {
   NSString *myString = url.absoluteString;
   
   NSLog(@"String to handle : %@ ", myString);
-  if (@available(iOS 11.0, *)) {
+  if (@available(iOS 13.0, *)) {
     [RNCustomAuthSdk handle:myString];
   } else {
     // Fallback on earlier versions
@@ -71,7 +71,7 @@ static void InitializeFlipper(UIApplication *application) {
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
 #if DEBUG
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
