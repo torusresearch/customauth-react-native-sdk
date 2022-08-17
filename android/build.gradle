@@ -7,14 +7,14 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.android.tools.build:gradle:7.2.2'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 24
@@ -48,6 +48,6 @@ repositories {
 
 dependencies {
     api 'com.facebook.react:react-native:+'
-    api 'org.torusresearch:customauth-android-sdk:3.0.0'
+    api 'org.torusresearch:customauth-android-sdk:3.0.2'
 }
   
