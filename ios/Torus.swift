@@ -34,7 +34,6 @@ public class RNCustomAuthSdk: NSObject {
                                          verifierName: subverifierWeb.verifier,
                                          redirectURL: directAuthArgs!.redirectUri,
                                          browserRedirectURL: directAuthArgs!.browserRedirectUri,
-                                         extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
             tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
             DispatchQueue.main.async {
@@ -67,7 +66,6 @@ public class RNCustomAuthSdk: NSObject {
                                          verifierName: subverifierWeb.verifier,
                                          redirectURL: directAuthArgs!.redirectUri,
                                          browserRedirectURL: directAuthArgs!.browserRedirectUri,
-                                         extraQueryParams: subverifierWeb.queryParameters ?? [:],
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
 
             tdsdk = CustomAuth(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
