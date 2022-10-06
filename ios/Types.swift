@@ -16,6 +16,7 @@ struct CustomAuthArgs: Codable {
     var browserRedirectUri: String? = "https://scripts.toruswallet.io/redirect.html"
     var enableLogging: Bool? = true
     var enableOneKey: Bool? = false
+    var networkUrl:String?
 
     enum CodingKeys: String, CodingKey {
         case redirectUri
@@ -23,6 +24,7 @@ struct CustomAuthArgs: Codable {
         case browserRedirectUri
         case enableLogging
         case enableOneKey
+        case networkUrl
     }
 
     init(dictionary: [String: Any]) throws {
