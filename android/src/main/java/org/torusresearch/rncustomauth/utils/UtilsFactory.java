@@ -21,13 +21,12 @@ import org.torusresearch.customauth.types.SubVerifierDetails;
 import org.torusresearch.customauth.types.TorusAggregateLoginResponse;
 import org.torusresearch.customauth.types.TorusKey;
 import org.torusresearch.customauth.types.TorusLoginResponse;
-import org.torusresearch.customauth.types.TorusNetwork;
 import org.torusresearch.customauth.types.TorusSubVerifierInfo;
 import org.torusresearch.customauth.types.TorusVerifierUnionResponse;
+import org.torusresearch.fetchnodedetails.types.TorusNetwork;
 import org.torusresearch.torusutils.helpers.Utils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -37,13 +36,16 @@ public final class UtilsFactory {
         String browserRedirectUri = map.getString("browserRedirectUri");
         CustomAuthArgs args = new CustomAuthArgs(browserRedirectUri);
         if (map.hasKey("network")) {
-            args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOfLabel(map.getString("network")));
+            args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOf(map.getString("network")));
         }
         if (map.hasKey("enableOneKey")) {
             args.setEnableOneKey((map.getBoolean("enableOneKey")));
         }
         if (map.hasKey("redirectUri")) {
             args.setRedirectUri((map.getString("redirectUri")));
+        }
+        if (map.hasKey("networkUrl")) {
+            args.setNetworkUrl((map.getString("networkUrl")));
         }
         return args;
     }
