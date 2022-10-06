@@ -29,6 +29,7 @@ import org.torusresearch.torusutils.helpers.Utils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 // Checks are not present at certain places. It implies params are mandatory and app should crash if they are not provided.
 public final class UtilsFactory {
@@ -36,7 +37,7 @@ public final class UtilsFactory {
         String browserRedirectUri = map.getString("browserRedirectUri");
         CustomAuthArgs args = new CustomAuthArgs(browserRedirectUri);
         if (map.hasKey("network")) {
-            args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOf(map.getString("network")));
+            args = new CustomAuthArgs(browserRedirectUri, TorusNetwork.valueOf(map.getString("network").toUpperCase(Locale.ROOT)));
         }
         if (map.hasKey("enableOneKey")) {
             args.setEnableOneKey((map.getBoolean("enableOneKey")));
