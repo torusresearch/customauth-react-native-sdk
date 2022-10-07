@@ -12,7 +12,7 @@ target 'RNCustomAuthSDK' do
 
   # Pods for RNCustomAuthSDK
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec', :modular_headers => false
-  pod 'CustomAuth', '~> 4.0.1', :modular_headers => true
+  pod 'CustomAuth', '~> 4.1.0', :modular_headers => true
   pod 'secp256k1.swift', :modular_headers => true
 
 
