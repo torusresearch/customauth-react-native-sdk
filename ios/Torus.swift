@@ -35,7 +35,7 @@ public class RNCustomAuthSdk: NSObject {
                                          redirectURL: directAuthArgs!.redirectUri,
                                          browserRedirectURL: directAuthArgs!.browserRedirectUri,
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
-            tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
+            tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: subverifierWeb.verifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false,networkUrl: directAuthArgs?.networkUrl)
             DispatchQueue.main.async {
                 let vc = UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
                 self.tdsdk!.triggerLogin(controller: vc, browserType: browserType).done { data in
@@ -68,7 +68,7 @@ public class RNCustomAuthSdk: NSObject {
                                          browserRedirectURL: directAuthArgs!.browserRedirectUri,
                                          jwtParams: subverifierWeb.jwtParams ?? [:])
 
-            tdsdk = CustomAuth(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
+            tdsdk = CustomAuth(aggregateVerifierType: verifierTypes(rawValue: aggregateVerifierWeb.aggregateVerifierType)!, aggregateVerifierName: aggregateVerifierWeb.verifierIdentifier, subVerifierDetails: [sub], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false,networkUrl: directAuthArgs?.networkUrl)
             DispatchQueue.main.async {
                 let vc = UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
                 self.tdsdk!.triggerLogin(controller: vc, browserType: browserType).done { data in
@@ -94,7 +94,7 @@ public class RNCustomAuthSdk: NSObject {
             return
         }
 
-        tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
+        tdsdk = CustomAuth(aggregateVerifierType: .singleLogin, aggregateVerifierName: verifier, subVerifierDetails: [], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false,networkUrl: directAuthArgs?.networkUrl)
 
         DispatchQueue.main.async {
             self.tdsdk!.getTorusKey(verifier: verifier, verifierId: verifierId, idToken: idToken, userData: [:]).done { data in
@@ -118,7 +118,7 @@ public class RNCustomAuthSdk: NSObject {
                 throw "subVerifierInfoArray cannot be empty"
             }
 
-            tdsdk = CustomAuth(aggregateVerifierType: .singleIdVerifier, aggregateVerifierName: verifier, subVerifierDetails: [], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false)
+            tdsdk = CustomAuth(aggregateVerifierType: .singleIdVerifier, aggregateVerifierName: verifier, subVerifierDetails: [], network: directAuthArgs!.nativeNetwork, loglevel: .info, enableOneKey: directAuthArgs?.enableOneKey ?? false,networkUrl: directAuthArgs?.networkUrl)
 
             DispatchQueue.main.async {
                 self.tdsdk!.getAggregateTorusKey(verifier: verifier, verifierId: verifierId, idToken: subverifierInfoWebArray[0].idToken, subVerifierDetails: SubVerifierDetails(loginProvider: .jwt, clientId: "", verifierName: verifier, redirectURL: "https://app.tor.us")).done { data in
