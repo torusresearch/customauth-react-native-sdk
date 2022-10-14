@@ -75,14 +75,15 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.container}>
-          <Text style={styles.wrapper}>Verifier:</Text>
-          <Picker
-            style={styles.wrapper}
-            selectedValue={selectedVerifier}
-            onValueChange={itemValue => {
+          <Text style={styles.headerStyle}>Web3Auth Verifier:</Text>
+          <View style={{ borderWidth: 1, borderColor: 'black', borderRadius: 4 }}>
+            <Picker
+              style={styles.wrapper}
+              selectedValue={selectedVerifier}
+              onValueChange={itemValue => {
               this.setState({selectedVerifier: itemValue});
-            }}>
-            {Object.keys(verifierMap).map(login => (
+              }}>
+              {Object.keys(verifierMap).map(login => (
               <Picker.Item
                 style={styles.wrapper}
                 value={login}
@@ -91,13 +92,16 @@ export default class App extends React.Component {
               />
             ))}
           </Picker>
+          </View>
         </View>
         <View style={styles.top}>
-          <Button onPress={this.login} title="Login with Torus" />
-          <Button onPress={this.getTorusKey} title="test getTorusKey" />
+          <View style={{ marginBottom: 10 }}>
+            <Button uppercase={false} onPress={this.login} title="Login with Torus" />
+          </View>
+          <Button onPress={this.getTorusKey} title="test get-Torus-Key" />
         </View>
         <View style={styles.console}>
-          <Text>{consoleText}</Text>
+          <Text style={styles.consoleText}>{consoleText}</Text>
         </View>
       </View>
     );
@@ -116,6 +120,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 50,
     width: 250,
+  },
+  headerStyle: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+    width: 250,
+    fontSize: 18,
+    color: "#0364FF"
+  },
+  consoleText: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+    width: 250,
+    fontSize: 16,
+    color: "#0364FF"
   },
   top: {
     // marginTop: "20",
