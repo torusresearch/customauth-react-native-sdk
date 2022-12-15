@@ -30,7 +30,6 @@ export default class App extends React.Component {
         network: 'testnet', // details for test net
         enableLogging: true,
         enableOneKey: false,
-        networkUrl: '',
       });
     } catch (error) {
       console.error(error, 'mounted caught');
