@@ -16,7 +16,7 @@ struct CustomAuthArgs: Codable {
     var browserRedirectUri: String? = "https://scripts.toruswallet.io/redirect.html"
     var enableLogging: Bool? = true
     var enableOneKey: Bool? = false
-    var networkUrl:String?
+    var networkUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case redirectUri
@@ -33,9 +33,13 @@ struct CustomAuthArgs: Codable {
 
     var nativeNetwork: EthereumNetworkFND {
         if network == "testnet" {
-            return .ROPSTEN
+            return .TESTNET
         } else if network == "cyan" {
-            return .POLYGON
+            return .CYAN
+        } else if network == "celeste" {
+            return .CELESTE
+        } else if network == "aqua" {
+            return .AQUA
         } else {
             return .MAINNET
         }
@@ -48,7 +52,7 @@ struct SubVerifierDetailsWebSDK: Codable {
     var clientId: String
     var jwtParams: [String: String]? = [:]
     var webOrInstalled: String? = "web"
-    var browserType:String? = URLOpenerTypes.asWebAuthSession.rawValue
+    var browserType: String? = URLOpenerTypes.asWebAuthSession.rawValue
 
     enum CodingKeys: String, CodingKey {
         case typeOfLogin
