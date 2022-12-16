@@ -75,27 +75,31 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <View style={styles.container}>
           <Text style={styles.headerStyle}>Web3Auth Verifier:</Text>
-          <View style={{ borderWidth: 1, borderColor: 'black', borderRadius: 4 }}>
+          <View style={{borderWidth: 1, borderColor: 'black', borderRadius: 4}}>
             <Picker
               style={styles.wrapper}
               selectedValue={selectedVerifier}
               onValueChange={itemValue => {
-              this.setState({selectedVerifier: itemValue});
+                this.setState({selectedVerifier: itemValue});
               }}>
               {Object.keys(verifierMap).map(login => (
-              <Picker.Item
-                style={styles.wrapper}
-                value={login}
-                key={login.toString()}
-                label={verifierMap[login].name}
-              />
-            ))}
-          </Picker>
+                <Picker.Item
+                  style={styles.wrapper}
+                  value={login}
+                  key={login.toString()}
+                  label={verifierMap[login].name}
+                />
+              ))}
+            </Picker>
           </View>
         </View>
         <View style={styles.top}>
-          <View style={{ marginBottom: 10 }}>
-            <Button uppercase={false} onPress={this.login} title="Login with Torus" />
+          <View style={{marginBottom: 10}}>
+            <Button
+              uppercase={false}
+              onPress={this.login}
+              title="Login with Torus"
+            />
           </View>
           <Button onPress={this.getTorusKey} title="test get-Torus-Key" />
         </View>
@@ -126,7 +130,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 250,
     fontSize: 18,
-    color: "#0364FF"
+    color: '#0364FF',
   },
   consoleText: {
     alignItems: 'center',
@@ -134,7 +138,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 250,
     fontSize: 16,
-    color: "#0364FF"
+    color: '#0364FF',
   },
   top: {
     // marginTop: "20",

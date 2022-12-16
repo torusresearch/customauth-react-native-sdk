@@ -17,8 +17,8 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "react-native": "~0.68.2",
-    "release-it": "^15.2.0"
+    "react-native": "^0.68.2",
+    "release-it": "^15.5.1"
   },
   "bugs": {
     "url": "https://github.com/torusresearch/customauth-react-native-sdk/issues"
