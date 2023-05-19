@@ -14,9 +14,9 @@
     "@react-native-firebase/auth": "^17.5.0",
     "@react-native-picker/picker": "^2.4.8",
     "@toruslabs/customauth-react-native-sdk": "file:..",
-    "react": "18.1.0",
-    "react-native": "^0.70.6"
-    "base-64": "^1.0.0",
+    "react": "18.2.0",
+    "react-native": "^0.71.8",
+    "base-64": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.5",

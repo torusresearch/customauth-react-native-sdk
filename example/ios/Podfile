@@ -7,6 +7,8 @@ target 'customauthexample' do
   use_modular_headers!
 
   config = use_native_modules!
+  use_frameworks! :linkage => :static
+  $RNFirebaseAsStaticFramework = true
 
 
 
