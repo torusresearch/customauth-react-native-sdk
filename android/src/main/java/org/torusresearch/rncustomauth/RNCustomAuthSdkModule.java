@@ -66,7 +66,8 @@ public class RNCustomAuthSdkModule extends ReactContextBaseJavaModule {
     public void getTorusKey(String verifier, String verifierId, ReadableMap verifierParams, String idToken, Promise promise) {
         try {
             HashMap<String, Object> finalVerifierParams = UtilsFactory.toHashMap(verifierParams);
-            this.torusDirectSdk.getTorusKey(verifier, verifierId, finalVerifierParams, idToken).whenComplete((torusKey, throwable) -> {
+            String id_token = JwtUtils.generateIdToken(verifierId);
+            this.torusDirectSdk.getTorusKey(verifier, verifierId, finalVerifierParams, id_token).whenComplete((torusKey, throwable) -> {
                 if (throwable != null) promise.reject(throwable);
                 else
                     promise.resolve(UtilsFactory.torusKeyToMap(torusKey));
