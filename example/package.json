@@ -12,7 +12,7 @@
   "dependencies": {
     "@react-native-picker/picker": "^2.4.8",
     "@toruslabs/customauth-react-native-sdk": "file:..",
-    "react": "18.1.0",
+    "react": "18.3.1",
     "react-native": "^0.70.6"
   },
   "devDependencies": {
