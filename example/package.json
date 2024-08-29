@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-picker/picker": "^2.4.8",
+    "@react-native-picker/picker": "^2.7.7",
     "@toruslabs/customauth-react-native-sdk": "file:..",
     "react": "18.1.0",
     "react-native": "^0.70.6"
